@@ -4,8 +4,5 @@
   "description": "Personal site.",
   "main": "index.html",
   "author": "Igor Barsi <ibarsi92@gmail.com> (https://github.com/ibarsi)",
-  "license": "ISC",
-  "dependencies": {
-    "normalize.css": "5.0.0"
-  }
+  "license": "ISC"
 }
