@@ -53,9 +53,15 @@ html {
     width: 2rem;
 }
 
-.twitter-feed {
+/* === JUICER === */
+
+.juicer-feed {
     margin: auto;
     max-width: 800px;
+}
+
+.feed-item.juicer.image-post {
+    display: none;
 }
 
 @media (max-width: 900px) {
