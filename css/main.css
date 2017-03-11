@@ -26,7 +26,7 @@ html {
 .social__list {
     display: flex;
     justify-content: center;
-    margin: 0;
+    margin: 0 0 40px;
     padding: 0;
     list-style: none;
 }
@@ -51,6 +51,11 @@ html {
 
 .social__icon--linkedin {
     width: 2rem;
+}
+
+.twitter-feed {
+    margin: auto;
+    max-width: 800px;
 }
 
 @media (max-width: 900px) {
