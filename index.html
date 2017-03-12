@@ -96,5 +96,12 @@
         </main>
 
         <script type="text/javascript" src="//assets.juicer.io/embed.js"></script>
+
+        <script>
+            navigator.serviceWorker && navigator.serviceWorker.register('/sw.js')
+                .then(function(registration) {
+                    console.log('SERVICE WORKER | REGISTERED: ', registration.scope);
+                });
+        </script>
     </body>
 </html>
