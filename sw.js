@@ -2,11 +2,11 @@ self.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open('igorbarsi-static').then(function(cache) {
             return cache.addAll([
-                '/igorbarsi',
-                '/igorbarsi/index.html',
-                '/igorbarsi/manifest.json',
-                '/igorbarsi/css/normalize.css',
-                '/igorbarsi/css/main.css'
+                '/',
+                '/index.html',
+                '/manifest.json',
+                '/css/normalize.css',
+                '/css/main.css'
             ]);
         })
     );
