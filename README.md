@@ -1,3 +1,3 @@
-# PORTFOLIO #
+# IGOR BARSI #
 
-[https://ibarsi.github.io/igorbarsi/](https://ibarsi.github.io/igorbarsi/)
+[http://www.igorbarsi.com](http://www.igorbarsi.com)
