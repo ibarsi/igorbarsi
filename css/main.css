@@ -94,4 +94,8 @@ html {
     .social__icon--linkedin {
         width: 1rem;
     }
+
+    .social__icon--medium {
+        width: 1.5rem;
+    }
 }
