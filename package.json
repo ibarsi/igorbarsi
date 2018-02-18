@@ -2,7 +2,20 @@
   "name": "igorbarsi",
   "version": "1.0.0",
   "description": "Personal site.",
-  "main": "index.html",
   "author": "Igor Barsi <ibarsi92@gmail.com> (https://github.com/ibarsi)",
-  "license": "ISC"
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "backbone": "1.3.3",
+    "gatsby": "^1.9.202",
+    "gatsby-link": "^1.6.37",
+    "gatsby-plugin-react-helmet": "^2.0.5",
+    "jquery": "3.3.1",
+    "react-helmet": "^5.2.0"
+  }
 }
