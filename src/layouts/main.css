@@ -11,12 +11,8 @@ html {
     color: #222222;
 }
 
-.content-container {
+.site-container {
     padding: 0 20px;
-}
-
-.title {
-    font-size: 5rem;
 }
 
 .paragraph {

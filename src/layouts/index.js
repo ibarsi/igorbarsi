@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 import Header from '../components/Header';
 
 import './normalize.css';
-import './index.css';
+import './main.css';
 
 const TemplateWrapper = ({ children }) => <div>
     <Helmet>
@@ -30,7 +30,7 @@ const TemplateWrapper = ({ children }) => <div>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,700" />
     </Helmet>
 
-    <div className='content-container'>
+    <div className='site-container'>
         <Header />
 
         <main>
