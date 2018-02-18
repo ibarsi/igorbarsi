@@ -54,3 +54,34 @@
 .nav__link:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 600px) {
+    .social__list {
+        margin: 0 0 20px;
+    }
+
+    .social__icon {
+        width: 2rem;
+    }
+
+    .social__icon--twitter {
+        width: 1.5rem;
+    }
+
+    .social__icon--linkedin {
+        width: 1rem;
+    }
+
+    .social__icon--medium {
+        width: 1.5rem;
+    }
+
+    .nav__list {
+        margin: 0 0 20px;
+    }
+
+    .nav__link {
+        font-size: 1rem;
+    }
+}
+

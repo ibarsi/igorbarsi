@@ -52,20 +52,4 @@ html {
     .paragraph {
         font-size: 1rem;
     }
-
-    .social__icon {
-        width: 2rem;
-    }
-
-    .social__icon--twitter {
-        width: 1.5rem;
-    }
-
-    .social__icon--linkedin {
-        width: 1rem;
-    }
-
-    .social__icon--medium {
-        width: 1.5rem;
-    }
 }
