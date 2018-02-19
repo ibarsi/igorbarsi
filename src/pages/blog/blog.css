@@ -18,6 +18,7 @@
     padding: 0;
     margin: 0;
     list-style: none;
+    font-size: 1.3em;
 }
 
 .blog__list-item {
@@ -34,4 +35,17 @@
 
 .blog__list-item-link {
     flex: 12;
+}
+
+@media (max-width: 900px) {
+    .content-container {
+        min-width: initial;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .content-container {
+        padding: 0 0.5em;
+    }
 }

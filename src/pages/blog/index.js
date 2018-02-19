@@ -70,9 +70,9 @@ const BlogListItem = ({ frontmatter }) => {
 
     return (
         <div className="blog__list-item-content">
-            <b className="blog__list-item-date">
+            <span className="blog__list-item-date">
                 { date }
-            </b>
+            </span>
 
             <Link to={ frontmatter.path }
                 className='blog__list-item-link'>

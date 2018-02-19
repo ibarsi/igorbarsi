@@ -11,6 +11,15 @@ html {
     color: #222222;
 }
 
+a {
+    color: #3980F5;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .site-container {
     padding: 0 20px;
 }
