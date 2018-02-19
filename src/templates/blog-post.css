@@ -54,6 +54,7 @@
 .blog-post__footer {
     font-size: 0.8em;
     font-style: italic;
+    margin-bottom: 2em;
 }
 
 .blog-post__share_list {

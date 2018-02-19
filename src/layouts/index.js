@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 import { FB_APP_ID } from '../config';
 import { BASE_URL } from '../utils';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 import './normalize.css';
 import './main.css';
@@ -56,6 +57,8 @@ const TemplateWrapper = ({ children, location }) => {
                 { children() }
             </main>
         </div>
+
+        <Footer />
     </div>;
 };
 

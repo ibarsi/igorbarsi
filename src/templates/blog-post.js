@@ -34,7 +34,7 @@ export const Template = ({ data }) => {
                 </h1>
 
                 <span className='blog-post__header-byline'>
-                    By Igor Barsi <span className='blog-post__header-byline-separator'>|</span> { moment(post.frontmatter.date).format('MMMM d') }
+                    By Igor Barsi <span className='separator'></span> { moment(post.frontmatter.date).format('MMMM d') }
                 </span>
             </header>
 

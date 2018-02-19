@@ -17,6 +17,7 @@ a {
 }
 
 a:hover {
+    color: #3980F5;
     text-decoration: underline;
 }
 
@@ -26,6 +27,14 @@ a:hover {
 
 .paragraph {
     font-size: 2em;
+}
+
+.separator {
+    margin: 0 0.5em;
+}
+
+.separator:before {
+    content: '|';
 }
 
 /* === JUICER === */
