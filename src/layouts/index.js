@@ -35,6 +35,9 @@ const TemplateWrapper = ({ children, location }) => {
             <link rel='shortcut icon' href='/favicon.ico' />
             <link rel="canonical" href={ url } />
 
+            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:site" content="@igorbarsi" />
+            <meta name="twitter:creator" content="@igorbarsi" />
             <meta property='og:url' content={ url } />
             <meta property='og:type' content='profile' />
             <meta property="og:site_name" content="Igor Barsi" />
