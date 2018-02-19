@@ -1,37 +1,83 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
+import moment from 'moment';
+
+import './blog.css';
+
+const groupPostsByYear = posts => {
+    console.log(posts);
+
+    return posts
+    .reduce((acc, { node: post } = {}) => {
+        if (!post || !post.frontmatter.title || !post.frontmatter.date) { return acc; }
+
+        const year = moment(post.frontmatter.date).year();
+
+        return Object.assign({}, acc, {
+            [ year ]: [ ...acc[ year ] || [], post ],
+        });
+    }, {});
+};
 
 const Blog = ({ data }) => {
     const { edges: posts } = data.allMarkdownRemark;
 
+    const groupedPosts = groupPostsByYear(posts);
+
     return (
-        <div>
+        <div className='content-container blog'>
             <Helmet title='Igor Barsi - Blog' />
 
             {
-                posts
-                .filter(post => post.node.frontmatter.title.length > 0)
-                .map(({ node: post }) => {
-                    return (
-                        <div key={post.id}>
-                            <h1>
-                                <Link to={post.frontmatter.path}>
-                                    {post.frontmatter.title}
-                                </Link>
-                            </h1>
+                Object.keys(groupedPosts)
+                .sort((a, b) => b - a)
+                .map(key => {
+                    const postsForYear = groupedPosts[ key ];
 
+                    console.log(groupedPosts);
+                    console.log(postsForYear);
+
+                    return (
+                        <div key={ key }>
                             <h2>
-                                {post.frontmatter.date}
+                                { key }
                             </h2>
 
-                            <p>
-                                {post.excerpt}
-                            </p>
+                            <ul className='blog__list'>
+                                {
+                                    postsForYear
+                                    .map(post => {
+                                        return (
+                                            <li key={ post.id }
+                                                className="blog__list-item">
+                                                <BlogListItem { ...post } />
+                                            </li>
+                                        );
+                                    })
+                                }
+                            </ul>
                         </div>
                     );
                 })
             }
+        </div>
+    );
+};
+
+const BlogListItem = ({ frontmatter }) => {
+    const date = moment(frontmatter.date).format('MMMM d');
+
+    return (
+        <div className="blog__list-item-content">
+            <b className="blog__list-item-date">
+                { date }
+            </b>
+
+            <Link to={ frontmatter.path }
+                className='blog__list-item-link'>
+                { frontmatter.title }
+            </Link>
         </div>
     );
 };
@@ -47,7 +93,7 @@ export const pageQuery = graphql`
           id
           frontmatter {
             title
-            date(formatString: "MMMM DD, YYYY")
+            date
             path
           }
         }
