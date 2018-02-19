@@ -7,8 +7,19 @@ import './blog-post.css';
 export const Template = ({ data }) => {
     const post = data.markdownRemark;
 
+    const title = `Igor Barsi | ${ post.frontmatter.title }`;
+    const description = post.excerpt;
+
     return <article>
-        <Helmet title={`Igor Barsi - ${ post.frontmatter.title }`} />
+        <Helmet>
+            <title>
+                { title }
+            </title>
+            <meta name='description' content={ description } />
+
+            <meta property='og:title' content={ title } />
+            <meta property='og:description' content={ description } />
+        </Helmet>
 
         <div className='content-container blog-post__markdown'>
             <header>
@@ -29,14 +40,15 @@ export const Template = ({ data }) => {
 export default Template;
 
 export const pageQuery = graphql`
-  query BlogPostByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
-      frontmatter {
-        date
-        path
-        title
-      }
+    query BlogPostByPath($path: String!) {
+        markdownRemark(frontmatter: { path: { eq: $path } }) {
+            html
+            excerpt(pruneLength: 250)
+            frontmatter {
+                date
+                path
+                title
+            }
+        }
     }
-  }
 `;

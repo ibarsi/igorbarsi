@@ -23,9 +23,17 @@ const Blog = ({ data }) => {
 
     const groupedPosts = groupPostsByYear(posts);
 
+    const title = 'Igor Barsi | Blog';
+
     return (
         <div className='content-container blog'>
-            <Helmet title='Igor Barsi - Blog' />
+            <Helmet>
+                <title>
+                    { title }
+                </title>
+
+                <meta property='og:title' content={ title } />
+            </Helmet>
 
             {
                 Object.keys(groupedPosts)
@@ -84,7 +92,6 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
-          excerpt(pruneLength: 250)
           id
           frontmatter {
             title
