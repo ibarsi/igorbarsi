@@ -1,0 +1,47 @@
+/* ==================================================
+    HEADER
+================================================== */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 0;
+    border-bottom: 1px dotted #B1B1B1;
+}
+
+.header__left {
+    flex: 3;
+    margin: 0;
+}
+
+.header__middle {
+    flex: 10;
+}
+
+.header__right {
+    flex: 3;
+}
+
+@media (max-width: 900px) {
+    .header__left,
+    .header__right {
+        flex: 5;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    .header__left {
+        margin-bottom: 1em;
+    }
+
+    .header__right {
+        display: none;
+    }
+}
+

@@ -1,0 +1,61 @@
+/* ==================================================
+    MAIN
+================================================== */
+
+html {
+    background-color: #EAEAEA;
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: #222222;
+}
+
+a {
+    color: #3980F5;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3980F5;
+    text-decoration: underline;
+}
+
+.site-container {
+    padding: 0 20px;
+}
+
+.paragraph {
+    font-size: 2em;
+}
+
+.separator {
+    margin: 0 0.5em;
+}
+
+.separator:before {
+    content: '|';
+}
+
+/* === JUICER === */
+
+.juicer-feed {
+    margin: auto;
+    max-width: 800px;
+}
+
+.feed-item.juicer.image-post {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .paragraph {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 600px) {
+    .paragraph {
+        font-size: 1em;
+    }
+}

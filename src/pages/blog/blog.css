@@ -1,0 +1,55 @@
+/* ==================================================
+    BLOG
+================================================== */
+
+.content-container {
+    display: inline-block;
+    padding: 0 2em;
+    max-width: 800px;
+    min-width: 800px;
+}
+
+.blog {
+    text-align: left;
+    margin-bottom: 5em;
+}
+
+.blog__list {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 1.3em;
+}
+
+.blog__list-item {
+    width: 100%;
+}
+
+.blog__list-item-content {
+    display: flex;
+}
+
+.blog__list-item-date {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 6em;
+}
+
+@media (max-width: 900px) {
+    .content-container {
+        min-width: initial;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .content-container {
+        padding: 0 0.5em;
+    }
+
+    .blog__list {
+        font-size: 1em;
+    }
+}
