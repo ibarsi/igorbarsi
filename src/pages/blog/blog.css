@@ -5,6 +5,7 @@
 .content-container {
     display: inline-block;
     padding: 0 2em;
+    max-width: 800px;
     min-width: 800px;
 }
 
@@ -34,7 +35,7 @@
 }
 
 .blog__list-item-link {
-    flex: 12;
+    flex: 6;
 }
 
 @media (max-width: 900px) {
@@ -47,5 +48,13 @@
 @media (max-width: 600px) {
     .content-container {
         padding: 0 0.5em;
+    }
+
+    .blog__list {
+        font-size: 1em;
+    }
+
+    .blog__list-item-link {
+        flex: 5;
     }
 }

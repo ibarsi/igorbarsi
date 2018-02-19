@@ -25,7 +25,7 @@ a:hover {
 }
 
 .paragraph {
-    font-size: 2rem;
+    font-size: 2em;
 }
 
 /* === JUICER === */
@@ -40,21 +40,13 @@ a:hover {
 }
 
 @media (max-width: 900px) {
-    .title {
-        font-size: 3.5rem;
-    }
-
     .paragraph {
-        font-size: 1.5rem;
+        font-size: 1.5em;
     }
 }
 
 @media (max-width: 600px) {
-    .title {
-        font-size: 3rem;
-    }
-
     .paragraph {
-        font-size: 1rem;
+        font-size: 1em;
     }
 }

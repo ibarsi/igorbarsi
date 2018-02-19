@@ -6,8 +6,6 @@ import moment from 'moment';
 import './blog.css';
 
 const groupPostsByYear = posts => {
-    console.log(posts);
-
     return posts
     .reduce((acc, { node: post } = {}) => {
         if (!post || !post.frontmatter.title || !post.frontmatter.date) { return acc; }
@@ -34,9 +32,6 @@ const Blog = ({ data }) => {
                 .sort((a, b) => b - a)
                 .map(key => {
                     const postsForYear = groupedPosts[ key ];
-
-                    console.log(groupedPosts);
-                    console.log(postsForYear);
 
                     return (
                         <div key={ key }>
