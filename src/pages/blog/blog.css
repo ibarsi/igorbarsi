@@ -31,11 +31,9 @@
 }
 
 .blog__list-item-date {
-    flex: 2;
-}
-
-.blog__list-item-link {
-    flex: 6;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 6em;
 }
 
 @media (max-width: 900px) {
@@ -52,9 +50,5 @@
 
     .blog__list {
         font-size: 1em;
-    }
-
-    .blog__list-item-link {
-        flex: 5;
     }
 }
