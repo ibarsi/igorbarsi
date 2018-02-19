@@ -54,4 +54,14 @@
     .blog-post__markdown h1 {
         font-size: 2em;
     }
+
+    .blog-post__markdown ul,
+    .blog-post__markdown ol {
+        padding: 0;
+    }
+
+    .blog-post__markdown blockquote ul,
+    .blog-post__markdown blockquote ol {
+        padding-left: 1em;
+    }
 }
