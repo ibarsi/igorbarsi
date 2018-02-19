@@ -6,7 +6,7 @@ import { BASE_URL } from '../utils';
 
 import './blog-post.css';
 
-export const Template = ({ data }) => {
+export const Template = ({ data, location }) => {
     const post = data.markdownRemark;
 
     const url = `${ BASE_URL }${ location.pathname }`;
