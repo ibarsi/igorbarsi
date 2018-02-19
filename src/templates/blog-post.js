@@ -25,13 +25,13 @@ export const Template = ({ data }) => {
         </Helmet>
 
         <div className='content-container blog-post__markdown'>
-            <header>
-                <h1>
+            <header className='blog-post__header'>
+                <h1 className='blog-post__header-headline'>
                     {post.frontmatter.title}
                 </h1>
 
-                <span className='blog-post__byline'>
-                    By Igor Barsi | { moment(post.frontmatter.date).format('MMMM d') }
+                <span className='blog-post__header-byline'>
+                    By Igor Barsi <span className='blog-post__header-byline-separator'>|</span> { moment(post.frontmatter.date).format('MMMM d') }
                 </span>
             </header>
 

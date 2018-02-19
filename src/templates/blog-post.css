@@ -2,9 +2,21 @@
     BLOG POST
 ================================================== */
 
-.blog-post__byline {
+.blog-post__header {
+    margin: 1em 0;
+}
+
+.blog-post__header-headline {
+    margin: 0;
+}
+
+.blog-post__header-byline {
     font-size: 0.8em;
     color: #a5a5a5;
+}
+
+.blog-post__header-byline-separator {
+    margin: 0 0.5em;
 }
 
 .blog-post__markdown {
@@ -14,8 +26,7 @@
 }
 
 .blog-post__markdown h1 {
-    font-size: 3em;
-    margin: 0;
+    font-size: 2.5em;
 }
 
 .blog-post__markdown blockquote {
@@ -31,7 +42,7 @@
     }
 
     .blog-post__markdown h1 {
-        font-size: 2.5em;
+        font-size: 2em;
     }
 }
 

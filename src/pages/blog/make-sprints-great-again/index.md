@@ -16,7 +16,7 @@ Yes, estimation is hard. Yes, software project planning is hard. But why, as an 
 
 After much reflection (and frustration), I’ve come to a realization.
 
-### Time-Boxed Sprints are Problematic
+## Time-Boxed Sprints are Problematic
 
 During one of my team’s feature planning sessions, a colleague expressed his dislike of Scrum. He called it “artificial hustle”. His reasoning, and I’m paraphrasing here (my memory is not as sharp as some), was that it's needless “process” inhibiting our work. We have a prioritized backlog. We know how to group and tackle the tasks best. We know that our estimates will inevitably change and tasks will evolve as we work. Why time-box us into uniform segments of work? We can keep daily stand-ups, but run our own retros after a milestone has been reached (ie. a critical feature has been shipped), not after some arbitrary amount of time has passed. It feels _forced_.
 
@@ -30,7 +30,7 @@ I forced myself to take a step back and remove my rose-coloured Scrum glasses to
 
 Here’s what I came up with.
 
-### Too Much Churn
+## Too Much Churn
 
 I narrowed down what I believe to be Scrum’s biggest “time-sinks” to the following, un-ordered list. Keep in mind, this is all from personal experience. While I’m sure the processes followed by my previous organizations weren’t perfect (what process truly is?), I feel that these issues are not unique to me and that many of you have had similar gripes with your team’s software planning process.
 
@@ -43,7 +43,7 @@ I narrowed down what I believe to be Scrum’s biggest “time-sinks” to the f
 - **Implementing another person’s estimate**  — Regardless of your estimation method of choice, there will always be some discrepancy between contributors. The larger the gap, the further your sprint commitment is from reality.
 - **Unable to truly maximize effectiveness**  — When you know you only have a limited time to complete your work, you’ll always shy away from grabbing large tasks near the end of the sprint. This holds especially true if the remaining larger tasks are unfamiliar. What you end up with is most team members grabbing one or two larger tasks, followed by a few small ones near the end, leaving the rest.
 
-### The Cost of Time-Boxed Sprints
+## The Cost of Time-Boxed Sprints
 
 While these issues clearly cause a loss of time and efficiency, there are other potentially more damaging costs that are not immediately apparent.
 
@@ -57,7 +57,7 @@ Looking at the list above, you should be wondering… Aren’t efficiency, quali
 
 I think we can do better.
 
-### Value-Based Sprints
+## Value-Based Sprints
 
 In my search to improve my team’s process, I read through Ken Schwaber and Mike Beedle’s [Agile Software Development with Scrum](https://www.amazon.ca/Agile-Software-Development-SCRUM-Schwaber/dp/0130676349). The book conveys an understanding of why thinking of software development as “new product” development is necessary, filled with detailed descriptions of the Scrum process backed by plenty of real world success stories. While the book is a bit dated (published 2001), we still follow many of its steps today. However, the following 2 characteristics stood out from what I’ve been used to:
 
@@ -77,7 +77,7 @@ I propose we make the following additions/modifications to our sprints:
 - **Break stories down in detail** — Granularity is your friend. The more vague a task’s description, the greater the possibility for error during implementation. There is a balance though, as you don’t want your contributors to feel like code monkeys. Your tasks should be clear, with enough information and supporting links to documentation to guide contributors down the right path. No more, and definitely no less.
 - **Stop if needed**  — If blockers (ie. design errors, vague requirements, implementation discrepancies, etc) emerge that cannot be resolved quickly then don’t be afraid to stop the sprint. I find this is harder to do when sprints are time-boxed, likely because the team is focused on reaching that deadline. The reality is, these disagreements and surprises end up costing more if ignored, rushed, resolved ad hoc or overlapped with concurrent implementations that end up getting re-written or tossed. Take time to regroup and align, then continue or plan an altered sprint if necessary.
 
-### Conclusion
+## Conclusion
 
 At the end of the day, this is all speculative. I’ve never worked at an organization that adopted all or even most of these concepts. There might be some Kanban influence in my thinking, although I’m not knowledgeable enough in the practice to say for sure. What I’m trying to create is a way of thinking that moves focus away from “precise” estimates and process for the sake of (ultimately inaccurate) project planning over to efficiency. To quote [The Agile Manifesto](http://agilemanifesto.org/principles.html):
 
