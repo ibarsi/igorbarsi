@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 
-import { FB_APP_ID } from '../config';
-import { BASE_URL } from '../utils';
+import { BASE_URL, FB_APP_ID } from '../config';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 

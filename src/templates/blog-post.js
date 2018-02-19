@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import moment from 'moment';
 
-import { BASE_URL } from '../utils';
+import { BASE_URL } from '../config';
 
 import './blog-post.css';
 
