@@ -19,6 +19,9 @@ export const Template = ({ data }) => {
 
             <meta property='og:title' content={ title } />
             <meta property='og:description' content={ description } />
+            <meta property='og:type' content='article' />
+            <meta property="article:author" content="https://www.facebook.com/IgorBarsi" />
+            <meta property="article:publisher" content="https://www.facebook.com/IgorBarsi" />
         </Helmet>
 
         <div className='content-container blog-post__markdown'>

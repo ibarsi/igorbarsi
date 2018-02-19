@@ -12,6 +12,7 @@ import './main.css';
 const TemplateWrapper = ({ children, location }) => {
     const title = 'Igor Barsi';
     const description = 'Breaking the web, one coffee-less commit at a time!';
+    const url = `${ BASE_URL }${ location.pathname }`;
 
     return <div>
         <Helmet>
@@ -32,9 +33,11 @@ const TemplateWrapper = ({ children, location }) => {
             <link rel='icon' type='image/png' href='/favicon-16x16.png' sizes='16x16' />
             <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#000000' />
             <link rel='shortcut icon' href='/favicon.ico' />
+            <link rel="canonical" href={ url } />
 
-            <meta property='og:url' content={ `${ BASE_URL }${ location.pathname }` } />
+            <meta property='og:url' content={ url } />
             <meta property='og:type' content='profile' />
+            <meta property="og:site_name" content="Igor Barsi" />
             <meta property='og:title' content={ title } />
             <meta property='og:description' content={ description } />
             <meta property='og:image' content={ `${ BASE_URL }/default_share_image.jpg` } />
