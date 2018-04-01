@@ -38,7 +38,8 @@ export const Template = ({ data, location }) => {
                 </span>
             </header>
 
-            <div dangerouslySetInnerHTML={{ __html: post.html }}/>
+            <div className='blog-post__content'
+                dangerouslySetInnerHTML={{ __html: post.html }}/>
 
             <hr className='blog-post__hard-break' />
 
