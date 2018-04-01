@@ -1,7 +1,7 @@
 ---
 path: "/blog/habitual-testing"
 date: "2018-03-31T00:00:00.000"
-title: "Habitual Testing: Transform Negative Software Testing Culture By Leveraging Your Subconcious"
+title: "Habitual Testing: Transform Negative Software Testing Culture By Leveraging Your Subconscious"
 ---
 
 I think we can all agree that testing code is valuable.
