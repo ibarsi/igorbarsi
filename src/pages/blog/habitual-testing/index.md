@@ -14,7 +14,7 @@ Ultimately, testing leads to increased software quality, reliability and custome
 
 Why do we seem to resist following a practice that is ultimately designed for the collective benefit of _all_ stakeholders?
 
-I believe it comes down to **culture**. A shared mindset across organizations to turn a blind eye to the undisputed value that well tested software brings. Perhaps it was pressure from management, instilled in the company from early contributors or developed slowly over time due to overall lack of diligence. No matter what the cause(s) may be, it’s ingrained in your company’s culture now and you’re stuck. This quote from Tom DeMarco and Tim Lister’s [Peopleware](https://www.amazon.ca/Peopleware-Productive-Projects-Teams-3rd/dp/0321934113) captures the issue perfectly:
+I believe it comes down to **culture**. A shared mindset across organizations to turn a blind eye to the undisputed value that well tested software brings. Perhaps it was pressure from management, instilled in the company from early contributors or developed slowly over time due to overall lack of diligence. No matter what the cause(s) may be, it’s ingrained in your company’s culture now and you’re stuck. This quote from Tom DeMarco and Tim Lister’s [Peopleware](https://amzn.to/2Gr0aKM) captures the issue perfectly:
 
 > “People hate change…\
 > and that’s because people hate change…\
@@ -75,7 +75,7 @@ I don’t blame you.
 
 Tackling a large, untested codebase head first, much like jumping into an aggressive diet or workout routine, is simply too much to take on at once. The _goal_ of having a fully tested codebase doesn’t seem feasible. What you want to do is to foster a _habit_ of piecemeal testing, attacking the monolith one step at a time.
 
-In her book [Succeed](https://www.amazon.ca/Succeed-How-Can-Reach-Goals/dp/0452297710), [Heidi Grant Halvorson](https://twitter.com/heidgrantphd) lays out a simple practice to overcome procrastination that she calls an **if-then plan**, in which we identify a scenario that we would like to respond to by completing a certain task.
+In her book [Succeed](https://amzn.to/2EbRGVQ), [Heidi Grant Halvorson](https://twitter.com/heidgrantphd) lays out a simple practice to overcome procrastination that she calls an **if-then plan**, in which we identify a scenario that we would like to respond to by completing a certain task.
 
 > “Planning creates a link between the situation or cue (the _if_) and the behaviour that you should follow (the _then_).”
 
@@ -91,7 +91,7 @@ By adhering to a few simple guidelines, you can teach yourself (and your team) t
 Integrating these if-then plans into your development process introduces light testing sprinkled throughout your day-to-day tasks. Before you know it, you’ll be thinking about ways to test your code before you write it.
 
 ## Make it Simple
-[Charles Duhigg](https://twitter.com/cduhigg) compares our willpower to a muscle in his book [The Power of Habit](http://charlesduhigg.com/books/the-power-of-habit/), suggesting that there is only so much willpower we can exert before we run out of steam. Over-exerting ourselves early during trivial tasks results in depleted self-control and lack of discipline when the time comes to apply ourselves for the work that really matters.
+[Charles Duhigg](https://twitter.com/cduhigg) compares our willpower to a muscle in his book [The Power of Habit](https://amzn.to/2H1iRWD), suggesting that there is only so much willpower we can exert before we run out of steam. Over-exerting ourselves early during trivial tasks results in depleted self-control and lack of discipline when the time comes to apply ourselves for the work that really matters.
 
 Our work lives are full of tasks that require willpower. Checking emails, keeping JIRA tickets up to date and responding to Slack notifications gradually deplete your willpower reserves throughout the day. Eventually, you can become so drained that you start to slip and lack diligence when it comes time to work on more meaningful tasks (like testing your code).
 
@@ -124,7 +124,7 @@ Embracing effective software testing patterns can be a daunting, uncomfortable a
 * **Tooling** that supports painless testing will ease the barrier of entry for writing future tests.
 * **Rules** will have an impact on the willingness and self-discipline of your team when it comes to diligently testing their code.
 
-The final takeaway to making habitual testing a success is _believing_ that it’s possible. Forming habits can be a challenge. It takes significant time and effort to realize the fruits of your labour, but the result is truly satisfying. To quote [Charles Duhigg](https://twitter.com/cduhigg) once again in [The Power of Habit](http://charlesduhigg.com/books/the-power-of-habit/):
+The final takeaway to making habitual testing a success is _believing_ that it’s possible. Forming habits can be a challenge. It takes significant time and effort to realize the fruits of your labour, but the result is truly satisfying. To quote [Charles Duhigg](https://twitter.com/cduhigg) once again in [The Power of Habit](https://amzn.to/2H1iRWD):
 
 > If you believe you can change – if you make it a habit – the change becomes real.
 
