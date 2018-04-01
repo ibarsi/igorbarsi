@@ -59,7 +59,7 @@ I think we can do better.
 
 ## Value-Based Sprints
 
-In my search to improve my team’s process, I read through Ken Schwaber and Mike Beedle’s [Agile Software Development with Scrum](https://www.amazon.ca/Agile-Software-Development-SCRUM-Schwaber/dp/0130676349). The book conveys an understanding of why thinking of software development as “new product” development is necessary, filled with detailed descriptions of the Scrum process backed by plenty of real world success stories. While the book is a bit dated (published 2001), we still follow many of its steps today. However, the following 2 characteristics stood out from what I’ve been used to:
+In my search to improve my team’s process, I read through Ken Schwaber and Mike Beedle’s [Agile Software Development with Scrum](https://amzn.to/2H1l1pg). The book conveys an understanding of why thinking of software development as “new product” development is necessary, filled with detailed descriptions of the Scrum process backed by plenty of real world success stories. While the book is a bit dated (published 2001), we still follow many of its steps today. However, the following 2 characteristics stood out from what I’ve been used to:
 
 > 1. Sprints should have a clear goal that the team agrees on.
 > 2. Sprints should run for a month.
