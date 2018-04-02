@@ -1,6 +1,6 @@
 ---
 path: "/blog/habitual-testing"
-date: "2018-03-31T00:00:00.000"
+date: "03-31-2018"
 title: "Habitual Testing: Transform Negative Software Testing Culture By Leveraging Your Subconscious"
 ---
 
