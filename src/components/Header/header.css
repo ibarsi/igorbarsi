@@ -6,8 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5em 0;
-    border-bottom: 1px dotted #B1B1B1;
+    padding: 1.5em 20px;
 }
 
 .header__left {
@@ -24,6 +23,13 @@
 }
 
 @media (max-width: 900px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5em 10px;
+    }
+
     .header__left,
     .header__right {
         flex: 5;

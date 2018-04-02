@@ -49,13 +49,11 @@ const TemplateWrapper = ({ children, location }) => {
             <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Oswald:400,700' />
         </Helmet>
 
-        <div className='site-container'>
-            <Header />
+        <Header />
 
-            <main>
-                { children() }
-            </main>
-        </div>
+        <main className='site-container'>
+            { children() }
+        </main>
 
         <Footer />
     </div>;
