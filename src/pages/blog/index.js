@@ -35,6 +35,16 @@ const Blog = ({ data }) => {
                 <meta property='og:title' content={ title } />
             </Helmet>
 
+            <h1>
+                All Posts By Date
+            </h1>
+
+            <p className='paragraph'>
+                Take a look below to browse all of my posts by date and title. The are listed from newest to oldest.
+            </p>
+
+            <hr />
+
             {
                 Object.keys(groupedPosts)
                 .sort((a, b) => b - a)
