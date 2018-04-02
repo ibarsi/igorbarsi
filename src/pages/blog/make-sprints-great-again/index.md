@@ -1,6 +1,6 @@
 ---
 path: "/blog/make-sprints-great-again"
-date: "2018-01-13T00:00:00.000"
+date: "01-13-2018"
 title: "Make Sprints Great Again"
 ---
 
