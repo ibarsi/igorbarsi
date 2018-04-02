@@ -21,12 +21,31 @@ a:hover {
     text-decoration: underline;
 }
 
+hr {
+    border: none;
+    border-bottom: 1px dotted #B1B1B1;
+}
+
 .site-container {
     padding: 0 20px;
 }
 
+.content-container {
+    display: inline-block;
+    padding: 0 2em;
+    max-width: 800px;
+    min-width: 800px;
+}
+
+.title {
+    margin-top: 1.5em;
+    font-size: 3em;
+}
+
 .paragraph {
-    font-size: 2em;
+    font-size: 1.5em;
+    line-height: 1.5;
+    text-align: left;
 }
 
 .separator {
@@ -49,13 +68,21 @@ a:hover {
 }
 
 @media (max-width: 900px) {
+    .content-container {
+        min-width: initial;
+    }
+
+    .title {
+        font-size: 2em;
+    }
+
     .paragraph {
-        font-size: 1.5em;
+        font-size: 1.25em;
     }
 }
 
 @media (max-width: 600px) {
-    .paragraph {
-        font-size: 1em;
+    .content-container {
+        padding: 0 0.5em;
     }
 }

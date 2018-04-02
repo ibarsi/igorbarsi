@@ -9,9 +9,23 @@ const IndexPage = () => <div>
         <script type="text/javascript" src="//assets.juicer.io/embed.js"></script>
     </Helmet>
 
-    <p className='paragraph'>
-        Breaking the web, one coffee-less commit at a time ☕️
-    </p>
+    <header>
+        <h1 className='title'>
+            { 'Hi, I\'m Igor Barsi 👋🏼' }
+        </h1>
+    </header>
+
+    <div className='content-container'>
+        <hr />
+
+        <p className='paragraph'>
+            {'I’m a software developer and writer focused on effective engineering and leadership. My writing combines personal experiences with ideas across disciplines, such as behavioural psychology, philosophy, engineering, neuroscience and more. My goal is to share lessons and concepts that focus on the “soft” side of what we do to build routines and practices that ultimately shape our life and work.'}
+        </p>
+
+        <p className='paragraph'>
+            {'Much of my writing consists of opinion posts and think pieces targeted at engineers, however the core concepts are far reaching and applicable to many disciplines. I don’t have all the answers, but I’m happy to share what I have learned in hopes that my thoughts and experiences might leave a positive impact.'}
+        </p>
+    </div>
 
     <ul className='clearfix social__list'>
         <li className='social__list-item'>
