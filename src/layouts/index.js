@@ -47,6 +47,7 @@ const TemplateWrapper = ({ children, location }) => {
             <meta property='fb:app_id' content={ FB_APP_ID } />
 
             <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Oswald:400,700' />
+            <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:400,700' />
         </Helmet>
 
         <Header />

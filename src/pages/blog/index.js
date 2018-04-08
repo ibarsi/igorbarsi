@@ -40,7 +40,7 @@ const Blog = ({ data }) => {
             </h1>
 
             <p className='paragraph'>
-                Take a look below to browse all of my posts by date and title. The are listed from newest to oldest.
+                Take a look below to browse all of my posts by date and title. They are listed from newest to oldest.
             </p>
 
             <hr />
@@ -82,7 +82,7 @@ const BlogListItem = ({ frontmatter }) => {
     const date = moment(frontmatter.date).format('MMMM Do');
 
     return (
-        <div className="blog__list-item-content">
+        <div className="paragraph blog__list-item-content">
             <span className="blog__list-item-date">
                 { date }
             </span>

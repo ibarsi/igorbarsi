@@ -18,12 +18,12 @@ const IndexPage = () => <div>
     <div className='content-container'>
         <hr />
 
-        <p className='paragraph'>
+        <p className='paragraph paragraph--intro'>
             {'I’m a software developer and writer focused on effective engineering and leadership. My writing combines personal experiences with ideas across disciplines, such as behavioural psychology, philosophy, engineering, neuroscience and more. My goal is to share lessons and concepts that focus on the “soft” side of what we do to build routines and practices that ultimately shape our life and work.'}
         </p>
 
-        <p className='paragraph'>
-            {'Much of my writing consists of opinion posts and think pieces targeted at engineers, however the core concepts are far reaching and applicable to many disciplines. I don’t have all the answers, but I’m happy to share what I have learned in hopes that my thoughts and experiences might leave a positive impact.'}
+        <p className='paragraph paragraph--intro'>
+            {'Much of my writing consists of opinion posts and think pieces targeted at engineers, however the core concepts are far reaching and applicable to many disciplines. I don’t have all the answers, but I’m happy to share what I have learned in hopes that my thoughts and experiences might impact readers in a positive way.'}
         </p>
     </div>
 

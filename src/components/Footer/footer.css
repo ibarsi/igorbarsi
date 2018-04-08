@@ -17,3 +17,9 @@
 .footer__copywrite-link {
     color: #A5A5A5;
 }
+
+@media (max-width: 600px) {
+    .footer {
+        padding: 1em 0;
+    }
+}

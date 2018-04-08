@@ -26,7 +26,7 @@
 }
 
 .blog-post__markdown {
-    font-size: 1.5em;
+    font-size: 1.25em;
     text-align: left;
 }
 
@@ -85,10 +85,6 @@
 }
 
 @media (max-width: 900px) {
-    .blog-post__markdown {
-        font-size: 1.25em;
-    }
-
     .blog-post__markdown h1 {
         font-size: 2em;
     }
