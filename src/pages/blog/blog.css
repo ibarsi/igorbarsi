@@ -14,7 +14,6 @@
     padding: 0;
     margin: 0;
     list-style: none;
-    font-size: 1.3em;
 }
 
 .blog__list-item {
@@ -30,10 +29,4 @@
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: 8em;
-}
-
-@media (max-width: 600px) {
-    .blog__list {
-        font-size: 1em;
-    }
 }

@@ -48,9 +48,14 @@ hr {
 }
 
 .paragraph {
+    font-size: 1.25em;
+    line-height: 1.25;
+    text-align: left;
+}
+
+.paragraph--intro {
     font-size: 1.5em;
     line-height: 1.5;
-    text-align: left;
 }
 
 .separator {
@@ -82,6 +87,10 @@ hr {
     }
 
     .paragraph {
+        font-size: 1em;
+    }
+
+    .paragraph--intro {
         font-size: 1.25em;
     }
 }
