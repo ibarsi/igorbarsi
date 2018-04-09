@@ -3,6 +3,8 @@ import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import moment from 'moment';
 
+import { buildPageTitle } from '../../utils';
+
 import './blog.css';
 
 const groupPostsByYear = posts => {
@@ -23,7 +25,7 @@ const Blog = ({ data }) => {
 
     const groupedPosts = groupPostsByYear(posts);
 
-    const title = 'Igor Barsi | Blog';
+    const title = buildPageTitle('Blog');
 
     return (
         <div className='content-container blog'>
