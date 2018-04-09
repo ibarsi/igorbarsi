@@ -6,7 +6,8 @@ import { buildPageTitle } from '../utils';
 import './index.css';
 
 const IndexPage = () => {
-    const title = buildPageTitle('Home');
+    const title = buildPageTitle();
+    const description = 'Igor Barsi is a software developer and writer focused on effective engineering and leadership. You can find links to his writing and work here at igorbarsi.com.';
 
     return <div>
         <Helmet>
@@ -14,6 +15,7 @@ const IndexPage = () => {
                 { title }
             </title>
 
+            <meta name='description' content={ description } />
             <meta property='og:title' content={ title } />
 
             <link rel="stylesheet" href="//assets.juicer.io/embed.css" media="all" type="text/css" />

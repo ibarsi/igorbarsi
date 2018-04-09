@@ -23,9 +23,10 @@ const groupPostsByYear = posts => {
 const Blog = ({ data }) => {
     const { edges: posts } = data.allMarkdownRemark;
 
-    const groupedPosts = groupPostsByYear(posts);
-
     const title = buildPageTitle('Blog');
+    const description = 'Looking for the best blog posts to read? Browse this list of interesting posts on software engineering, leadership, behavioural psychology, productivity and more.';
+
+    const groupedPosts = groupPostsByYear(posts);
 
     return (
         <div className='content-container blog'>
@@ -34,6 +35,7 @@ const Blog = ({ data }) => {
                     { title }
                 </title>
 
+                <meta name='description' content={ description } />
                 <meta property='og:title' content={ title } />
             </Helmet>
 
