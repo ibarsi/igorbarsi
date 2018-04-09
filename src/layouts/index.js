@@ -10,14 +10,12 @@ import './normalize.css';
 import './main.css';
 
 const TemplateWrapper = ({ children, location }) => {
-    const description = 'Breaking the web, one coffee-less commit at a time!';
     const url = `${ BASE_URL }${ location.pathname }`;
 
     return <div>
         <Helmet>
             <meta charSet='utf-8' />
             <meta httpEquiv='X-UA-Compatible' content='IE=edge,chrome=1' />
-            <meta name='description' content={ description } />
             <meta name='viewport' content='width=device-width, initial-scale=1' />
             <meta name='msapplication-config' content='/browserconfig.xml' />
             <meta name='theme-color' content='#000000' />
@@ -37,7 +35,6 @@ const TemplateWrapper = ({ children, location }) => {
             <meta property='og:url' content={ url } />
             <meta property='og:type' content='profile' />
             <meta property="og:site_name" content="Igor Barsi" />
-            <meta property='og:description' content={ description } />
             <meta property='og:image' content={ `${ BASE_URL }/default_share_image.jpg` } />
             <meta property='fb:app_id' content={ FB_APP_ID } />
 
