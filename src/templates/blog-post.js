@@ -2,6 +2,8 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import moment from 'moment';
 
+import { buildPageTitle } from '../utils';
+
 import { BASE_URL } from '../config';
 
 import './blog-post.css';
@@ -10,7 +12,7 @@ export const Template = ({ data, location }) => {
     const post = data.markdownRemark;
 
     const url = `${ BASE_URL }${ location.pathname }`;
-    const title = `Igor Barsi | ${ post.frontmatter.title }`;
+    const title = buildPageTitle(post.frontmatter.title);
     const description = post.excerpt;
 
     return <article>
@@ -18,8 +20,8 @@ export const Template = ({ data, location }) => {
             <title>
                 { title }
             </title>
-            <meta name='description' content={ description } />
 
+            <meta name='description' content={ description } />
             <meta property='og:title' content={ title } />
             <meta property='og:description' content={ description } />
             <meta property='og:type' content='article' />
