@@ -5,6 +5,7 @@
 .signup-form {
     display: inline-block;
     margin: 2em;
+    border: solid 1px #222222;
 }
 
 .signup-form__input {
