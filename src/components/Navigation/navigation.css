@@ -20,13 +20,3 @@
     text-transform: uppercase;
     color: currentColor;
 }
-
-@media (max-width: 600px) {
-    .nav__list {
-        margin: 0 0 20px;
-    }
-
-    .nav__link {
-        font-size: 1em;
-    }
-}

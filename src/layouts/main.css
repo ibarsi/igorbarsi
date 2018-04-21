@@ -3,7 +3,8 @@
 ================================================== */
 
 body {
-    background-color: #EAEAEA;
+    background: #EAEAEA;
+    background: linear-gradient(180deg, #FBFBFB 200px, #EAEAEA 0, #EAEAEA 100%);
     text-align: center;
 }
 
@@ -40,18 +41,21 @@ hr {
 
 .content-container {
     display: inline-block;
+    margin: 2em auto;
     padding: 0 2em;
     max-width: 800px;
     min-width: 800px;
+    border: solid 1px #222222;
+    background-color: #FFFFFF;
 }
 
 .title {
-    margin-top: 1.5em;
+    margin: 0;
+    padding: 1em 0 0.5em;
     font-size: 3em;
 }
 
 .title--sub {
-    margin-top: 1em;
     font-size: 2.5em;
 }
 
@@ -108,8 +112,12 @@ hr {
 }
 
 @media (max-width: 600px) {
+    .site-container {
+        padding: 0;
+    }
+
     .content-container {
-        padding: 0 0.5em;
+        border: none;
     }
 
     .paragraph--intro {
