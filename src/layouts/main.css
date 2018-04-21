@@ -2,12 +2,15 @@
     MAIN
 ================================================== */
 
-html {
+body {
     background-color: #EAEAEA;
+    text-align: center;
+}
+
+body, input, button {
     font-size: 16px;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    text-align: center;
     color: #222222;
 }
 
@@ -47,6 +50,11 @@ hr {
     font-size: 3em;
 }
 
+.title--sub {
+    margin-top: 1em;
+    font-size: 2.5em;
+}
+
 .paragraph {
     font-size: 1.25em;
     line-height: 1.25;
@@ -54,7 +62,7 @@ hr {
 }
 
 .paragraph--intro {
-    font-size: 1.5em;
+    font-size: 1.35em;
     line-height: 1.5;
 }
 
@@ -83,7 +91,11 @@ hr {
     }
 
     .title {
-        font-size: 2em;
+        font-size: 2.25em;
+    }
+
+    .title--sub {
+        font-size: 1.75em;
     }
 
     .paragraph {
@@ -98,5 +110,9 @@ hr {
 @media (max-width: 600px) {
     .content-container {
         padding: 0 0.5em;
+    }
+
+    .paragraph--intro {
+        font-size: 1em;
     }
 }
