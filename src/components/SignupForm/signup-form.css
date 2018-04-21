@@ -1,0 +1,41 @@
+/* ==================================================
+    SIGNUP FORM
+================================================== */
+
+.signup-form {
+    display: inline-block;
+    margin: 2em;
+}
+
+.signup-form__input {
+    display: inline-block;
+    padding: 1em;
+    width: 450px;
+    border: none;
+}
+
+.signup-form__button {
+    display: inline-block;
+    padding: 1em;
+    text-transform: uppercase;
+    border: none;
+    background-color: #222222;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.signup-form__hidden-input {
+    position: absolute;
+    left: -5000px;
+}
+
+@media (max-width: 900px) {
+    .signup-form {
+        display: flex;
+        margin: 3em 0;
+    }
+
+    .signup-form__input {
+        width: 100%;
+    }
+}
