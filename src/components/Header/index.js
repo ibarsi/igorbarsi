@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
+import Navigation from '../Navigation'
+
 import './header.css';
 
 const Header = () => <header>
@@ -10,20 +12,7 @@ const Header = () => <header>
         </h1>
 
         <div className="header__middle">
-            <ul className='nav__list'>
-                <li className='nav__list-item'>
-                    <Link to='/'
-                        className='nav__link'>
-                        Home
-                    </Link>
-                </li>
-                <li className='nav__list-item'>
-                    <Link to='/blog'
-                        className='nav__link'>
-                        Blog
-                    </Link>
-                </li>
-            </ul>
+            <Navigation />
         </div>
 
         <div className='header__right'>
