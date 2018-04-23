@@ -3,7 +3,7 @@ import Link from 'gatsby-link';
 
 import './navigation.css';
 
-const Navigation = () => <nav className="header__middle">
+const Navigation = () => <div>
     <ul className='nav__list'>
         <li className='nav__list-item'>
             <Link to='/'
@@ -18,6 +18,6 @@ const Navigation = () => <nav className="header__middle">
             </Link>
         </li>
     </ul>
-</nav>;
+</div>;
 
 export default Navigation;

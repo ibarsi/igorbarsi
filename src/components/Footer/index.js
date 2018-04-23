@@ -6,7 +6,9 @@ import Navigation from '../Navigation';
 import './footer.css';
 
 const Footer = () => <footer className='footer'>
-    <Navigation />
+    <nav>
+        <Navigation />
+    </nav>
 
     <div className='footer__copywrite'>
         <a href='mailto:ibarsi92@gmail.com'

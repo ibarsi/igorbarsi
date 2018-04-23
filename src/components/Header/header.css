@@ -47,7 +47,7 @@
     }
 
     .header__right {
-        display: none;
+        margin-top: 1em;
     }
 }
 
