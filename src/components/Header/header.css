@@ -22,6 +22,27 @@
     flex: 3;
 }
 
+/* === NAVIGATION === */
+
+.nav__list {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav__list-item {
+    margin: 0 0.5em;
+}
+
+.nav__link {
+    font-size: 1.5em;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    color: currentColor;
+}
+
 @media (max-width: 900px) {
     .header {
         display: flex;
@@ -47,7 +68,7 @@
     }
 
     .header__right {
-        display: none;
+        margin-top: 1em;
     }
 }
 

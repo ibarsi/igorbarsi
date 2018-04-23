@@ -112,11 +112,16 @@ hr {
 }
 
 @media (max-width: 600px) {
+    body {
+        background: linear-gradient(180deg, #FBFBFB 300px, #EAEAEA 0, #EAEAEA 100%);
+    }
+
     .site-container {
         padding: 0;
     }
 
     .content-container {
+        margin-top: 1em;
         border: none;
     }
 

@@ -1,19 +1,38 @@
 import React from 'react';
-
-import Navigation from '../Navigation';
+import Link from 'gatsby-link';
 
 import './header.css';
 
 const Header = () => <header>
-    <div className="header">
+    <nav className="header">
         <h1 className='header__left'>
             IGOR BARSI
         </h1>
 
-        <Navigation className='header__middle' />
+        <div className="header__middle">
+            <ul className='nav__list'>
+                <li className='nav__list-item'>
+                    <Link to='/'
+                        className='nav__link'>
+                        Home
+                    </Link>
+                </li>
+                <li className='nav__list-item'>
+                    <Link to='/blog'
+                        className='nav__link'>
+                        Blog
+                    </Link>
+                </li>
+            </ul>
+        </div>
 
-        <div className='header__right'></div>
-    </div>
+        <div className='header__right'>
+            <Link to='/newsletter'
+                className='nav__link'>
+                Free Newsletter
+            </Link>
+        </div>
+    </nav>
 
     <hr />
 </header>;
