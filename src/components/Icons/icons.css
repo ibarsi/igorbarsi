@@ -3,37 +3,37 @@
 ================================================== */
 
 .icon {
-    width: 3em;
-    height: 3em;
-    fill: #444444;
+  width: 3em;
+  height: 3em;
+  fill: #444444;
 }
 
 .icon:hover {
-    fill: #222222;
+  fill: #222222;
 }
 
 .icon--twitter {
-    width: 2.5em;
+  width: 2.5em;
 }
 
 .icon--linkedin {
-    width: 2em;
+  width: 2em;
 }
 
 @media (max-width: 600px) {
-    .icon {
-        width: 2em;
-    }
+  .icon {
+    width: 2em;
+  }
 
-    .icon--twitter {
-        width: 1.5em;
-    }
+  .icon--twitter {
+    width: 1.5em;
+  }
 
-    .icon--linkedin {
-        width: 1em;
-    }
+  .icon--linkedin {
+    width: 1em;
+  }
 
-    .icon--medium {
-        width: 1.5em;
-    }
+  .icon--medium {
+    width: 1.5em;
+  }
 }

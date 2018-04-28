@@ -3,40 +3,40 @@
 ================================================== */
 
 .signup-form {
-    display: inline-block;
-    margin: 2em;
-    border: solid 1px #222222;
+  display: inline-block;
+  margin: 2em;
+  border: solid 1px #222222;
 }
 
 .signup-form__input {
-    display: inline-block;
-    padding: 1em;
-    width: 450px;
-    border: none;
+  display: inline-block;
+  padding: 1em;
+  width: 450px;
+  border: none;
 }
 
 .signup-form__button {
-    display: inline-block;
-    padding: 1em;
-    text-transform: uppercase;
-    border: none;
-    background-color: #222222;
-    font-weight: bold;
-    color: #FFFFFF;
+  display: inline-block;
+  padding: 1em;
+  text-transform: uppercase;
+  border: none;
+  background-color: #222222;
+  font-weight: bold;
+  color: #ffffff;
 }
 
 .signup-form__hidden-input {
-    position: absolute;
-    left: -5000px;
+  position: absolute;
+  left: -5000px;
 }
 
 @media (max-width: 900px) {
-    .signup-form {
-        display: flex;
-        margin: 3em 0;
-    }
+  .signup-form {
+    display: flex;
+    margin: 3em 0;
+  }
 
-    .signup-form__input {
-        width: 100%;
-    }
+  .signup-form__input {
+    width: 100%;
+  }
 }

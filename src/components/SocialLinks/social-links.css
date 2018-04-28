@@ -3,19 +3,19 @@
 ================================================== */
 
 .social__list {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0 40px 0;
-    padding: 0;
-    list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 40px 0;
+  padding: 0;
+  list-style: none;
 }
 
 .social__list-item {
-    margin: 0 20px;
+  margin: 0 20px;
 }
 
 @media (max-width: 600px) {
-    .social__list {
-        margin: 0 0 20px;
-    }
+  .social__list {
+    margin: 0 0 20px;
+  }
 }
