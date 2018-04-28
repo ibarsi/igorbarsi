@@ -5,8 +5,6 @@ import SignupForm from '../components/SignupForm';
 import SocialLinks from '../components/SocialLinks';
 import { buildPageTitle } from '../utils';
 
-import './index.css';
-
 const IndexPage = () => {
     const title = buildPageTitle();
     const description = 'Igor Barsi is a software developer and writer focused on effective engineering and leadership. You can find links to his writing and work here at igorbarsi.com.';
