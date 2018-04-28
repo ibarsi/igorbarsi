@@ -5,21 +5,20 @@ import Navigation from '../Navigation';
 
 import './footer.css';
 
-const Footer = () => <footer className='footer'>
+const Footer = () => (
+  <footer className="footer">
     <nav>
-        <Navigation />
+      <Navigation />
     </nav>
 
-    <div className='footer__copywrite'>
-        <a href='mailto:ibarsi92@gmail.com'
-            className='footer__copywrite-link'>
-            Contact
-        </a>
-
-        <span className='separator'></span>
-
-        Copywrite ©{ moment().year() }
+    <div className="footer__copywrite">
+      <a href="mailto:ibarsi92@gmail.com" className="footer__copywrite-link">
+        Contact
+      </a>
+      <span className="separator" />
+      Copywrite ©{moment().year()}
     </div>
-</footer>;
+  </footer>
+);
 
 export default Footer;

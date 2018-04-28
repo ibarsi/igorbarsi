@@ -3,23 +3,23 @@
 ================================================== */
 
 .footer {
-    padding: 2em 0;
-    font-size: 0.8em;
-    background-color: #222222;
-    border-top: 1px dotted #B1B1B1;
-    color: #A5A5A5;
+  padding: 2em 0;
+  font-size: 0.8em;
+  background-color: #222222;
+  border-top: 1px dotted #b1b1b1;
+  color: #a5a5a5;
 }
 
 .footer__copywrite {
-    margin-top: 1em;
+  margin-top: 1em;
 }
 
 .footer__copywrite-link {
-    color: #A5A5A5;
+  color: #a5a5a5;
 }
 
 @media (max-width: 600px) {
-    .footer {
-        padding: 1em 0;
-    }
+  .footer {
+    padding: 1em 0;
+  }
 }

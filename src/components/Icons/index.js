@@ -7,9 +7,9 @@ import StackOverflowIcon from './stackOverflow';
 import './icons.css';
 
 export default {
-    TwitterIcon,
-    LinkedInIcon,
-    MediumIcon,
-    GitHubIcon,
-    StackOverflowIcon,
+  TwitterIcon,
+  LinkedInIcon,
+  MediumIcon,
+  GitHubIcon,
+  StackOverflowIcon,
 };
