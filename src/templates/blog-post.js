@@ -1,17 +1,15 @@
+import moment from 'moment';
 import React from 'react';
 import Helmet from 'react-helmet';
-import moment from 'moment';
 
-import { TwitterIcon } from '../components/Icons';
+import SignupForm from '../components/SignupForm';
 import { buildPageTitle } from '../utils';
-import { BASE_URL } from '../config';
 
 import './blog-post.css';
 
-export const Template = ({ data, location }) => {
+export const Template = ({ data }) => {
   const post = data.markdownRemark;
 
-  const url = `${BASE_URL}${location.pathname}`;
   const title = buildPageTitle(post.frontmatter.title);
   const description = post.excerpt;
 
@@ -57,23 +55,13 @@ export const Template = ({ data, location }) => {
           <p>Thanks for taking the time to read this post!</p>
 
           <p>
-            If you liked what you read and think others might enjoy it too,
-            please share below.
+            Sign up below for occasional updates on my work and the latest in
+            software engineering and leadership.
           </p>
 
-          <ul className="blog-post__share_list">
-            <li className="blog-post__share-list-item">
-              <a
-                href={`https://twitter.com/intent/tweet?url=${url}&text=${
-                  post.frontmatter.title
-                }&via=igorbarsi`}
-                title="Share Post to Twitter"
-                target="blank"
-              >
-                <TwitterIcon />
-              </a>
-            </li>
-          </ul>
+          <p>No spam, ever.</p>
+
+          <SignupForm />
         </footer>
       </div>
     </article>
