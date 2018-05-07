@@ -7,8 +7,8 @@ import { buildPageTitle } from '../../utils';
 
 import './blog.css';
 
-const groupPostsByYear = posts => {
-  return posts.reduce((acc, { node: post } = {}) => {
+const groupPostsByYear = posts =>
+  posts.reduce((acc, { node: post } = {}) => {
     if (!post || !post.frontmatter.title || !post.frontmatter.date) {
       return acc;
     }
@@ -19,7 +19,6 @@ const groupPostsByYear = posts => {
       [year]: [...(acc[year] || []), post],
     });
   }, {});
-};
 
 const Blog = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark;
@@ -58,13 +57,11 @@ const Blog = ({ data }) => {
               <h2>{key}</h2>
 
               <ul className="blog__list">
-                {postsForYear.map(post => {
-                  return (
-                    <li key={post.id} className="blog__list-item">
-                      <BlogListItem {...post} />
-                    </li>
-                  );
-                })}
+                {postsForYear.map(post => (
+                  <li key={post.id} className="blog__list-item">
+                    <BlogListItem {...post} />
+                  </li>
+                ))}
               </ul>
             </div>
           );

@@ -1,11 +1,11 @@
 import React from 'react';
 
 import {
-  StackOverflowIcon,
   GitHubIcon,
-  TwitterIcon,
-  MediumIcon,
   LinkedInIcon,
+  MediumIcon,
+  StackOverflowIcon,
+  TwitterIcon,
 } from '../Icons';
 
 import './social-links.css';
