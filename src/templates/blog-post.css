@@ -55,7 +55,7 @@
 
 .blog-post__hard-break {
   margin-top: 2em;
-  margin-bottom: 4em;
+  margin-bottom: 3em;
   border: none;
   text-align: center;
 }
@@ -69,28 +69,13 @@
 }
 
 .blog-post__footer {
-  font-size: 0.8em;
-  font-style: italic;
   margin-bottom: 2em;
-}
-
-.blog-post__share_list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.blog-post__share-list-item {
-  font-size: 0.5em;
+  font-size: 0.8em;
 }
 
 @media (max-width: 900px) {
   .blog-post__markdown h1 {
     font-size: 2em;
-  }
-
-  .blog-post__share-list-item {
-    font-size: 0.8em;
   }
 }
 
@@ -111,9 +96,5 @@
   .blog-post__markdown blockquote ul,
   .blog-post__markdown blockquote ol {
     padding-left: 1em;
-  }
-
-  .blog-post__share-list-item {
-    font-size: 1em;
   }
 }
