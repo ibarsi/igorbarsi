@@ -17,7 +17,8 @@ const Newsletter = () => {
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
       </Helmet>
-      <h1 className="title">Join my Weekly Newsletter</h1>
+
+      <h1 className="title">Join My Newsletter</h1>
 
       <hr />
 
