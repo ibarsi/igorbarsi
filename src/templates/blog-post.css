@@ -73,9 +73,26 @@
   font-size: 0.8em;
 }
 
+.blog-post__signup-container {
+  padding: 1em;
+  margin: 0 auto 3em;
+  width: 80%;
+  background-color: #3980f5;
+}
+
+.blog-post__signup-content {
+  padding: 1em;
+  border: 1px solid;
+  background-color: #ffffff;
+}
+
 @media (max-width: 900px) {
   .blog-post__markdown h1 {
     font-size: 2em;
+  }
+
+  .blog-post__signup-container {
+    width: 90%;
   }
 }
 
@@ -96,5 +113,14 @@
   .blog-post__markdown blockquote ul,
   .blog-post__markdown blockquote ol {
     padding-left: 1em;
+  }
+
+  .blog-post__signup-container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .blog-post__signup-content {
+    font-size: 1.2em;
   }
 }

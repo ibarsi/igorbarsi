@@ -20,20 +20,21 @@
   width: 2em;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .icon {
-    width: 2em;
+    height: 2.5em;
+    width: 2.5em;
   }
 
   .icon--twitter {
-    width: 1.5em;
+    width: 2em;
   }
 
   .icon--linkedin {
-    width: 1em;
+    width: 1.5em;
   }
 
   .icon--medium {
-    width: 1.5em;
+    width: 2em;
   }
 }
