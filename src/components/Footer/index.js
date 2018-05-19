@@ -12,11 +12,7 @@ const Footer = () => (
     </nav>
 
     <div className="footer__copywrite">
-      <a href="mailto:ibarsi92@gmail.com" className="footer__copywrite-link">
-        Contact
-      </a>
-      <span className="separator" />
-      Copywrite ©{moment().year()}
+      ©  {moment().year()} Igor Barsi. All rights reserved.
     </div>
   </footer>
 );
