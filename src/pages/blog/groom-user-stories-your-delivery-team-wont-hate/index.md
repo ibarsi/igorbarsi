@@ -1,6 +1,6 @@
 ---
 path: "/blog/groom-user-stories-your-delivery-team-wont-hate"
-date: "03-31-2018"
+date: "05-27-2018"
 title: "Groom User Stories Your Delivery Team Won’t Hate"
 ---
 
@@ -10,7 +10,7 @@ While this is very meaningful from a business perspective, I find that writing u
 
 This often causes issues for members of the delivery team that don’t share that same mental model. Implementation details and blockers are not clear. Developers are fumbling over conflicting technical requirements and duplicated work. QA is never certain that the story is entirely finished, unsure that listed acceptance criteria cover all expected test cases. Ultimately, these issues make it impossible for the PO to accurately track progress.
 
-> This is the kind of wasted velocity we want to _avoid_.
+> This is the kind of wasted velocity we want to **avoid**.
 
 In order to overcome these issues and groom effective stories, changes will need to be made to the team’s grooming process. User stories should bring value to the entire team, unifying and guiding all those involved through the delivery process.
 
