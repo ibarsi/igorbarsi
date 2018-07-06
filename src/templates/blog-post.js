@@ -53,24 +53,13 @@ export const Template = ({ data }) => {
         <hr className="blog-post__hard-break" />
 
         <footer className="blog-post__footer">
-          <div className="blog-post__signup-container">
-            <div className="blog-post__signup-content">
-              <h2>Join us now</h2>
+          <h2>Join us now</h2>
 
-              <p>
-                Sign up below for occasional updates on software engineering,
-                leadership and concepts that focus on the “soft” side of what we
-                do to build routines and practices that ultimately shape our
-                life and work.
-              </p>
+          <SignupForm />
 
-              <p>No spam, ever.</p>
-
-              <SignupForm />
-            </div>
+          <div className="blog-post__footer-social-links">
+            <SocialLinks />
           </div>
-
-          <SocialLinks />
         </footer>
       </div>
     </article>
