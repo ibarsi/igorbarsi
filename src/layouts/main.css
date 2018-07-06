@@ -26,6 +26,14 @@ h5 {
   text-transform: uppercase;
 }
 
+h2 {
+  margin-top: 1em;
+}
+
+h3 {
+  margin-top: 1.5em;
+}
+
 a {
   color: #3980f5;
   text-decoration: none;
