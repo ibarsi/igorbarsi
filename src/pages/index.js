@@ -29,34 +29,47 @@ const IndexPage = () => {
 
       <div className="content-container">
         <header>
-          <h1 className="title">{"Hi, I'm Igor Barsi 👋🏼"}</h1>
+          <h1 className="title">Hi, I'm Igor Barsi 👋🏼</h1>
         </header>
 
         <hr />
 
         <p className="paragraph paragraph--intro">
-          {
-            'I’m a software developer and writer focused on effective engineering and leadership. My writing combines personal experiences with ideas across disciplines, such as behavioural psychology, philosophy, engineering, neuroscience and more. My goal is to share lessons and concepts that focus on the “soft” side of what we do to build routines and practices that ultimately shape our life and work.'
-          }
+          👨🏽‍💻 I’m a software developer and writer focused on effective
+          engineering and leadership.
         </p>
-
         <p className="paragraph paragraph--intro">
-          {
-            'Much of my writing consists of opinion posts and think pieces targeted at engineers, however the core concepts are far reaching and applicable to many disciplines. I don’t have all the answers, but I’m happy to share what I have learned in hopes that my thoughts and experiences might impact readers in a positive way.'
-          }
+          👨🏽‍🏫 My goal is to share the lessons and concepts I've learned over the
+          years that focus on the “soft” side of what we do to build routines
+          and practices that ultimately shape our life and work.
+        </p>
+        <p className="paragraph paragraph--intro">
+          ✍🏼 Much of my writing consists of opinion posts targeted at engineers.
+          However, the core concepts are far reaching and applicable to diverse
+          disciplines and walks of life.
+        </p>
+        <p className="paragraph paragraph--intro">
+          😄 I don’t have all the answers, but I’m happy to share what I have
+          learned in hopes that my thoughts and experiences might impact readers
+          in a positive way!
         </p>
 
         <h2 className="title title--sub">Join Us Now</h2>
 
         <p className="paragraph paragraph--intro">
-          {
-            "I feel very lucky to have the priviledge to share my knowledge and opinions with such a broad audience of makers, managers and the like. Together, I believe we can continually broaden our reach and impact millions by delivering the highest quality content that's guranteed to leave a lasting impact and bring value to those that consume it."
-          }
+          🌟 I feel very lucky to have the priviledge to share my knowledge and
+          opinions with such a broad audience!
         </p>
 
         <p className="paragraph paragraph--intro">
-          Ready to join us? Great! Just enter your email and sign up for my free
-          newsletter below.
+          🌍 Together, I believe we can continually broaden our reach and impact
+          the world by delivering the highest quality content that's guaranteed
+          to deliver value and leave a lasting impact.
+        </p>
+
+        <p className="paragraph paragraph--intro">
+          👇🏼 Ready to join us? Great! Please enter your email and sign up for my
+          free newsletter below.
         </p>
 
         <div>
