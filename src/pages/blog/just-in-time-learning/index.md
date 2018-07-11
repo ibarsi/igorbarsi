@@ -84,11 +84,13 @@ Determining the value of an article often doesn’t require it’s full consumpt
 
 While the benefits are enticing, **just-in-time learning does not replace knowing the basics**.
 
-Schools teach you fundamentals for good reason. They’re the building blocks used to develop a deeper, more specialized understanding of the subject matter at hand.
+Schools teach you fundamentals for good reason. They’re the building blocks used to develop a deeper, more specialized understanding of the subject matter at hand. Without that [foundation](https://fs.blog/2013/08/choose-your-next-book/), you'll have a hard time ramping up on new material. Starting from something is easier than starting from scratch.
 
-Broad knowledge and understanding will help optimize your just-in-time learning. The more you know, the better primed you will be to tackle new challenges. Continuous learning is key to personal development and success. [Growing smarter every day](https://fs.blog/2013/05/the-buffett-formula-how-to-get-smarter/) will compound and propel you ahead.
+In addition to knowing the basics, you should also **know the landscape**.
 
-Take the time to research the [foundational materials](https://fs.blog/2013/08/choose-your-next-book/) for your field of interest. Furthermore, investing in teaching yourself core, transferrable skills will complement much of your future learning.
+Broad knowledge and surface-level understanding of the many edges and specialties of your field will help optimize your just-in-time learning. Otherwise, how will you know _what_ to learn when you're faced with an unfamiliar problem? You need to be aware of your options before you can decide where to invest your learning.
+
+The more you know, the better primed you will be to tackle new challenges. Continuous learning is key to personal development and success. [Growing smarter every day](https://fs.blog/2013/05/the-buffett-formula-how-to-get-smarter/) will compound and propel you ahead.
 
 ## What To Do When You Don’t Know
 
