@@ -54,7 +54,7 @@ const IndexPage = () => {
           in a positive way!
         </p>
 
-        <h2 className="title title--sub">Join Us Now</h2>
+        <h2 className="title title--sub">Stay in the Loop</h2>
 
         <p className="paragraph paragraph--intro">
           🌟 I feel very lucky to have the priviledge to share my knowledge and
@@ -68,8 +68,8 @@ const IndexPage = () => {
         </p>
 
         <p className="paragraph paragraph--intro">
-          👇🏼 Ready to join us? Great! Please enter your email and sign up for my
-          free newsletter below.
+          👇🏼 Want to stay up-to-date? Great! Please enter your email and sign up
+          below for notifications of my latest work.
         </p>
 
         <div>
