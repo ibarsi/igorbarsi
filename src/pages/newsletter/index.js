@@ -18,19 +18,24 @@ const Newsletter = () => {
         <meta property="og:title" content={title} />
       </Helmet>
 
-      <h1 className="title">Join My Newsletter</h1>
+      <h1 className="title">Stay in the Loop</h1>
 
       <hr />
 
       <p className="paragraph">
-        Join us in our quest to expand our knowledge of software engineering and
-        leadership by sharing lessons and concepts that focus on the “soft” side
-        of what we do to build routines and practices that ultimately shape our
-        life and work!
+        🌟 I feel very lucky to have the priviledge to share my knowledge and
+        opinions with such a broad audience!
       </p>
 
       <p className="paragraph">
-        Please enter your email address below and click <b>SUBSCRIBE</b>.
+        🌍 Together, I believe we can continually broaden our reach and impact
+        the world by delivering the highest quality content that's guaranteed to
+        deliver value and leave a lasting impact.
+      </p>
+
+      <p className="paragraph">
+        👇🏼 Want to stay up-to-date? Great! Please enter your email and sign up
+        below for notifications of my latest work.
       </p>
 
       <SignupForm />

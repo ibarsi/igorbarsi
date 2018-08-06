@@ -53,7 +53,7 @@ export const Template = ({ data }) => {
         <hr className="blog-post__hard-break" />
 
         <footer className="blog-post__footer">
-          <h2>Join us now</h2>
+          <h2>Stay in the Loop</h2>
 
           <SignupForm />
 
