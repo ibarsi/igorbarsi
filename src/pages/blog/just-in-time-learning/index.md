@@ -1,10 +1,8 @@
 ---
-path: "/blog/just-in-time-learning"
-date: "07-06-2018"
-title: "Just-in-Time Knowledge: Learn What You Need, When You Need It"
+path: '/blog/just-in-time-learning'
+date: '07-06-2018'
+title: 'Just-in-Time Knowledge: Learn What You Need, When You Need It'
 ---
-
-Like most knowledge workers, I’m someone who prides myself in my ability to learn and adapt to change.
 
 As makers, we’re always looking for creative new ways to keep our minds sharp and skills relevant. We live in an age where a vast sea of information is available at our fingertips. **In this knowledge economy, information is king**. When you take a step back to consider the possibilities this creates for personal and societal growth, it’s really quite inspiring.
 
@@ -34,7 +32,7 @@ If the information you’re learning is not immediately valuable or applied regu
 
 This method of learning is comparable to the way we regularly consume daily tech news, deep-dive blog posts and lengthy Twitter rants. While the information may be valuable, internalizing it now before you’re presented the opportunity to make use of it is wasteful. At some point, you begin to experience diminishing returns on your investment of time and cognition.
 
-To explain the alternative to this approach, let’s take a look at [JIT compilers](https://hacks.mozilla.org/2017/02/a-crash-course-in-just-in-time-jit-compilers/).
+I'd like to explore an alternative approach to learning by drawing analogies with a software program that embodies similar core principles - [the JIT compiler](https://hacks.mozilla.org/2017/02/a-crash-course-in-just-in-time-jit-compilers/).
 
 Compilers translate the code you write to something a machine can understand. Traditional compilers work ahead of time to create an optimized translation of what we write. Modern JIT compilers, on the other hand, translate individual parts of your code as they become _warm_ (ie. as they are used).
 
@@ -44,13 +42,13 @@ At it’s core, **just-in-time learning** can be explained using the principles 
 
 ### Effectiveness > Efficiency
 
-Traditional compilers are very efficient. They take their time, reading over the entirety of your code before translating it in the most efficient way possible. You can become very efficient at reading and processing information, committing vast amounts of your time to consuming as much knowledge as possible.
+Traditional compilers are very efficient. They take their time, reading over the entirety of your code before translating in the most efficient way possible. You can become very efficient at reading and processing information this way by committing vast amounts of your time to consuming as much knowledge as possible.
 
 This isn’t the best way to learn.
 
 Instead of focusing on _efficiency_, stop and ask yourself if you’re learning the right thing?
 
-> Too often, we focus our time on “getting things done” instead of “getting the right things done”.
+> Too often, we focus our time on “getting things done” instead of “getting the _right_ things done”.
 
 Whether it’s [personal](https://hackernoon.com/productivity-by-sam-altman-5d10d72f14d1) or [team productivity](https://www.amazon.ca/Rework-Jason-Fried/dp/0307463745), take your time and make sure you’re heading in the right direction. Only apply effort when it maximizes value.
 
