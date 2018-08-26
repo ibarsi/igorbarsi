@@ -1,6 +1,6 @@
 ---
 path: '/blog/just-in-time-learning'
-date: '07-06-2018'
+date: '08-26-2018'
 title: 'Just-in-Time Knowledge: Learn What You Need, When You Need It'
 ---
 
