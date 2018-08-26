@@ -4,10 +4,9 @@ import Helmet from 'react-helmet';
 import SignupForm from '../../components/SignupForm';
 import { buildPageTitle } from '../../utils';
 
-const Newsletter = () => {
-  const title = buildPageTitle('Free Newsletter');
-  const description =
-    'Sign up for this free newsletter that will teach you the skills you need to become an effective software engineer and leader through shared lessons and concepts.';
+const Subscription = () => {
+  const title = buildPageTitle('Free Subscription');
+  const description = 'Subscribe to get updates on my latest work.';
 
   return (
     <div className="content-container">
@@ -43,4 +42,4 @@ const Newsletter = () => {
   );
 };
 
-export default Newsletter;
+export default Subscription;
