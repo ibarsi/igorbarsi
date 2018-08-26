@@ -16,7 +16,7 @@ const Header = () => (
 
       <div className="header__right">
         <Link to="/newsletter" className="nav__link">
-          Free Newsletter
+          Free Subscription
         </Link>
       </div>
     </nav>
