@@ -41,7 +41,9 @@ export const Template = ({ data }) => {
 
           <span className="blog-post__header-byline">
             By Igor Barsi <span className="separator" />{' '}
-            {moment(post.frontmatter.date).format('MMMM Do, YYYY')}
+            {moment(post.frontmatter.date, 'MM-DD-YYYY').format(
+              'MMMM Do, YYYY',
+            )}
           </span>
         </header>
 

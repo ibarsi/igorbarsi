@@ -71,7 +71,7 @@ const Blog = ({ data }) => {
 };
 
 const BlogListItem = ({ frontmatter }) => {
-  const date = moment(frontmatter.date).format('MMMM Do');
+  const date = moment(frontmatter.date, 'MM-DD-YYYY').format('MMMM Do');
 
   return (
     <div className="paragraph blog__list-item-content">
