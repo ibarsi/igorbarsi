@@ -1,10 +1,11 @@
 import moment from 'moment';
-import React from 'react';
+import React, { Fragment } from 'react';
 import Helmet from 'react-helmet';
 
 import SignupForm from '../components/SignupForm';
 import SocialLinks from '../components/SocialLinks';
 import { buildPageTitle } from '../utils';
+import { FEATURE_SWITCHES } from '../config';
 
 import './blog-post.css';
 
@@ -55,9 +56,13 @@ export const Template = ({ data }) => {
         <hr className="blog-post__hard-break" />
 
         <footer className="blog-post__footer">
-          <h2>Stay in the Loop</h2>
+          {FEATURE_SWITCHES.NEWSLETTER && (
+            <Fragment>
+              <h2>Stay in the Loop</h2>
 
-          <SignupForm />
+              <SignupForm />
+            </Fragment>
+          )}
 
           <div className="blog-post__footer-social-links">
             <SocialLinks />
