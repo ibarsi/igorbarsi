@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 import Navigation from '../Navigation';
+import { FEATURE_SWITCHES } from '../../config';
 
 import './header.css';
 
@@ -15,9 +16,11 @@ const Header = () => (
       </div>
 
       <div className="header__right">
-        <Link to="/newsletter" className="nav__link">
-          Free Subscription
-        </Link>
+        {FEATURE_SWITCHES.NEWSLETTER && (
+          <Link to="/newsletter" className="nav__link">
+            Free Subscription
+          </Link>
+        )}
       </div>
     </nav>
 
