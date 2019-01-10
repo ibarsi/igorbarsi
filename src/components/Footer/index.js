@@ -1,11 +1,11 @@
 import React from 'react';
 import moment from 'moment';
 
-import Navigation from '../Navigation';
+import { Navigation } from '../Navigation';
 
 import './footer.css';
 
-const Footer = () => (
+export const Footer = () => (
   <footer className="footer">
     <nav>
       <Navigation />
@@ -16,5 +16,3 @@ const Footer = () => (
     </div>
   </footer>
 );
-
-export default Footer;

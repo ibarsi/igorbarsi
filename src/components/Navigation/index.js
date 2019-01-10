@@ -3,7 +3,7 @@ import Link from 'gatsby-link';
 
 import './navigation.css';
 
-const Navigation = () => (
+export const Navigation = () => (
   <div>
     <ul className="nav__list">
       <li className="nav__list-item">
@@ -19,5 +19,3 @@ const Navigation = () => (
     </ul>
   </div>
 );
-
-export default Navigation;

@@ -1,9 +1,10 @@
 import moment from 'moment';
 import React, { Fragment } from 'react';
 import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
 
-import SignupForm from '../components/SignupForm';
-import SocialLinks from '../components/SocialLinks';
+import { SignupForm } from '../components/SignupForm';
+import { SocialLinks } from '../components/SocialLinks';
 import { buildPageTitle } from '../utils';
 import { FEATURE_SWITCHES } from '../config';
 

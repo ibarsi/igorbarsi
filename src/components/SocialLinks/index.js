@@ -10,7 +10,7 @@ import {
 
 import './social-links.css';
 
-const SocialLinks = () => (
+export const SocialLinks = () => (
   <ul className="clearfix social__list">
     <li className="social__list-item">
       <a
@@ -59,5 +59,3 @@ const SocialLinks = () => (
     </li>
   </ul>
 );
-
-export default SocialLinks;

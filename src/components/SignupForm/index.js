@@ -2,7 +2,7 @@ import React from 'react';
 
 import './signup-form.css';
 
-const SignupForm = () => (
+export const SignupForm = () => (
   <form
     action="https://igorbarsi.us18.list-manage.com/subscribe/post?u=23241cc8c91d313ea62d65da5&amp;id=bd5c8a81b8"
     method="post"
@@ -37,5 +37,3 @@ const SignupForm = () => (
     </div>
   </form>
 );
-
-export default SignupForm;

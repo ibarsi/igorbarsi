@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-import Navigation from '../Navigation';
+import { Navigation } from '../Navigation';
 import { FEATURE_SWITCHES } from '../../config';
 
 import './header.css';
 
-const Header = () => (
+export const Header = () => (
   <header>
     <nav className="header">
       <h1 className="header__left">IGOR BARSI</h1>
@@ -27,5 +27,3 @@ const Header = () => (
     <hr />
   </header>
 );
-
-export default Header;

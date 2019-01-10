@@ -1,6 +1,6 @@
 import React from 'react';
 
-const twitterIcon = () => (
+export const TwitterIcon = () => (
   <svg
     className="icon icon--twitter"
     version="1.1"
@@ -23,5 +23,3 @@ const twitterIcon = () => (
     </g>
   </svg>
 );
-
-export default twitterIcon;
