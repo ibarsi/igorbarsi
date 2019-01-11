@@ -17,7 +17,7 @@ const NotFoundPage = () => {
 
       <div className="content-container">
         <header>
-          <h1 className="title">Oops! Page not found 😞</h1>
+          <h1 className="title">Oops! Page not found <span role="img" aria-label="Emoji">😞</span></h1>
         </header>
 
         <p className="paragraph paragraph--intro">
