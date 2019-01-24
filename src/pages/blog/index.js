@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import moment from 'moment';
 import { graphql } from 'gatsby';
 
+import { Layout } from '../../layouts';
 import { buildPageTitle } from '../../utils';
 
 import './blog.css';
@@ -16,9 +17,7 @@ const groupPostsByYear = posts =>
 
     const year = moment(post.frontmatter.date).year();
 
-    return Object.assign({}, acc, {
-      [year]: [...(acc[year] || []), post],
-    });
+    return { ...acc, [year]: [...(acc[year] || []), post] };
   }, {});
 
 const Blog = ({ data }) => {
@@ -31,7 +30,7 @@ const Blog = ({ data }) => {
   const groupedPosts = groupPostsByYear(posts);
 
   return (
-    <div className="content-container blog">
+    <Layout location={location}>
       <Helmet>
         <title>{title}</title>
 
@@ -39,6 +38,7 @@ const Blog = ({ data }) => {
         <meta property="og:title" content={title} />
       </Helmet>
 
+      <div className="content-container blog">
       <h1>All Posts By Date</h1>
 
       <p className="paragraph">
@@ -49,7 +49,7 @@ const Blog = ({ data }) => {
       <hr />
 
       {Object.keys(groupedPosts)
-        .sort((a, b) => b - a)
+        .sort((previous, next) => next - previous)
         .map(key => {
           const postsForYear = groupedPosts[key];
 
@@ -67,7 +67,8 @@ const Blog = ({ data }) => {
             </div>
           );
         })}
-    </div>
+      </div>
+    </Layout>
   );
 };
 
@@ -87,8 +88,8 @@ const BlogListItem = ({ frontmatter }) => {
 
 export default Blog;
 
-export const pageQuery = graphql`
-  query IndexQuery {
+export const blogPostsFragment = graphql`
+  fragment BlogPostsFragment on Query {
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
@@ -101,5 +102,11 @@ export const pageQuery = graphql`
         }
       }
     }
+  }
+`;
+
+export const query = graphql`
+  query BlogsQuery {
+    ...BlogPostsFragment
   }
 `;

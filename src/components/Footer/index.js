@@ -12,7 +12,7 @@ export const Footer = () => (
     </nav>
 
     <div className="footer__copywrite">
-      ©  {moment().year()} Igor Barsi. All rights reserved.
+      © {moment().year()} Igor Barsi. All rights reserved.
     </div>
   </footer>
 );

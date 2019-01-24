@@ -1,13 +1,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
+import { Layout } from '../layouts';
+
 const NotFoundPage = () => {
   const title = 'Not Found - 404';
   const description =
     'Oops! Page not found :( Please return to www.igorbarsi.com.';
 
   return (
-    <div>
+    <Layout location={location}>
       <Helmet>
         <title>{title}</title>
 
@@ -17,7 +19,12 @@ const NotFoundPage = () => {
 
       <div className="content-container">
         <header>
-          <h1 className="title">Oops! Page not found <span role="img" aria-label="Emoji">😞</span></h1>
+          <h1 className="title">
+            Oops! Page not found{' '}
+            <span role="img" aria-label="Emoji">
+              😞
+            </span>
+          </h1>
         </header>
 
         <p className="paragraph paragraph--intro">
@@ -25,7 +32,7 @@ const NotFoundPage = () => {
           Sorry about that!
         </p>
       </div>
-    </div>
+    </Layout>
   );
 };
 export default NotFoundPage;

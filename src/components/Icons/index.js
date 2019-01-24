@@ -6,10 +6,4 @@ import { StackOverflowIcon } from './stackOverflow';
 
 import './icons.css';
 
-export {
-  TwitterIcon,
-  LinkedInIcon,
-  MediumIcon,
-  GitHubIcon,
-  StackOverflowIcon,
-};
+export { TwitterIcon, LinkedInIcon, MediumIcon, GitHubIcon, StackOverflowIcon };
