@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './signup-form.css';
+import signupFormStyles from './signup-form.module.css';
 
 export const SignupForm = () => (
   <form
@@ -12,15 +12,15 @@ export const SignupForm = () => (
     target="_blank"
     noValidate
   >
-    <div className="signup-form">
+    <div className={signupFormStyles.container}>
       <input
-        className="signup-form__input"
+        className={signupFormStyles.input}
         type="email"
         name="EMAIL"
         placeholder="Email Address"
         required
       />
-      <div className="signup-form__hidden-input" aria-hidden="true">
+      <div className={signupFormStyles.hiddenInput} aria-hidden="true">
         <input
           type="text"
           name="b_23241cc8c91d313ea62d65da5_bd5c8a81b8"
@@ -29,7 +29,7 @@ export const SignupForm = () => (
         />
       </div>
       <input
-        className="signup-form__button"
+        className={signupFormStyles.button}
         type="submit"
         value="Subscribe"
         name="subscribe"

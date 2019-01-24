@@ -1,20 +1,22 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-import './navigation.css';
+import navigationStyles from './navigation.module.css';
+
+export const NavigationLink = ({ children, to }) => (
+  <Link to={to} className={navigationStyles.link}>
+    {children}
+  </Link>
+);
 
 export const Navigation = () => (
   <div>
-    <ul className="nav__list">
-      <li className="nav__list-item">
-        <Link to="/" className="nav__link">
-          Home
-        </Link>
+    <ul className={navigationStyles.list}>
+      <li className={navigationStyles.listItem}>
+        <NavigationLink to="/">Home</NavigationLink>
       </li>
-      <li className="nav__list-item">
-        <Link to="/blog" className="nav__link">
-          Blog
-        </Link>
+      <li className={navigationStyles.listItem}>
+        <NavigationLink to="/blog">Blog</NavigationLink>
       </li>
     </ul>
   </div>

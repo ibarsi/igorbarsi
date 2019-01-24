@@ -2,51 +2,51 @@
     HEADER
 ================================================== */
 
-.header {
+.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.5em 20px;
 }
 
-.header__left {
+.left {
   flex: 3;
   margin: 0;
 }
 
-.header__middle {
+.middle {
   flex: 10;
 }
 
-.header__right {
+.right {
   flex: 3;
 }
 
 @media (max-width: 900px) {
-  .header {
+  .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.5em 10px;
   }
 
-  .header__left,
-  .header__right {
+  .left,
+  .right {
     flex: 5;
   }
 }
 
 @media (max-width: 600px) {
-  .header {
+  .container {
     flex-direction: column;
     padding: 1em;
   }
 
-  .header__left {
+  .left {
     margin-bottom: 1em;
   }
 
-  .header__right {
+  .right {
     margin-top: 1em;
   }
 }

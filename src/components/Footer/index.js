@@ -3,15 +3,15 @@ import moment from 'moment';
 
 import { Navigation } from '../Navigation';
 
-import './footer.css';
+import footerStyles from './footer.module.css';
 
 export const Footer = () => (
-  <footer className="footer">
+  <footer className={footerStyles.container}>
     <nav>
       <Navigation />
     </nav>
 
-    <div className="footer__copywrite">
+    <div className={footerStyles.copywrite}>
       © {moment().year()} Igor Barsi. All rights reserved.
     </div>
   </footer>
