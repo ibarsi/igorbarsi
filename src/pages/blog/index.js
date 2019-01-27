@@ -39,34 +39,34 @@ const Blog = ({ data }) => {
       </Helmet>
 
       <div className="content-container blog">
-      <h1>All Posts By Date</h1>
+        <h1>All Posts By Date</h1>
 
-      <p className="paragraph">
-        Take a look below to browse all of my posts by date and title. They are
-        listed from newest to oldest.
-      </p>
+        <p className="paragraph">
+          Take a look below to browse all of my posts by date and title. They
+          are listed from newest to oldest.
+        </p>
 
-      <hr />
+        <hr />
 
-      {Object.keys(groupedPosts)
-        .sort((previous, next) => next - previous)
-        .map(key => {
-          const postsForYear = groupedPosts[key];
+        {Object.keys(groupedPosts)
+          .sort((previous, next) => next - previous)
+          .map(key => {
+            const postsForYear = groupedPosts[key];
 
-          return (
-            <div key={key}>
-              <h2>{key}</h2>
+            return (
+              <div key={key}>
+                <h2>{key}</h2>
 
-              <ul className="blog__list">
-                {postsForYear.map(post => (
-                  <li key={post.id} className="blog__list-item">
-                    <BlogListItem {...post} />
-                  </li>
-                ))}
-              </ul>
-            </div>
-          );
-        })}
+                <ul className="blog__list">
+                  {postsForYear.map(post => (
+                    <li key={post.id} className="blog__list-item">
+                      <BlogListItem {...post} />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
       </div>
     </Layout>
   );

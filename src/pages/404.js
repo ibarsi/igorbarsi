@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 
 import { Layout } from '../layouts';
 
-const NotFoundPage = () => {
+const NotFoundPage = ({ location }) => {
   const title = 'Not Found - 404';
   const description =
     'Oops! Page not found :( Please return to www.igorbarsi.com.';
