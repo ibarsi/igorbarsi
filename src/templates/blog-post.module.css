@@ -2,50 +2,50 @@
     BLOG POST
 ================================================== */
 
-.blog-post__header {
+.header {
   margin: 1.5em 0;
 }
 
-.blog-post__header-headline {
+.header-headline {
   margin: 0;
 }
 
-.blog-post__header-byline {
+.header-byline {
   display: block;
   margin: 1em 0;
   font-size: 0.8em;
   color: #a5a5a5;
 }
 
-.blog-post__header-byline-separator {
+.header-byline-separator {
   margin: 0 0.5em;
 }
 
-.blog-post__content {
+.content {
   line-height: 1.5;
 }
 
-.blog-post__markdown {
+.markdown {
   font-size: 1.25em;
   text-align: left;
 }
 
-.blog-post__markdown h1 {
+.markdown h1 {
   font-size: 2.5em;
 }
 
-.blog-post__markdown blockquote {
+.markdown blockquote {
   margin: 1.5em 0;
   padding: 0 1em;
   border-left: 5px solid #ff4646;
   font-style: italic;
 }
 
-.blog-post__markdown figure {
+.markdown figure {
   margin: 2em 1em;
 }
 
-.blog-post__markdown figcaption {
+.markdown figcaption {
   display: block;
   margin: 0.8em;
   font-size: 0.8em;
@@ -53,14 +53,14 @@
   color: #a5a5a5;
 }
 
-.blog-post__hard-break {
+.hard-break {
   margin-top: 2em;
   margin-bottom: 4em;
   border: none;
   text-align: center;
 }
 
-.blog-post__hard-break:before {
+.hard-break:before {
   content: '• • •';
   font-size: 1em;
   font-weight: 700;
@@ -68,37 +68,37 @@
   color: #717171;
 }
 
-.blog-post__footer {
+.footer {
   margin-bottom: 2em;
   text-align: center;
 }
 
-.blog-post__footer-social-links {
+.footer-social-links {
   font-size: 0.8em;
 }
 
 @media (max-width: 900px) {
-  .blog-post__markdown h1 {
+  .markdown h1 {
     font-size: 2em;
   }
 }
 
 @media (max-width: 600px) {
-  .blog-post__markdown {
+  .markdown {
     font-size: 1em;
   }
 
-  .blog-post__markdown h1 {
+  .markdown h1 {
     font-size: 2em;
   }
 
-  .blog-post__markdown ul,
-  .blog-post__markdown ol {
+  .markdown ul,
+  .markdown ol {
     padding: 0;
   }
 
-  .blog-post__markdown blockquote ul,
-  .blog-post__markdown blockquote ol {
+  .markdown blockquote ul,
+  .markdown blockquote ol {
     padding-left: 1em;
   }
 }

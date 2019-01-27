@@ -1,13 +1,13 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import moment from 'moment';
 import { graphql } from 'gatsby';
 
 import { Layout } from '../../layouts';
+import { BlogList, BlogListItem } from '../../components/BlogList';
 import { buildPageTitle } from '../../utils';
 
-import './blog.css';
+import blogStyles from './blog.module.css';
 
 const groupPostsByYear = posts =>
   posts.reduce((acc, { node: post } = {}) => {
@@ -38,7 +38,7 @@ const Blog = ({ data, location }) => {
         <meta property="og:title" content={title} />
       </Helmet>
 
-      <div className="content-container blog">
+      <div className={`content-container ${blogStyles.container}`}>
         <h1>All Posts By Date</h1>
 
         <p className="paragraph">
@@ -57,32 +57,16 @@ const Blog = ({ data, location }) => {
               <div key={key}>
                 <h2>{key}</h2>
 
-                <ul className="blog__list">
+                <BlogList>
                   {postsForYear.map(post => (
-                    <li key={post.id} className="blog__list-item">
-                      <BlogListItem {...post} />
-                    </li>
+                    <BlogListItem key={post.id} {...post} />
                   ))}
-                </ul>
+                </BlogList>
               </div>
             );
           })}
       </div>
     </Layout>
-  );
-};
-
-const BlogListItem = ({ frontmatter }) => {
-  const date = moment(frontmatter.date, 'MM-DD-YYYY').format('MMMM Do');
-
-  return (
-    <div className="paragraph blog__list-item-content">
-      <span className="blog__list-item-date">{date}</span>
-
-      <Link to={frontmatter.path} className="blog__list-item-link">
-        {frontmatter.title}
-      </Link>
-    </div>
   );
 };
 
