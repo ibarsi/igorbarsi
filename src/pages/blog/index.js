@@ -20,7 +20,7 @@ const groupPostsByYear = posts =>
     return { ...acc, [year]: [...(acc[year] || []), post] };
   }, {});
 
-const Blog = ({ data }) => {
+const Blog = ({ data, location }) => {
   const { edges: posts } = data.allMarkdownRemark;
 
   const title = buildPageTitle('Blog');

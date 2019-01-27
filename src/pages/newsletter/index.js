@@ -5,7 +5,7 @@ import { Layout } from '../../layouts';
 import { SignupForm } from '../../components/SignupForm';
 import { buildPageTitle } from '../../utils';
 
-const Subscription = () => {
+const Newsletter = ({ location }) => {
   const title = buildPageTitle('Free Subscription');
   const description = 'Subscribe to get updates on my latest work.';
 
@@ -54,4 +54,4 @@ const Subscription = () => {
   );
 };
 
-export default Subscription;
+export default Newsletter;
