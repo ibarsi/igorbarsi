@@ -1,15 +1,8 @@
 /* ==================================================
-    BLOG
+    BLOG LIST
 ================================================== */
 
-.blog {
-  text-align: left;
-  margin-bottom: 5em;
-  padding: 1.5em;
-  padding-top: 0;
-}
-
-.blog__list {
+.container {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -18,16 +11,16 @@
   list-style: none;
 }
 
-.blog__list-item {
+.item {
   margin: 0.5em 0;
   width: 100%;
 }
 
-.blog__list-item-content {
+.item-content {
   display: flex;
 }
 
-.blog__list-item-date {
+.item-date {
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: 8em;

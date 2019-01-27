@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { Layout } from '../layouts';
 import { SignupForm } from '../components/SignupForm';
 import { SocialLinks } from '../components/SocialLinks';
+import { RecentBlogPosts } from '../components/RecentBlogPosts';
 import { buildPageTitle } from '../utils';
 import { FEATURE_SWITCHES } from '../config';
 
@@ -107,6 +108,12 @@ const IndexPage = ({ location }) => {
             </div>
           </Fragment>
         )}
+
+        <div>
+          <h2 className="title title--sub">Recent Blog Posts</h2>
+
+          <RecentBlogPosts limit={3} />
+        </div>
 
         <SocialLinks />
       </div>

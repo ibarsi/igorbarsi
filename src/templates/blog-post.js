@@ -9,7 +9,7 @@ import { SocialLinks } from '../components/SocialLinks';
 import { buildPageTitle } from '../utils';
 import { FEATURE_SWITCHES } from '../config';
 
-import './blog-post.css';
+import blogPostStyles from './blog-post.module.css';
 
 const BlogPost = ({ data, location }) => {
   const post = data.markdownRemark;
@@ -37,13 +37,13 @@ const BlogPost = ({ data, location }) => {
           />
         </Helmet>
 
-        <div className="content-container blog-post__markdown">
-          <header className="blog-post__header">
-            <h1 className="blog-post__header-headline">
+        <div className={`content-container ${blogPostStyles.markdown}`}>
+          <header className={blogPostStyles.header}>
+            <h1 className={blogPostStyles.headerHeadline}>
               {post.frontmatter.title}
             </h1>
 
-            <span className="blog-post__header-byline">
+            <span className={blogPostStyles.headerByline}>
               By Igor Barsi <span className="separator" />{' '}
               {moment(post.frontmatter.date, 'MM-DD-YYYY').format(
                 'MMMM Do, YYYY',
@@ -52,13 +52,13 @@ const BlogPost = ({ data, location }) => {
           </header>
 
           <div
-            className="blog-post__content"
+            className={blogPostStyles.content}
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
 
-          <hr className="blog-post__hard-break" />
+          <hr className={blogPostStyles.hardBreak} />
 
-          <footer className="blog-post__footer">
+          <footer className={blogPostStyles.footer}>
             {FEATURE_SWITCHES.NEWSLETTER && (
               <Fragment>
                 <h2>Stay in the Loop</h2>
@@ -67,7 +67,7 @@ const BlogPost = ({ data, location }) => {
               </Fragment>
             )}
 
-            <div className="blog-post__footer-social-links">
+            <div className={blogPostStyles.footerSocialLinks}>
               <SocialLinks />
             </div>
           </footer>
