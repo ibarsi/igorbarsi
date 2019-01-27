@@ -27,7 +27,11 @@ const IndexPage = ({ location }) => {
           media="all"
           type="text/css"
         />
-        <script type="text/javascript" src="//assets.juicer.io/embed.js" />
+        <script
+          defer
+          type="text/javascript"
+          src="//assets.juicer.io/embed.js"
+        />
       </Helmet>
 
       <div className="content-container">
@@ -118,7 +122,7 @@ const IndexPage = ({ location }) => {
         <SocialLinks />
       </div>
 
-      <ul className="juicer-feed" data-feed-id="igorbarsi">
+      <ul className="juicer-feed" data-feed-id="igorbarsi" data-per="10">
         <h1 className="referral">
           <a href="https://www.juicer.io">Powered by Juicer</a>
         </h1>
