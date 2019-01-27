@@ -1,15 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 
 import { BASE_URL, FB_APP_ID } from '../config';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
 
-import './normalize.css';
-import './main.css';
-
-const TemplateWrapper = ({ children, location }) => {
+export const Layout = ({ children, location }) => {
   const url = `${BASE_URL}${location.pathname}`;
 
   return (
@@ -55,28 +51,13 @@ const TemplateWrapper = ({ children, location }) => {
           content={`${BASE_URL}/default_share_image.jpg`}
         />
         <meta property="fb:app_id" content={FB_APP_ID} />
-
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Oswald:400,700"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Lato:400,700"
-        />
       </Helmet>
 
       <Header />
 
-      <main className="site-container">{children()}</main>
+      <main className="site-container">{children}</main>
 
       <Footer />
     </div>
   );
 };
-
-TemplateWrapper.propTypes = {
-  children: PropTypes.func,
-};
-
-export default TemplateWrapper;

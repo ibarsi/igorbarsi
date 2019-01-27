@@ -1,6 +1,6 @@
 import React from 'react';
 
-const linkedInIcon = () => (
+export const LinkedInIcon = () => (
   <svg
     className="icon icon--linkedin"
     version="1.1"
@@ -22,5 +22,3 @@ const linkedInIcon = () => (
     </g>
   </svg>
 );
-
-export default linkedInIcon;

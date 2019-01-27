@@ -4,8 +4,8 @@ const path = require('path');
  * Implement the Gatsby API “createPages”. This is called once the
  * data layer is bootstrapped to let plugins create pages from data.
  */
-exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators;
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
     const blogPostTemplate = path.resolve('src/templates/blog-post.js');
@@ -36,16 +36,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           createPage({
             path: currentPath,
             component: blogPostTemplate,
-
-            /*
-             * If you have a layout component at src/layouts/blog-layout.js
-             * layout: `blog-layout`,
-             * In your blog post template's graphql query, you can use path
-             * as a GraphQL variable to query for data from the markdown file.
-             */
-            context: {
-              path: currentPath,
-            },
           });
         });
       }),

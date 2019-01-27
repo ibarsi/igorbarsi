@@ -1,20 +1,22 @@
 /* ==================================================
-    SOCIAL LINKS
+    NAVIGATION
 ================================================== */
 
-.social__list {
+.list {
   display: flex;
   justify-content: center;
   padding: 0;
+  margin: 0;
   list-style: none;
 }
 
-.social__list-item {
-  margin: 0 20px;
+.list-item {
+  margin: 0 0.5em;
 }
 
-@media (max-width: 600px) {
-  .social__list-item {
-    margin: 0 15px;
-  }
+.link {
+  font-size: 1.5em;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  color: currentColor;
 }

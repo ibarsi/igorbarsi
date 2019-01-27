@@ -1,6 +1,6 @@
 import React from 'react';
 
-const mediumIcon = () => (
+export const MediumIcon = () => (
   <svg
     className="icon icon--medium"
     xmlns="http://www.w3.org/2000/svg"
@@ -15,5 +15,3 @@ const mediumIcon = () => (
     </g>
   </svg>
 );
-
-export default mediumIcon;
