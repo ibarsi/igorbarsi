@@ -1,14 +1,14 @@
 ---
-path: "/blog/make-sprints-great-again"
+path: "/blog/sprinting-our-way-to-missed-deadlines"
 date: "01-13-2018"
-title: "Make Sprints Great Again"
+title: "Sprinting Our Way To Missed Deadlines"
 ---
 
 When I was first exposed to Scrum, I fell in love.
 
 The process was straight forward. The team agrees on a prioritized list of tasks to complete in a consistent block of time. A **sprint**. You meet daily to touch base, ensuring everything is on track. By the time the sprint is complete, some product functionality has been shipped. The client is happy. Finally, you regroup for a retrospective, discussing what went well and what went poorly. Then you start all over again. It just _made sense_.
 
-I’ve been fortunate enough to come across some great opportunities throughout my career, exposing myself to diverse development environments and teams across disparate industries. I’ve built in-house line of business applications, campaign/content sites for a variety of clients and currently (at the time of writing) the core platform at a mid-sized startup. Though my experiences in these roles have had many differences, one sombering fact seems to hold true across teams and organizations:
+I’ve been fortunate enough to come across some great opportunities throughout my career, exposing myself to diverse development environments and teams across disparate industries. I’ve built in-house line of business applications, campaign/content sites for a variety of clients and currently (at the time of writing) the core platform at a mid-sized startup. Though my experiences in these roles have had many differences, one sobering fact seems to hold true across teams and organizations:
 
 > Deadlines are missed. Often.
 

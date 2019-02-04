@@ -1,7 +1,7 @@
 ---
 path: '/blog/just-in-time-learning'
 date: '08-26-2018'
-title: 'Just-in-Time Knowledge: Learn What You Need, When You Need It'
+title: 'Just-In-Time Knowledge: Learn What You Need, When You Need It'
 ---
 
 As makers, we’re always looking for creative new ways to keep our minds sharp and skills relevant. We live in an age where a vast sea of information is available at our fingertips. **In this knowledge economy, information is king**. When you take a step back to consider the possibilities this creates for personal and societal growth, it’s really quite inspiring.
