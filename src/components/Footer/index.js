@@ -3,7 +3,7 @@ import moment from 'moment';
 
 import { Navigation } from '../Navigation';
 
-import footerStyles from './footer.module.css';
+import * as footerStyles from './footer.module.css';
 
 export const Footer = () => (
   <footer className={footerStyles.container}>

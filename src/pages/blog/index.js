@@ -7,9 +7,9 @@ import { Layout } from '../../layouts';
 import { BlogList, BlogListItem } from '../../components/BlogList';
 import { buildPageTitle } from '../../utils';
 
-import blogStyles from './blog.module.css';
+import * as blogStyles from './blog.module.css';
 
-const groupPostsByYear = posts =>
+const groupPostsByYear = (posts) =>
   posts.reduce((acc, { node: post } = {}) => {
     if (!post || !post.frontmatter.title || !post.frontmatter.date) {
       return acc;
@@ -50,7 +50,7 @@ const Blog = ({ data, location }) => {
 
         {Object.keys(groupedPosts)
           .sort((previous, next) => next - previous)
-          .map(key => {
+          .map((key) => {
             const postsForYear = groupedPosts[key];
 
             return (
@@ -58,7 +58,7 @@ const Blog = ({ data, location }) => {
                 <h2>{key}</h2>
 
                 <BlogList>
-                  {postsForYear.map(post => (
+                  {postsForYear.map((post) => (
                     <BlogListItem key={post.id} {...post} />
                   ))}
                 </BlogList>

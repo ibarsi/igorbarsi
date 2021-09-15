@@ -1,6 +1,6 @@
 import React from 'react';
 
-import signupFormStyles from './signup-form.module.css';
+import * as signupFormStyles from './signup-form.module.css';
 
 export const SignupForm = () => (
   <form

@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import moment from 'moment';
 
-import blogListStyles from './blog-list.module.css';
+import * as blogListStyles from './blog-list.module.css';
 
 export const BlogListItem = ({ frontmatter }) => {
   const date = moment(frontmatter.date, 'MM-DD-YYYY').format('MMMM Do');
@@ -12,9 +12,7 @@ export const BlogListItem = ({ frontmatter }) => {
       <div className={`paragraph ${blogListStyles.itemContent}`}>
         <span className={blogListStyles.itemDate}>{date}</span>
 
-        <Link to={frontmatter.path} className={blogListStyles.itemLink}>
-          {frontmatter.title}
-        </Link>
+        <Link to={frontmatter.path}>{frontmatter.title}</Link>
       </div>
     </li>
   );

@@ -8,7 +8,7 @@ import {
   TwitterIcon,
 } from '../Icons';
 
-import socialLinkStyles from './social-links.module.css';
+import * as socialLinkStyles from './social-links.module.css';
 
 export const SocialLinks = () => (
   <ul className={socialLinkStyles.list}>
