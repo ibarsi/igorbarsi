@@ -9,7 +9,7 @@ import { SocialLinks } from '../components/SocialLinks';
 import { buildPageTitle } from '../utils';
 import { FEATURE_SWITCHES } from '../config';
 
-import blogPostStyles from './blog-post.module.css';
+import * as blogPostStyles from './blog-post.module.css';
 
 const BlogPost = ({ data, location }) => {
   const post = data.markdownRemark;

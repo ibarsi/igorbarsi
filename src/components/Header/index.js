@@ -2,7 +2,7 @@ import React from 'react';
 import { Navigation, NavigationLink } from '../Navigation';
 import { FEATURE_SWITCHES } from '../../config';
 
-import headerStyles from './header.module.css';
+import * as headerStyles from './header.module.css';
 
 export const Header = () => (
   <header>

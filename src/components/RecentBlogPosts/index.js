@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby';
 
 import { BlogList, BlogListItem } from '../BlogList';
 
-import recentBlogPostStyles from './recent-blog-posts.module.css';
+import * as recentBlogPostStyles from './recent-blog-posts.module.css';
 
 export const RecentBlogPosts = ({ limit }) => (
   <StaticQuery
@@ -12,7 +12,7 @@ export const RecentBlogPosts = ({ limit }) => (
         ...BlogPostsFragment
       }
     `}
-    render={data => {
+    render={(data) => {
       const { edges: posts } = data.allMarkdownRemark;
 
       return (

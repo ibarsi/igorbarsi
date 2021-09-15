@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-import navigationStyles from './navigation.module.css';
+import * as navigationStyles from './navigation.module.css';
 
 export const NavigationLink = ({ children, to }) => (
   <Link to={to} className={navigationStyles.link}>
