@@ -11,6 +11,10 @@ description = "Install npm dependencies"
 run = "npm install"
 alias = "i"
 
+[tasks."install:ci"]
+description = "Install npm dependencies for CI"
+run = "npm ci"
+
 [tasks.dev]
 description = "Start the Astro dev server"
 run = "npm run develop"
@@ -69,7 +73,7 @@ depends = ["lint", "typecheck"]
 
 [tasks.ci]
 description = "Run the local CI suite"
-run = "mise run -j 1 lint ::: typecheck ::: format-check ::: build"
+run = "mise run -j 1 install:ci ::: lint ::: typecheck ::: format-check ::: build"
 
 [tasks.clean]
 description = "Remove generated build artifacts"
