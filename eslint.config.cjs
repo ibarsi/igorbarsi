@@ -1,23 +1,15 @@
-const babelParser = require('@babel/eslint-parser');
-const reactPlugin = require('eslint-plugin-react');
-const reactHooksPlugin = require('eslint-plugin-react-hooks');
 const prettierConfig = require('eslint-config-prettier');
 
 module.exports = [
   {
-    ignores: ['node_modules/**', '.cache/**', 'public/**'],
+    ignores: ['dist/**', 'node_modules/**', 'public/**'],
   },
   {
-    files: ['**/*.{js,jsx,cjs}'],
+    files: ['**/*.{js,cjs,mjs}'],
     languageOptions: {
-      parser: babelParser,
       parserOptions: {
         ecmaVersion: 'latest',
-        requireConfigFile: false,
         sourceType: 'module',
-        babelOptions: {
-          presets: ['gatsby'],
-        },
       },
       globals: {
         __dirname: 'readonly',
@@ -31,22 +23,9 @@ module.exports = [
         window: 'readonly',
       },
     },
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
-    plugins: {
-      react: reactPlugin,
-      'react-hooks': reactHooksPlugin,
-    },
     rules: {
-      ...reactPlugin.configs.recommended.rules,
-      ...reactHooksPlugin.configs.recommended.rules,
       ...prettierConfig.rules,
       'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off',
     },
   },
 ];

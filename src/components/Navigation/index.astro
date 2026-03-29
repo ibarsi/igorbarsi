@@ -1,0 +1,43 @@
+---
+import styles from './navigation.module.css';
+
+interface Props {
+  pathname?: string;
+  variant?: 'default' | 'inverse';
+}
+
+const { pathname = '/', variant = 'default' } = Astro.props;
+
+const normalizePath = (value: string) =>
+  value.length > 1 ? value.replace(/\/+$/, '') : value;
+
+const currentPath = normalizePath(pathname);
+
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/blog', label: 'Blog' },
+];
+---
+
+<ul class={styles.list}>
+  {
+    links.map(({ href, label }) => {
+      const isActive = currentPath === normalizePath(href);
+
+      return (
+        <li class={styles.listItem}>
+          <a
+            href={href}
+            class:list={[
+              styles.link,
+              variant === 'inverse' && styles.linkInverse,
+              isActive && styles.linkActive,
+            ]}
+          >
+            {label}
+          </a>
+        </li>
+      );
+    })
+  }
+</ul>

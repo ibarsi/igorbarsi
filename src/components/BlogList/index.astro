@@ -1,0 +1,31 @@
+---
+import { formatPostDate } from '../../utils.js';
+import styles from './blog-list.module.css';
+
+interface BlogEntry {
+  data: {
+    date: string;
+    slug: string;
+    title: string;
+  };
+}
+
+interface Props {
+  entries: BlogEntry[];
+}
+
+const { entries } = Astro.props;
+---
+
+<ul class={styles.container}>
+  {
+    entries.map((entry) => (
+      <li class={styles.item}>
+        <a href={`/blog/${entry.data.slug}/`} class={styles.card}>
+          <span class={styles.itemDate}>{formatPostDate(entry.data.date)}</span>
+          <span class={styles.itemTitle}>{entry.data.title}</span>
+        </a>
+      </li>
+    ))
+  }
+</ul>

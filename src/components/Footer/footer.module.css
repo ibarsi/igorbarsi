@@ -39,7 +39,8 @@
   justify-content: center;
 }
 
-.social :global(.list) {
+.social {
+  display: flex;
   justify-content: flex-end;
 }
 
@@ -55,7 +56,7 @@
     text-align: center;
   }
 
-  .social :global(.list) {
+  .social {
     justify-content: center;
   }
 }

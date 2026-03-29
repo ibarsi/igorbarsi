@@ -5,33 +5,29 @@
   "author": "Igor Barsi <ibarsi92@gmail.com> (https://github.com/ibarsi)",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,md,json}\"",
-    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,css,md,json}\"",
-    "lint": "eslint --ext .js,.jsx src gatsby-browser.js gatsby-config.js gatsby-node.js",
-    "typecheck": "tsc --noEmit"
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "develop": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
+    "format": "prettier --write \"**/*.{astro,js,jsx,ts,tsx,css,md,mdx,json,mjs}\"",
+    "format:check": "prettier --check \"**/*.{astro,js,jsx,ts,tsx,css,md,mdx,json,mjs}\"",
+    "lint": "eslint src --ext .js,.jsx,.cjs,.mjs && eslint astro.config.mjs eslint.config.cjs",
+    "typecheck": "ASTRO_TELEMETRY_DISABLED=1 astro check"
   },
   "dependencies": {
-    "gatsby": "^5.16.1",
-    "gatsby-plugin-sharp": "^5.16.0",
-    "gatsby-remark-images": "^7.16.0",
-    "gatsby-source-filesystem": "^5.16.0",
-    "gatsby-transformer-remark": "^6.16.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "@astrojs/mdx": "^5.0.3",
+    "@astrojs/sitemap": "^3.7.2",
+    "astro": "^6.1.1",
+    "sharp": "^0.34.5"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.8",
     "@babel/core": "^7.28.4",
     "@babel/eslint-parser": "^7.28.4",
     "@types/node": "^25.5.0",
-    "@types/react": "^18.3.28",
-    "@types/react-dom": "^18.3.7",
     "eslint": "^9.39.4",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^7.0.1",
     "prettier": "^3.8.1",
-    "typescript": "^6.0.2"
+    "prettier-plugin-astro": "^0.14.1",
+    "typescript": "^5.9.3"
   }
 }

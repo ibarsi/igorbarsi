@@ -4,6 +4,8 @@
 
 [http://www.igorbarsi.com](http://www.igorbarsi.com)
 
+Astro-powered personal site and blog.
+
 ## Development
 
 Install dependencies with `npm install`.
@@ -12,6 +14,7 @@ Useful scripts:
 
 - `npm run develop`
 - `npm run build`
+- `npm run preview`
 - `npm run lint`
 - `npm run typecheck`
 - `npm run format`
@@ -20,3 +23,4 @@ Useful scripts:
 Note:
 
 - This repo targets the Node version in `.nvmrc`. Run `nvm use` before `npm run build` if your local runtime is newer.
+- Blog content now lives under `src/content/blog/` as MDX.

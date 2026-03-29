@@ -1,0 +1,61 @@
+---
+import { getCollection, render } from 'astro:content';
+
+import SocialLinks from '../../components/SocialLinks/index.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import styles from '../../templates/blog-post.module.css';
+import { buildPageTitle, formatPostDateWithYear } from '../../utils.js';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+
+  return posts.map((entry) => ({
+    params: { slug: entry.data.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const title = buildPageTitle(entry.data.title);
+const description =
+  entry.data.description ??
+  (entry.body ?? '')
+    .replace(/[`*_>#-]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .slice(0, 220);
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  pathname={`/blog/${entry.data.slug}/`}
+  type="article"
+>
+  <article>
+    <div class={`content-container ${styles.shell}`}>
+      <header class={styles.header}>
+        <p class={styles.eyebrow}>Article</p>
+        <h1 class={styles.headerHeadline}>{entry.data.title}</h1>
+
+        <span class={styles.headerByline}>
+          By Igor Barsi <span class="separator"></span>{' '}
+          {formatPostDateWithYear(entry.data.date)}
+        </span>
+      </header>
+
+      <div class={`${styles.markdown} ${styles.content}`}>
+        <Content />
+      </div>
+
+      <hr class={styles.hardBreak} />
+
+      <footer class={styles.footer}>
+        <div class={styles.footerSocialLinks}>
+          <SocialLinks />
+        </div>
+      </footer>
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,12 @@
+---
+import BlogList from '../BlogList/index.astro';
+
+interface Props {
+  entries: Array<any>;
+  limit?: number;
+}
+
+const { entries, limit = 3 } = Astro.props;
+---
+
+<BlogList entries={entries.slice(0, limit)} />

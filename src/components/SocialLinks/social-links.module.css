@@ -8,6 +8,10 @@
   list-style: none;
 }
 
+.listEnd {
+  justify-content: flex-end;
+}
+
 .list-item {
   margin: 0;
 }
@@ -23,8 +27,20 @@
   background: rgba(255, 252, 247, 0.65);
 }
 
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  object-fit: contain;
+}
+
 .list-item a:hover {
   border-color: rgba(15, 118, 110, 0.24);
   background: rgba(15, 118, 110, 0.08);
   text-decoration: none;
+}
+
+@media (max-width: 840px) {
+  .listEnd {
+    justify-content: center;
+  }
 }
