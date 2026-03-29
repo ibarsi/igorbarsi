@@ -8,19 +8,32 @@ Astro-powered personal site and blog.
 
 ## Development
 
-Install dependencies with `npm install`.
+This project uses `mise` for the Node runtime and local tasks.
 
-Useful scripts:
+1. Install the toolchain and npm dependencies:
 
-- `npm run develop`
-- `npm run build`
-- `npm run preview`
-- `npm run lint`
-- `npm run typecheck`
-- `npm run format`
-- `npm run format:check`
+```bash
+mise install
+mise run install
+```
+
+2. Use `mise` tasks for day-to-day work:
+
+```bash
+mise tasks
+mise run dev
+mise run build
+mise run preview
+mise run lint
+mise run typecheck
+mise run check
+mise run ci
+mise run format
+mise run format-check
+```
 
 Note:
 
-- This repo targets the Node version in `.nvmrc`. Run `nvm use` before `npm run build` if your local runtime is newer.
+- The project runtime is pinned in `mise.toml`.
+- `mise run ci` is the quick local verification path before pushing changes.
 - Blog content now lives under `src/content/blog/` as MDX.
