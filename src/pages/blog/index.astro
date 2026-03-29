@@ -39,23 +39,24 @@ const years = Object.keys(groupedPosts)
 
 <BaseLayout title={title} description={description} pathname="/blog/">
   <div class={styles.page}>
-    <section class={styles.hero}>
-      <p class={styles.eyebrow}>Archive</p>
+    <section class={`${styles.hero} animate-in`}>
+      <p class={styles.label}>Archive</p>
       <h1 class={styles.title}>
         Writing on engineering, leadership, and better delivery.
       </h1>
       <p class="paragraph paragraph--intro">
-        Browse the full archive by year. Posts are ordered from newest to oldest
-        so the latest thinking stays easy to find.
+        Browse the full archive by year. Posts are ordered from newest to
+        oldest.
       </p>
     </section>
 
     {
-      years.map((year) => (
-        <section class={styles.yearSection}>
+      years.map((year, i) => (
+        <section
+          class={`${styles.yearSection} animate-in delay-${Math.min(i + 1, 5)}`}
+        >
           <div class={styles.yearHeader}>
-            <p class={styles.yearLabel}>Year</p>
-            <h2 class={styles.yearTitle}>{year}</h2>
+            <span class={styles.yearTitle}>{year}</span>
           </div>
 
           <BlogList entries={groupedPosts[year]} />

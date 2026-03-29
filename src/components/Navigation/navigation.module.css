@@ -1,49 +1,39 @@
 .list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
+  gap: 0.25rem;
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-.list-item {
-  margin: 0;
-}
-
 .link {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  min-height: 2.5rem;
-  padding: 0.55rem 1rem;
-  border: 1px solid transparent;
-  border-radius: 999px;
-  font-size: 0.95rem;
-  font-family: 'Oswald', sans-serif;
-  letter-spacing: 0.06em;
+  padding: 0.5rem 0.9rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--color-muted);
+  color: var(--color-text-secondary);
+  transition:
+    color 200ms ease,
+    background 200ms ease;
 }
 
 .link:hover {
-  border-color: var(--color-border);
   color: var(--color-text);
   text-decoration: none;
 }
 
 .linkActive {
-  border-color: rgba(15, 118, 110, 0.16);
-  background: rgba(15, 118, 110, 0.08);
-  color: var(--color-accent-strong);
+  color: var(--color-accent);
 }
 
 .linkInverse {
-  color: rgba(255, 252, 247, 0.82);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .linkInverse:hover {
-  border-color: rgba(255, 252, 247, 0.16);
   color: #ffffff;
 }

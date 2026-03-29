@@ -2,7 +2,6 @@
 import { getCollection } from 'astro:content';
 
 import RecentBlogPosts from '../components/RecentBlogPosts/index.astro';
-import SocialLinks from '../components/SocialLinks/index.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import styles from './index.module.css';
 import { buildPageTitle } from '../utils.js';
@@ -17,45 +16,33 @@ posts.sort((a, b) => (a.data.date < b.data.date ? 1 : -1));
 
 <BaseLayout title={title} description={description}>
   <div class={styles.page}>
-    <section class={styles.hero}>
-      <div class={styles.heroIntro}>
-        <p class={styles.eyebrow}>
-          Software developer, writer, and engineering lead
-        </p>
-        <h1 class="title">
-          Ideas for building better teams, habits, and software.
-        </h1>
-        <p class={`paragraph paragraph--intro ${styles.summary}`}>
-          I write about the human side of engineering: delivery, leadership,
-          communication, and the routines that shape durable technical work.
-        </p>
+    <section class={`${styles.hero} animate-in`}>
+      <p class={styles.label}>Software Engineer &amp; Writer</p>
+      <h1 class={styles.headline}>
+        Building better teams,<br />
+        habits, and software.
+      </h1>
+      <p class={`paragraph paragraph--intro ${styles.summary}`}>
+        I write about the human side of engineering — delivery, leadership,
+        communication, and the routines that shape durable technical work.
+      </p>
 
-        <div class={styles.heroActions}>
-          <a href="/blog/" class={styles.primaryAction}> Read the blog </a>
-          <a
-            href="https://www.linkedin.com/in/ibarsi/"
-            class={styles.secondaryAction}
-          >
-            Connect on LinkedIn
-          </a>
-        </div>
+      <div class={styles.heroActions}>
+        <a href="/blog/" class={styles.primaryAction}>Read the blog</a>
+        <a
+          href="https://www.linkedin.com/in/ibarsi/"
+          class={styles.secondaryAction}
+        >
+          LinkedIn &rarr;
+        </a>
       </div>
-
-      <aside class={styles.heroPanel}>
-        <p class={styles.panelLabel}>What you will find here</p>
-        <ul class={styles.panelList}>
-          <li>Practical writing for engineers and leaders</li>
-          <li>Lessons on process, clarity, and collaboration</li>
-          <li>Thoughtful opinions shaped by real delivery work</li>
-        </ul>
-      </aside>
     </section>
 
-    <section class={styles.storyGrid}>
-      <article class={styles.storyCard}>
-        <p class={styles.cardEyebrow}>Focus</p>
-        <h2 class={styles.cardTitle}>
-          Effective engineering over empty motion.
+    <div class={`${styles.pillars} animate-in delay-1`}>
+      <article class={styles.pillar}>
+        <span class={styles.pillarNumber}>01</span>
+        <h2 class={styles.pillarTitle}>
+          Effective engineering over empty motion
         </h2>
         <p class="paragraph">
           Much of my writing is aimed at engineers, but the themes travel well:
@@ -64,42 +51,26 @@ posts.sort((a, b) => (a.data.date < b.data.date ? 1 : -1));
         </p>
       </article>
 
-      <article class={styles.storyCard}>
-        <p class={styles.cardEyebrow}>Approach</p>
-        <h2 class={styles.cardTitle}>Opinionated, practical, and grounded.</h2>
+      <article class={styles.pillar}>
+        <span class={styles.pillarNumber}>02</span>
+        <h2 class={styles.pillarTitle}>Opinionated, practical, and grounded</h2>
         <p class="paragraph">
-          I do not claim to have all the answers. I share what has proven
-          useful, where teams tend to struggle, and the patterns that seem to
-          compound over time.
+          I share what has proven useful, where teams tend to struggle, and the
+          patterns that seem to compound over time.
         </p>
       </article>
-    </section>
+    </div>
 
-    <section class={styles.postsSection}>
-      <div class={styles.sectionHeading}>
+    <section class={`${styles.postsSection} animate-in delay-2`}>
+      <div class={styles.sectionHeader}>
         <div>
-          <p class={styles.eyebrow}>Latest writing</p>
-          <h2 class={styles.sectionTitle}>Recent blog posts</h2>
+          <p class={styles.label}>Latest</p>
+          <h2 class={styles.sectionTitle}>Recent writing</h2>
         </div>
-        <a href="/blog/" class={styles.sectionLink}> View all posts </a>
+        <a href="/blog/" class={styles.sectionLink}>All posts &rarr;</a>
       </div>
 
       <RecentBlogPosts entries={posts} limit={3} />
-    </section>
-
-    <section class={styles.contactSection}>
-      <div class={styles.contactCopy}>
-        <p class={styles.eyebrow}>Elsewhere</p>
-        <h2 class={styles.sectionTitle}>Follow the work outside the blog.</h2>
-        <p class="paragraph">
-          The site should feel more alive than it used to, but the core goal
-          stays the same: publish useful ideas and make them easy to find.
-        </p>
-      </div>
-
-      <div class={styles.socialWrap}>
-        <SocialLinks />
-      </div>
     </section>
   </div>
 </BaseLayout>

@@ -10,16 +10,14 @@ const { pathname = '/' } = Astro.props;
 ---
 
 <header class={styles.shell}>
-  <nav class={styles.container} aria-label="Primary">
+  <div class={styles.container}>
     <a href="/" class={styles.brand}>
+      <span class={styles.brandMark}>IB</span>
       <span class={styles.brandName}>Igor Barsi</span>
-      <span class={styles.brandTagline}
-        >Engineering, writing, and leadership</span
-      >
     </a>
 
-    <div class={styles.navigation}>
+    <nav class={styles.navigation} aria-label="Primary">
       <Navigation pathname={pathname} />
-    </div>
-  </nav>
+    </nav>
+  </div>
 </header>

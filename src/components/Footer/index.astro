@@ -13,17 +13,18 @@ const year = new Date().getFullYear();
 
 <footer class={styles.container}>
   <div class={styles.inner}>
-    <div class={styles.copyBlock}>
-      <p class={styles.kicker}>Built for writing that ages well.</p>
-      <p class={styles.copywrite}>© {year} Igor Barsi. All rights reserved.</p>
+    <div class={styles.top}>
+      <nav class={styles.navigation} aria-label="Footer">
+        <Navigation pathname={pathname} />
+      </nav>
+
+      <div class={styles.social}>
+        <SocialLinks />
+      </div>
     </div>
 
-    <nav class={styles.navigation} aria-label="Footer">
-      <Navigation pathname={pathname} variant="inverse" />
-    </nav>
-
-    <div class={styles.social}>
-      <SocialLinks align="end" />
+    <div class={styles.bottom}>
+      <p class={styles.copywrite}>&copy; {year} Igor Barsi</p>
     </div>
   </div>
 </footer>

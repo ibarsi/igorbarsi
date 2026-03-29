@@ -1,7 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
 
-import SocialLinks from '../../components/SocialLinks/index.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import styles from '../../templates/blog-post.module.css';
 import { buildPageTitle, formatPostDateWithYear } from '../../utils.js';
@@ -33,29 +32,22 @@ const description =
   pathname={`/blog/${entry.data.slug}/`}
   type="article"
 >
-  <article>
-    <div class={`content-container ${styles.shell}`}>
-      <header class={styles.header}>
-        <p class={styles.eyebrow}>Article</p>
-        <h1 class={styles.headerHeadline}>{entry.data.title}</h1>
+  <article class={`${styles.shell} animate-in`}>
+    <header class={styles.header}>
+      <a href="/blog/" class={styles.backLink}>&larr; Back to archive</a>
+      <h1 class={styles.headerHeadline}>{entry.data.title}</h1>
+      <span class={styles.headerByline}>
+        Igor Barsi <span class="separator"></span>
+        {formatPostDateWithYear(entry.data.date)}
+      </span>
+    </header>
 
-        <span class={styles.headerByline}>
-          By Igor Barsi <span class="separator"></span>{' '}
-          {formatPostDateWithYear(entry.data.date)}
-        </span>
-      </header>
-
-      <div class={`${styles.markdown} ${styles.content}`}>
-        <Content />
-      </div>
-
-      <hr class={styles.hardBreak} />
-
-      <footer class={styles.footer}>
-        <div class={styles.footerSocialLinks}>
-          <SocialLinks />
-        </div>
-      </footer>
+    <div class={`${styles.markdown} ${styles.content}`}>
+      <Content />
     </div>
+
+    <footer class={styles.footer}>
+      <a href="/blog/" class={styles.backLink}>&larr; Back to archive</a>
+    </footer>
   </article>
 </BaseLayout>

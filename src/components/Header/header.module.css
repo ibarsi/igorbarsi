@@ -1,82 +1,70 @@
 .shell {
-  width: min(calc(100% - 2rem), var(--content-width));
+  width: min(calc(100% - 3rem), var(--content-width));
   margin: 0 auto;
-  padding: 1rem 0 1.5rem;
+  padding: 1.5rem 0;
 }
 
 .container {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
   justify-content: space-between;
-  padding: 1.1rem 1.4rem;
-  border: 1px solid var(--color-border);
-  border-radius: 999px;
-  background: rgba(255, 252, 247, 0.72);
-  box-shadow: var(--shadow-soft);
-  backdrop-filter: blur(14px);
+  gap: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .brand {
   display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  color: inherit;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-text);
 }
 
 .brand:hover {
-  color: inherit;
-  opacity: 0.88;
+  color: var(--color-text);
+}
+
+.brandMark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--color-accent);
+  transition:
+    background 200ms ease,
+    color 200ms ease;
+}
+
+.brand:hover .brandMark {
+  background: var(--color-accent);
+  color: var(--color-bg);
 }
 
 .brandName {
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.3rem;
-  letter-spacing: 0.08em;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-}
-
-.brandTagline {
-  font-size: 0.82rem;
-  line-height: 1.2;
-  color: var(--color-muted);
 }
 
 .navigation {
   display: flex;
-  justify-content: center;
-  flex: 1;
-}
-
-.action {
-  min-width: 7rem;
-  text-align: right;
 }
 
 @media (max-width: 720px) {
   .shell {
-    width: min(calc(100% - 1rem), var(--content-width));
-    padding: 0.75rem 0 1rem;
+    width: min(calc(100% - 1.5rem), var(--content-width));
+    padding: 1rem 0;
   }
 
   .container {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 1rem;
-    padding: 1.1rem;
-    border-radius: 32px;
-  }
-
-  .brand,
-  .action {
-    text-align: center;
-  }
-
-  .navigation {
-    justify-content: center;
-  }
-
-  .action {
-    min-width: 0;
+    padding-bottom: 1rem;
   }
 }
