@@ -1,0 +1,66 @@
+---
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+import BlogList from '../../components/BlogList/index.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import styles from './blog.module.css';
+import { buildPageTitle, getPostYear } from '../../utils.js';
+
+const title = buildPageTitle('Blog');
+const description =
+  'Looking for the best blog posts to read? Browse this list of interesting posts on software engineering, leadership, behavioural psychology, productivity and more.';
+
+const posts = await getCollection('blog');
+posts.sort((a, b) => (a.data.date < b.data.date ? 1 : -1));
+
+const groupedPosts = posts.reduce<Record<number, CollectionEntry<'blog'>[]>>(
+  (acc, post) => {
+    const year = getPostYear(post.data.date);
+
+    if (!year) {
+      return acc;
+    }
+
+    if (!acc[year]) {
+      acc[year] = [];
+    }
+
+    acc[year].push(post);
+    return acc;
+  },
+  {}
+);
+
+const years = Object.keys(groupedPosts)
+  .map(Number)
+  .sort((a, b) => b - a);
+---
+
+<BaseLayout title={title} description={description} pathname="/blog/">
+  <div class={styles.page}>
+    <section class={styles.hero}>
+      <p class={styles.eyebrow}>Archive</p>
+      <h1 class={styles.title}>
+        Writing on engineering, leadership, and better delivery.
+      </h1>
+      <p class="paragraph paragraph--intro">
+        Browse the full archive by year. Posts are ordered from newest to oldest
+        so the latest thinking stays easy to find.
+      </p>
+    </section>
+
+    {
+      years.map((year) => (
+        <section class={styles.yearSection}>
+          <div class={styles.yearHeader}>
+            <p class={styles.yearLabel}>Year</p>
+            <h2 class={styles.yearTitle}>{year}</h2>
+          </div>
+
+          <BlogList entries={groupedPosts[year]} />
+        </section>
+      ))
+    }
+  </div>
+</BaseLayout>

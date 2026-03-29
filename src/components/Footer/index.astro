@@ -1,0 +1,29 @@
+---
+import Navigation from '../Navigation/index.astro';
+import SocialLinks from '../SocialLinks/index.astro';
+import styles from './footer.module.css';
+
+interface Props {
+  pathname?: string;
+}
+
+const { pathname = '/' } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<footer class={styles.container}>
+  <div class={styles.inner}>
+    <div class={styles.copyBlock}>
+      <p class={styles.kicker}>Built for writing that ages well.</p>
+      <p class={styles.copywrite}>© {year} Igor Barsi. All rights reserved.</p>
+    </div>
+
+    <nav class={styles.navigation} aria-label="Footer">
+      <Navigation pathname={pathname} variant="inverse" />
+    </nav>
+
+    <div class={styles.social}>
+      <SocialLinks align="end" />
+    </div>
+  </div>
+</footer>

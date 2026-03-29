@@ -1,0 +1,25 @@
+---
+import Navigation from '../Navigation/index.astro';
+import styles from './header.module.css';
+
+interface Props {
+  pathname?: string;
+}
+
+const { pathname = '/' } = Astro.props;
+---
+
+<header class={styles.shell}>
+  <nav class={styles.container} aria-label="Primary">
+    <a href="/" class={styles.brand}>
+      <span class={styles.brandName}>Igor Barsi</span>
+      <span class={styles.brandTagline}
+        >Engineering, writing, and leadership</span
+      >
+    </a>
+
+    <div class={styles.navigation}>
+      <Navigation pathname={pathname} />
+    </div>
+  </nav>
+</header>

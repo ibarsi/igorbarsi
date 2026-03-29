@@ -1,0 +1,21 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  ASTRO_TELEMETRY_DISABLED = "1"
+
+[context.production]
+  command = "npm run build"
+
+[context.deploy-preview]
+  command = "npm run build"
+
+[context.branch-deploy]
+  command = "npm run build"
+
+[dev]
+  command = "npm run develop"
+  targetPort = 4321
+  publish = "dist"
+  autoLaunch = false

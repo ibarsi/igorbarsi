@@ -3,8 +3,9 @@
 node_modules
 .cache/
 .eslintcache
+.astro/
 
 # Build directory
-public/
+dist/
 .tsbuildinfo
 .DS_Store

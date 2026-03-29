@@ -1,0 +1,49 @@
+---
+import styles from './social-links.module.css';
+
+interface Props {
+  align?: 'center' | 'end';
+}
+
+const { align = 'center' } = Astro.props;
+
+const links = [
+  {
+    href: 'http://stackoverflow.com/story/igor-barsi',
+    icon: '/svg/stackoverflow.svg',
+    label: 'Igor Barsi - StackOverflow Story',
+  },
+  {
+    href: 'https://github.com/ibarsi',
+    icon: '/svg/github.svg',
+    label: 'Igor Barsi - GitHub',
+  },
+  {
+    href: 'https://twitter.com/igorbarsi',
+    icon: '/svg/twitter.svg',
+    label: 'Igor Barsi - Twitter',
+  },
+  {
+    href: 'https://medium.com/@igorbarsi',
+    icon: '/svg/medium.svg',
+    label: 'Igor Barsi - Medium',
+  },
+  {
+    href: 'https://www.linkedin.com/in/ibarsi/',
+    icon: '/svg/linkedin.svg',
+    label: 'Igor Barsi - LinkedIn',
+  },
+];
+---
+
+<ul class:list={[styles.list, align === 'end' && styles.listEnd]}>
+  {
+    links.map(({ href, icon, label }) => (
+      <li class={styles.listItem}>
+        <a href={href} title={label} target="_blank" rel="noreferrer">
+          <img src={icon} alt="" class={styles.icon} loading="lazy" />
+        </a>
+      </li>
+    ))
+  }
+</ul>

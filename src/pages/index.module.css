@@ -140,8 +140,7 @@
 }
 
 .postsSection,
-.contactSection,
-.newsletter {
+.contactSection {
   padding: clamp(1.5rem, 3vw, 2rem);
 }
 
@@ -187,7 +186,6 @@
   .hero,
   .postsSection,
   .contactSection,
-  .newsletter,
   .storyCard {
     padding: 1.25rem;
   }
