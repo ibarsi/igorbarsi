@@ -1,141 +1,152 @@
-body {
-  background: #eaeaea;
-  background: linear-gradient(180deg, #fbfbfb 200px, #eaeaea 0, #eaeaea 100%);
-  text-align: center;
+:root {
+  --color-background: #f3efe6;
+  --color-surface: rgba(255, 252, 247, 0.84);
+  --color-surface-strong: #fffdf8;
+  --color-text: #1f2933;
+  --color-muted: #5b6875;
+  --color-border: rgba(31, 41, 51, 0.12);
+  --color-accent: #0f766e;
+  --color-accent-strong: #115e59;
+  --shadow-soft: 0 24px 60px rgba(40, 44, 52, 0.08);
+  --radius-lg: 28px;
+  --radius-md: 18px;
+  --content-width: 1120px;
+  --content-narrow: 760px;
 }
 
-body,
-input,
-button {
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top, rgba(15, 118, 110, 0.12), transparent 28%),
+    linear-gradient(180deg, #f8f4ec 0%, #f3efe6 42%, #ebe6da 100%);
   font-size: 16px;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  color: #222222;
+  color: var(--color-text);
+  text-rendering: optimizeLegibility;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: var(--color-accent-strong);
+  text-decoration: none;
+  text-underline-offset: 0.18em;
+  transition:
+    color 160ms ease,
+    opacity 160ms ease;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+p,
+ul,
+ol,
+blockquote {
+  margin-top: 0;
 }
 
 h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
+  margin-top: 0;
   font-family: 'Oswald', sans-serif;
-  text-transform: uppercase;
-}
-
-h2 {
-  margin-top: 1em;
-}
-
-h3 {
-  margin-top: 1.5em;
-}
-
-a {
-  color: #3980f5;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #3980f5;
-  text-decoration: underline;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  color: #12202b;
 }
 
 hr {
-  border: none;
-  border-bottom: 1px dotted #b1b1b1;
+  border: 0;
+  border-top: 1px solid var(--color-border);
 }
 
-.site-container {
-  padding: 0 20px;
+.site-shell {
+  min-height: 100vh;
+}
+
+.site-main {
+  width: min(calc(100% - 2rem), var(--content-width));
+  margin: 0 auto;
+  padding: 0 0 5rem;
 }
 
 .content-container {
-  display: inline-block;
-  margin: 2em auto;
-  padding: 1em 2em;
-  max-width: 800px;
-  min-width: 800px;
-  border: solid 1px #222222;
-  background-color: #ffffff;
+  width: min(100%, var(--content-narrow));
+  margin: 0 auto 3rem;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(12px);
 }
 
 .title {
   margin: 0;
-  padding: 1em 0 0.5em;
-  font-size: 3em;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 0.92;
 }
 
 .title--sub {
-  font-size: 2.5em;
+  font-size: clamp(2rem, 4vw, 3rem);
 }
 
 .paragraph {
-  font-size: 1.25em;
-  line-height: 1.25;
-  text-align: left;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: var(--color-muted);
 }
 
 .paragraph--intro {
-  font-size: 1.35em;
-  line-height: 1.5;
+  font-size: clamp(1.08rem, 1rem + 0.45vw, 1.28rem);
 }
 
 .separator {
-  margin: 0 0.5em;
+  display: inline-block;
+  margin: 0 0.5rem;
+  color: rgba(91, 104, 117, 0.75);
 }
 
 .separator:before {
-  content: '|';
+  content: '•';
 }
 
-/* === JUICER === */
-
-.juicer-feed {
-  margin: auto;
-  max-width: 800px;
-}
-
-.feed-item.juicer.image-post {
-  display: none;
-}
-
-@media (max-width: 900px) {
-  .content-container {
-    min-width: initial;
-  }
-
-  .title {
-    font-size: 2.25em;
-  }
-
-  .title--sub {
-    font-size: 1.75em;
-  }
-
-  .paragraph {
-    font-size: 1em;
-  }
-
-  .paragraph--intro {
-    font-size: 1.25em;
-  }
-}
-
-@media (max-width: 600px) {
-  body {
-    background: linear-gradient(180deg, #fbfbfb 300px, #eaeaea 0, #eaeaea 100%);
-  }
-
-  .site-container {
-    padding: 0;
+@media (max-width: 720px) {
+  .site-main {
+    width: min(calc(100% - 1rem), var(--content-width));
+    padding-bottom: 3.5rem;
   }
 
   .content-container {
-    margin-top: 1em;
-    border: none;
-  }
-
-  .paragraph--intro {
-    font-size: 1em;
+    margin-bottom: 2rem;
+    padding: 1.25rem;
+    border-radius: 24px;
   }
 }

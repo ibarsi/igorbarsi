@@ -1,19 +1,18 @@
 import React from 'react';
-import Link from 'gatsby-link';
-import moment from 'moment';
+import { Link } from 'gatsby';
 
+import { formatPostDate } from '../../utils';
 import * as blogListStyles from './blog-list.module.css';
 
 export const BlogListItem = ({ frontmatter }) => {
-  const date = moment(frontmatter.date, 'MM-DD-YYYY').format('MMMM Do');
+  const date = formatPostDate(frontmatter.date);
 
   return (
     <li className={blogListStyles.item}>
-      <div className={`paragraph ${blogListStyles.itemContent}`}>
+      <Link to={frontmatter.path} className={blogListStyles.card}>
         <span className={blogListStyles.itemDate}>{date}</span>
-
-        <Link to={frontmatter.path}>{frontmatter.title}</Link>
-      </div>
+        <span className={blogListStyles.itemTitle}>{frontmatter.title}</span>
+      </Link>
     </li>
   );
 };

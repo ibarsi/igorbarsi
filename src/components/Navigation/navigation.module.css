@@ -1,18 +1,49 @@
 .list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 0.5rem;
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
 .list-item {
-  margin: 0 0.5em;
+  margin: 0;
 }
 
 .link {
-  font-size: 1.5em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: 0.55rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.95rem;
   font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: currentColor;
+  color: var(--color-muted);
+}
+
+.link:hover {
+  border-color: var(--color-border);
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.linkActive {
+  border-color: rgba(15, 118, 110, 0.16);
+  background: rgba(15, 118, 110, 0.08);
+  color: var(--color-accent-strong);
+}
+
+.linkInverse {
+  color: rgba(255, 252, 247, 0.82);
+}
+
+.linkInverse:hover {
+  border-color: rgba(255, 252, 247, 0.16);
+  color: #ffffff;
 }

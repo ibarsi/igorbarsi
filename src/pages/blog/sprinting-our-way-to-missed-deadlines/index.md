@@ -1,7 +1,7 @@
 ---
-path: "/blog/sprinting-our-way-to-missed-deadlines"
-date: "01-13-2018"
-title: "Sprinting Our Way To Missed Deadlines"
+path: '/blog/sprinting-our-way-to-missed-deadlines'
+date: '01-13-2018'
+title: 'Sprinting Our Way To Missed Deadlines'
 ---
 
 When I was first exposed to Scrum, I fell in love.

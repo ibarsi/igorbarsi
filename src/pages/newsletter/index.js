@@ -1,23 +1,13 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 
 import { Layout } from '../../layouts';
 import { SignupForm } from '../../components/SignupForm';
+import { Seo } from '../../components/Seo';
 import { buildPageTitle } from '../../utils';
 
 const Newsletter = ({ location }) => {
-  const title = buildPageTitle('Free Subscription');
-  const description = 'Subscribe to get updates on my latest work.';
-
   return (
     <Layout location={location}>
-      <Helmet>
-        <title>{title}</title>
-
-        <meta name="description" content={description} />
-        <meta property="og:title" content={title} />
-      </Helmet>
-
       <div className="content-container">
         <h1 className="title">Stay in the Loop</h1>
 
@@ -36,8 +26,8 @@ const Newsletter = ({ location }) => {
             🌍
           </span>{' '}
           Together, I believe we can continually broaden our reach and impact
-          the world by delivering the highest quality content that's guaranteed
-          to deliver value and leave a lasting impact.
+          the world by delivering the highest quality content that&apos;s
+          guaranteed to deliver value and leave a lasting impact.
         </p>
 
         <p className="paragraph">
@@ -55,3 +45,11 @@ const Newsletter = ({ location }) => {
 };
 
 export default Newsletter;
+
+export const Head = ({ location }) => (
+  <Seo
+    description="Subscribe to get updates on my latest work."
+    pathname={location.pathname}
+    title={buildPageTitle('Free Subscription')}
+  />
+);

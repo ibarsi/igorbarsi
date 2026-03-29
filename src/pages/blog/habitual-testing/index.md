@@ -1,7 +1,7 @@
 ---
-path: "/blog/habitual-testing"
-date: "03-31-2018"
-title: "Habitual Testing: Transform Negative Software Testing Culture By Leveraging Your Subconscious"
+path: '/blog/habitual-testing'
+date: '03-31-2018'
+title: 'Habitual Testing: Transform Negative Software Testing Culture By Leveraging Your Subconscious'
 ---
 
 I think we can all agree that testing code is valuable.
@@ -30,9 +30,10 @@ People don’t like being pushed out of their comfort zones. Even if a change is
 In the rest of this post, I’m going to dive into what I call **habitual testing**. A collection of techniques and patterns I’ve adopted across the organizations I’ve worked at that have helped slowly build testing awareness and intuition. This process aims to instil small bits of change over time, while gradually forming good testing practices as the team adjusts and observes the benefits.
 
 ## Think Before You Test
+
 I came across this tweet a while back from [Guillermo Rauch](https://twitter.com/rauchg)‏ that really spoke to me:
 
-![Write tests. Not too many. Mostly integration.](write_tests.png "Write tests. Not too many. Mostly integration.")
+![Write tests. Not too many. Mostly integration.](write_tests.png 'Write tests. Not too many. Mostly integration.')
 
 In only a few words, he was able to sum up much of my own philosophy of how to approach testing. Especially in teams that don’t support testing as a core part of their development process.
 
@@ -44,19 +45,19 @@ I’m not advocating that you drop what you’re doing to test every line of cod
 
 An often shared model illustrating different forms of testing is what’s known as the **Test Pyramid**:
 
-![Test Pyramid](testing_pyramid.png "Test Pyramid")
+![Test Pyramid](testing_pyramid.png 'Test Pyramid')
 
 This diagram is often used to emphasize the importance of having a wide base of small, fast unit tests that cover the whole codebase, with some integration tests to “fill the gaps” and a few E2E tests to tie everything together. Alternatively, if we were to break down the diagram by _customer value_ (in terms of certainty in the product’s complete functionality) and _cost_ (effort expended to write), we would get the following:
 
-* **Unit** = low value, low cost
-* **Integration** = medium value, medium cost
-* **E2E** = high value, high cost
+- **Unit** = low value, low cost
+- **Integration** = medium value, medium cost
+- **E2E** = high value, high cost
 
 The more surface area a test covers, the more expensive (ie. time consuming) it is to implement, but the most value that it brings. Larger tests are less _precise_ but more _accurate_ at validating correctness by user story acceptance criteria. To put it another way, your tiny units of work can function absolutely perfectly but provide no certainty that the API your customers hit will respond in a way that is acceptable.
 
 If we were to re-draw this diagram in a way that better represents this new mental model, we might get something like the following (as shared by [Kent C. Dodds](https://twitter.com/kentcdodds)):
 
-![Testing Trophy](testing_trophy.jpg "Testing Trophy")
+![Testing Trophy](testing_trophy.jpg 'Testing Trophy')
 
 Here’s how this new diagram can be interpreted:
 
@@ -69,6 +70,7 @@ Here’s how this new diagram can be interpreted:
 Apply these insights to your testing strategy to ensure you get the most return on your investment. Remember to take a step back before writing a test, reference the points above and ask yourself if your current approach is appropriate.
 
 ## Be a Good Boy Scout
+
 Another deterring aspects of fully testing a completely untested codebase is the potential need for heavy refactoring to support sane testability. Most code written _without_ testing in mind is often untestable as a result (ie. giant functions, several dependencies, global state, etc). The older and larger the codebase is, the more daunting this task becomes. Combine this with an ever growing backlog of new feature work and looming deadlines and you’re left with a recipe for disaster.
 
 I don’t blame you.
@@ -85,17 +87,18 @@ By adhering to a few simple guidelines, you can teach yourself (and your team) t
 
 1. **Test every new bug** - When a production bug is reported, your instinct is to immediately sift through logs and attempt to replicate the error locally before proceeding to tinker and develop a solution. Before committing that code, stop and write a test. Not only does this increase code coverage, but it guarantees that if this bug is ever re-introduced it will be caught by your test runner, not your customers. If there’s no test, it didn’t happen.
 
-2. **Test every new feature** -  New code is easy to test. You have full control over how to encapsulate your logic, split and limit dependencies and ultimately make the feature as painless to test as possible. Challenge yourself to sensibly test any new code that you write until you’ve achieved a comfortable level of certainty in what you’re about to ship.
+2. **Test every new feature** - New code is easy to test. You have full control over how to encapsulate your logic, split and limit dependencies and ultimately make the feature as painless to test as possible. Challenge yourself to sensibly test any new code that you write until you’ve achieved a comfortable level of certainty in what you’re about to ship.
 3. **Test before you refactor** - Refactoring runs the risk of introducing regressions by incorrectly re-implementing old code based on misinterpreted intentions. Before you refactor, write some tests to define how the code is functioning correctly today. This way, you can assert and rest assured that your refactored code is functioning exactly as intended.
 
 Integrating these if-then plans into your development process introduces light testing sprinkled throughout your day-to-day tasks. Before you know it, you’ll be thinking about ways to test your code before you write it.
 
 ## Make it Simple
+
 [Charles Duhigg](https://twitter.com/cduhigg) compares our willpower to a muscle in his book [The Power of Habit](https://amzn.to/2H1iRWD), suggesting that there is only so much willpower we can exert before we run out of steam. Over-exerting ourselves early during trivial tasks results in depleted self-control and lack of discipline when the time comes to apply ourselves for the work that really matters.
 
 Our work lives are full of tasks that require willpower. Checking emails, keeping JIRA tickets up to date and responding to Slack notifications gradually deplete your willpower reserves throughout the day. Eventually, you can become so drained that you start to slip and lack diligence when it comes time to work on more meaningful tasks (like testing your code).
 
-While you can take measures to reduce the negative impact and frequency of these menial tasks, the reality for most of us is that we’re not in a position to block them out entirely. What  we _are_ in a position to do is make sure that testing doesn’t get negatively affected by our drained reserves. By making testing as straightforward and painless as possible, we reduce the effort required to write them and in turn minimize the risk of writing rushed, careless tests when we hit our lowest point of determination.
+While you can take measures to reduce the negative impact and frequency of these menial tasks, the reality for most of us is that we’re not in a position to block them out entirely. What we _are_ in a position to do is make sure that testing doesn’t get negatively affected by our drained reserves. By making testing as straightforward and painless as possible, we reduce the effort required to write them and in turn minimize the risk of writing rushed, careless tests when we hit our lowest point of determination.
 
 1. **Write utility functions** to reduce duplication of commonly repeated tasks. This is common practice in feature, DRYing out repetition and code duplication. Make sure the same philosophy is applied to test code. Do you find yourself creating a new user, generating a login token and applying to to requests for all API integration tests? Are you always stubbing out Stripe APIs when you test anything payment related? Write a utility that takes care of that for you in one line. The more you extract, centralize and simplify the prep work, the more streamlined and approachable testing becomes.
 2. **Leverage code snippets/generators** to bootstrap new tests quickly. As you write more and more tests you’ll establish certain patterns. Your tests will start looking the same. At this stage, taking some time to separate unique test code from the scaffolding will enable the use of code generators. These snippets can be mapped to key combinations in most modern editors and inserted at will, removing the need to hand write (or likely copy/paste) the same code from previous tests over and over again. This is the lowest form of yak shaving that really sucks the enjoyment out of writing software. These templates can act as boilerplates for new tests, removing the busy work and make writing tests feel like less of a chore.
@@ -105,6 +108,7 @@ While you can take measures to reduce the negative impact and frequency of these
 With the right tools at your team’s disposal, testing can become less of a chore and at times even enjoyable. We go to great lengths to make our development environment as pleasant to work with as possible. It’s time to apply the same mindset to our test tooling.
 
 ## Have Rules
+
 [Sandi Metz](https://twitter.com/sandimetz) gave a talk called [Rules](https://www.youtube.com/watch?v=npOGOmkxuio), which outlines 5 rules for writing object oriented code. Furthermore, she digs into how social scientists define rules and the impact they have on willingness and self-discipline. The results are illuminating, and the benefits can be applied across domains.
 
 Ultimately, the rules you set are arbitrary and it’s perfectly okay to break them if reasonable. It’s the very _existence_ of these rules that bias towards co-operation and collaboration, towards maintaining the “state of things”. By setting hard rules that govern how testing should be done, you are effectively influencing followers to uphold standards and push non-followers towards adhering to your norms.
@@ -117,12 +121,13 @@ When you start thinking about the kinds of rules you want to set for your own te
 Rules can have a profound effect on your team, wether they realize it or not. The metrics detailed above may not be perfect, but they serve the purpose of nudging team members toward the norm of constant, habitual testing.
 
 ## Develop Habits That Work For You
+
 Embracing effective software testing patterns can be a daunting, uncomfortable and downright painful experience. It doesn’t have to be. Take advantage of the mechanics hardwired in your brain. Create a framework that fosters the formation of habits that encourage a strong testing culture.
 
-* **Think** before you write your tests. Make sure you’re getting the maximum return on your investment.
-* **If-Then** plans trigger an automatic response to certain coding scenarios. Take advantage of them to elicit a positive response (via tests).
-* **Tooling** that supports painless testing will ease the barrier of entry for writing future tests.
-* **Rules** will have an impact on the willingness and self-discipline of your team when it comes to diligently testing their code.
+- **Think** before you write your tests. Make sure you’re getting the maximum return on your investment.
+- **If-Then** plans trigger an automatic response to certain coding scenarios. Take advantage of them to elicit a positive response (via tests).
+- **Tooling** that supports painless testing will ease the barrier of entry for writing future tests.
+- **Rules** will have an impact on the willingness and self-discipline of your team when it comes to diligently testing their code.
 
 The final takeaway to making habitual testing a success is _believing_ that it’s possible. Forming habits can be a challenge. It takes significant time and effort to realize the fruits of your labour, but the result is truly satisfying. To quote [Charles Duhigg](https://twitter.com/cduhigg) once again in [The Power of Habit](https://amzn.to/2H1iRWD):
 

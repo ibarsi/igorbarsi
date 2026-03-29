@@ -1,133 +1,142 @@
 import React, { Fragment } from 'react';
-import { Helmet } from 'react-helmet';
 
 import { Layout } from '../layouts';
 import { SignupForm } from '../components/SignupForm';
 import { SocialLinks } from '../components/SocialLinks';
 import { RecentBlogPosts } from '../components/RecentBlogPosts';
+import { Seo } from '../components/Seo';
 import { buildPageTitle } from '../utils';
 import { FEATURE_SWITCHES } from '../config';
+import * as homeStyles from './index.module.css';
+
+const title = buildPageTitle();
+const description =
+  'Igor Barsi is a software developer and writer focused on effective engineering and leadership. You can find links to his writing and work here at igorbarsi.com.';
 
 const IndexPage = ({ location }) => {
-  const title = buildPageTitle();
-  const description =
-    'Igor Barsi is a software developer and writer focused on effective engineering and leadership. You can find links to his writing and work here at igorbarsi.com.';
-
   return (
     <Layout location={location}>
-      <Helmet>
-        <title>{title}</title>
-
-        <meta name="description" content={description} />
-        <meta property="og:title" content={title} />
-
-        <link
-          rel="stylesheet"
-          href="//assets.juicer.io/embed.css"
-          media="all"
-          type="text/css"
-        />
-        <script
-          defer
-          type="text/javascript"
-          src="//assets.juicer.io/embed.js"
-        />
-      </Helmet>
-
-      <div className="content-container">
-        <header>
-          <h1 className="title">
-            Hi, I'm Igor Barsi{' '}
-            <span role="img" aria-label="Emoji">
-              👋
-            </span>
-          </h1>
-        </header>
-
-        <hr />
-
-        <p className="paragraph paragraph--intro">
-          <span role="img" aria-label="Emoji">
-            👨🏽‍💻
-          </span>{' '}
-          I’m a software developer and writer focused on effective engineering
-          and leadership.
-        </p>
-        <p className="paragraph paragraph--intro">
-          <span role="img" aria-label="Emoji">
-            👨🏽‍🏫
-          </span>{' '}
-          My goal is to share the lessons and concepts I've learned over the
-          years that focus on the “soft” side of what we do to build routines
-          and practices that ultimately shape our life and work.
-        </p>
-        <p className="paragraph paragraph--intro">
-          <span role="img" aria-label="Emoji">
-            ✍🏼
-          </span>{' '}
-          Much of my writing consists of opinion posts targeted at engineers.
-          However, the core concepts are far reaching and applicable to diverse
-          disciplines and walks of life.
-        </p>
-        <p className="paragraph paragraph--intro">
-          <span role="img" aria-label="Emoji">
-            😄
-          </span>{' '}
-          I don’t have all the answers, but I’m happy to share what I have
-          learned in hopes that my thoughts and experiences might impact readers
-          in a positive way!
-        </p>
-
-        {FEATURE_SWITCHES.NEWSLETTER && (
-          <Fragment>
-            <h2 className="title title--sub">Stay in the Loop</h2>
-
-            <p className="paragraph paragraph--intro">
-              <span role="img" aria-label="Emoji">
-                🌟
-              </span>{' '}
-              I feel very lucky to have the priviledge to share my knowledge and
-              opinions with such a broad audience!
+      <div className={homeStyles.page}>
+        <section className={homeStyles.hero}>
+          <div className={homeStyles.heroIntro}>
+            <p className={homeStyles.eyebrow}>
+              Software developer, writer, and engineering lead
+            </p>
+            <h1 className="title">
+              Ideas for building better teams, habits, and software.
+            </h1>
+            <p className={`paragraph paragraph--intro ${homeStyles.summary}`}>
+              I write about the human side of engineering: delivery, leadership,
+              communication, and the routines that shape durable technical work.
             </p>
 
-            <p className="paragraph paragraph--intro">
-              <span role="img" aria-label="Emoji">
-                🌍
-              </span>{' '}
-              Together, I believe we can continually broaden our reach and
-              impact the world by delivering the highest quality content that's
-              guaranteed to deliver value and leave a lasting impact.
-            </p>
-
-            <p className="paragraph paragraph--intro">
-              <span role="img" aria-label="Emoji">
-                👇🏼
-              </span>{' '}
-              Want to stay up-to-date? Great! Please enter your email and sign
-              up below for notifications of my latest work.
-            </p>
-
-            <div>
-              <SignupForm />
+            <div className={homeStyles.heroActions}>
+              <a href="/blog" className={homeStyles.primaryAction}>
+                Read the blog
+              </a>
+              <a
+                href="https://www.linkedin.com/in/ibarsi/"
+                className={homeStyles.secondaryAction}
+              >
+                Connect on LinkedIn
+              </a>
             </div>
-          </Fragment>
-        )}
+          </div>
 
-        <div>
-          <h2 className="title title--sub">Recent Blog Posts</h2>
+          <aside className={homeStyles.heroPanel}>
+            <p className={homeStyles.panelLabel}>What you will find here</p>
+            <ul className={homeStyles.panelList}>
+              <li>Practical writing for engineers and leaders</li>
+              <li>Lessons on process, clarity, and collaboration</li>
+              <li>Thoughtful opinions shaped by real delivery work</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section className={homeStyles.storyGrid}>
+          <article className={homeStyles.storyCard}>
+            <p className={homeStyles.cardEyebrow}>Focus</p>
+            <h2 className={homeStyles.cardTitle}>
+              Effective engineering over empty motion.
+            </h2>
+            <p className="paragraph">
+              Much of my writing is aimed at engineers, but the themes travel
+              well: clear communication, disciplined habits, and systems that
+              help people do meaningful work together.
+            </p>
+          </article>
+
+          <article className={homeStyles.storyCard}>
+            <p className={homeStyles.cardEyebrow}>Approach</p>
+            <h2 className={homeStyles.cardTitle}>
+              Opinionated, practical, and grounded.
+            </h2>
+            <p className="paragraph">
+              I do not claim to have all the answers. I share what has proven
+              useful, where teams tend to struggle, and the patterns that seem
+              to compound over time.
+            </p>
+          </article>
+        </section>
+
+        <section className={homeStyles.postsSection}>
+          <div className={homeStyles.sectionHeading}>
+            <div>
+              <p className={homeStyles.eyebrow}>Latest writing</p>
+              <h2 className={homeStyles.sectionTitle}>Recent blog posts</h2>
+            </div>
+            <a href="/blog" className={homeStyles.sectionLink}>
+              View all posts
+            </a>
+          </div>
 
           <RecentBlogPosts limit={3} />
-        </div>
+        </section>
 
-        <SocialLinks />
+        <section className={homeStyles.contactSection}>
+          <div className={homeStyles.contactCopy}>
+            <p className={homeStyles.eyebrow}>Elsewhere</p>
+            <h2 className={homeStyles.sectionTitle}>
+              Follow the work outside the blog.
+            </h2>
+            <p className="paragraph">
+              The site should feel more alive than it used to, but the core goal
+              stays the same: publish useful ideas and make them easy to find.
+            </p>
+          </div>
+
+          <div className={homeStyles.socialWrap}>
+            <SocialLinks />
+          </div>
+        </section>
+
+        {FEATURE_SWITCHES.NEWSLETTER && (
+          <section className={`${homeStyles.newsletter} content-container`}>
+            <div className={homeStyles.sectionHeading}>
+              <div>
+                <p className={homeStyles.eyebrow}>Stay in the loop</p>
+                <h2 className={homeStyles.sectionTitle}>
+                  Get notified when new writing goes live.
+                </h2>
+              </div>
+            </div>
+
+            <p className="paragraph">
+              If you want updates without checking back manually, subscribe and
+              I will send new posts your way.
+            </p>
+
+            <Fragment>
+              <SignupForm />
+            </Fragment>
+          </section>
+        )}
       </div>
-
-      <ul className="juicer-feed" data-feed-id="igorbarsi" data-per="10">
-        <h1 className="referral">
-          <a href="https://www.juicer.io">Powered by Juicer</a>
-        </h1>
-      </ul>
     </Layout>
   );
 };
 export default IndexPage;
+
+export const Head = ({ location }) => (
+  <Seo description={description} pathname={location.pathname} title={title} />
+);

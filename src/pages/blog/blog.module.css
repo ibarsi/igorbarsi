@@ -1,6 +1,50 @@
-.container {
-  text-align: left;
-  margin-bottom: 5em;
-  padding: 1.5em;
-  padding-top: 0;
+.page {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.hero,
+.yearSection {
+  padding: clamp(1.5rem, 3vw, 2rem);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(12px);
+}
+
+.eyebrow,
+.yearLabel {
+  margin: 0 0 0.65rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.84rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent-strong);
+}
+
+.title {
+  margin: 0 0 1rem;
+  font-size: clamp(2.4rem, 5vw, 4.6rem);
+  line-height: 0.96;
+}
+
+.yearHeader {
+  margin-bottom: 1.25rem;
+}
+
+.yearTitle {
+  margin: 0;
+  font-size: clamp(1.8rem, 2vw, 2.5rem);
+}
+
+@media (max-width: 720px) {
+  .page {
+    gap: 1rem;
+  }
+
+  .hero,
+  .yearSection {
+    padding: 1.25rem;
+  }
 }

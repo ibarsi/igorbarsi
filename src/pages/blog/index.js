@@ -1,13 +1,16 @@
 import React from 'react';
-import Helmet from 'react-helmet';
-import moment from 'moment';
 import { graphql } from 'gatsby';
 
 import { Layout } from '../../layouts';
 import { BlogList, BlogListItem } from '../../components/BlogList';
-import { buildPageTitle } from '../../utils';
+import { Seo } from '../../components/Seo';
+import { buildPageTitle, getPostYear } from '../../utils';
 
 import * as blogStyles from './blog.module.css';
+
+const title = buildPageTitle('Blog');
+const description =
+  'Looking for the best blog posts to read? Browse this list of interesting posts on software engineering, leadership, behavioural psychology, productivity and more.';
 
 const groupPostsByYear = (posts) =>
   posts.reduce((acc, { node: post } = {}) => {
@@ -15,7 +18,11 @@ const groupPostsByYear = (posts) =>
       return acc;
     }
 
-    const year = moment(post.frontmatter.date).year();
+    const year = getPostYear(post.frontmatter.date);
+
+    if (!year) {
+      return acc;
+    }
 
     return { ...acc, [year]: [...(acc[year] || []), post] };
   }, {});
@@ -23,30 +30,21 @@ const groupPostsByYear = (posts) =>
 const Blog = ({ data, location }) => {
   const { edges: posts } = data.allMarkdownRemark;
 
-  const title = buildPageTitle('Blog');
-  const description =
-    'Looking for the best blog posts to read? Browse this list of interesting posts on software engineering, leadership, behavioural psychology, productivity and more.';
-
   const groupedPosts = groupPostsByYear(posts);
 
   return (
     <Layout location={location}>
-      <Helmet>
-        <title>{title}</title>
-
-        <meta name="description" content={description} />
-        <meta property="og:title" content={title} />
-      </Helmet>
-
-      <div className={`content-container ${blogStyles.container}`}>
-        <h1>All Posts By Date</h1>
-
-        <p className="paragraph">
-          Take a look below to browse all of my posts by date and title. They
-          are listed from newest to oldest.
-        </p>
-
-        <hr />
+      <div className={blogStyles.page}>
+        <section className={blogStyles.hero}>
+          <p className={blogStyles.eyebrow}>Archive</p>
+          <h1 className={blogStyles.title}>
+            Writing on engineering, leadership, and better delivery.
+          </h1>
+          <p className="paragraph paragraph--intro">
+            Browse the full archive by year. Posts are ordered from newest to
+            oldest so the latest thinking stays easy to find.
+          </p>
+        </section>
 
         {Object.keys(groupedPosts)
           .sort((previous, next) => next - previous)
@@ -54,15 +52,18 @@ const Blog = ({ data, location }) => {
             const postsForYear = groupedPosts[key];
 
             return (
-              <div key={key}>
-                <h2>{key}</h2>
+              <section key={key} className={blogStyles.yearSection}>
+                <div className={blogStyles.yearHeader}>
+                  <p className={blogStyles.yearLabel}>Year</p>
+                  <h2 className={blogStyles.yearTitle}>{key}</h2>
+                </div>
 
                 <BlogList>
                   {postsForYear.map((post) => (
                     <BlogListItem key={post.id} {...post} />
                   ))}
                 </BlogList>
-              </div>
+              </section>
             );
           })}
       </div>
@@ -74,7 +75,7 @@ export default Blog;
 
 export const blogPostsFragment = graphql`
   fragment BlogPostsFragment on Query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       edges {
         node {
           id
@@ -94,3 +95,7 @@ export const query = graphql`
     ...BlogPostsFragment
   }
 `;
+
+export const Head = ({ location }) => (
+  <Seo description={description} pathname={location.pathname} title={title} />
+);

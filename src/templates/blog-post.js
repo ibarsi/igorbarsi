@@ -1,12 +1,11 @@
-import moment from 'moment';
 import React, { Fragment } from 'react';
-import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 
 import { Layout } from '../layouts';
 import { SignupForm } from '../components/SignupForm';
 import { SocialLinks } from '../components/SocialLinks';
-import { buildPageTitle } from '../utils';
+import { Seo } from '../components/Seo';
+import { buildPageTitle, formatPostDateWithYear } from '../utils';
 import { FEATURE_SWITCHES } from '../config';
 
 import * as blogPostStyles from './blog-post.module.css';
@@ -14,45 +13,24 @@ import * as blogPostStyles from './blog-post.module.css';
 const BlogPost = ({ data, location }) => {
   const post = data.markdownRemark;
 
-  const title = buildPageTitle(post.frontmatter.title);
-  const description = post.excerpt;
-
   return (
     <Layout location={location}>
       <article>
-        <Helmet>
-          <title>{title}</title>
-
-          <meta name="description" content={description} />
-          <meta property="og:title" content={title} />
-          <meta property="og:description" content={description} />
-          <meta property="og:type" content="article" />
-          <meta
-            property="article:author"
-            content="https://www.facebook.com/IgorBarsi"
-          />
-          <meta
-            property="article:publisher"
-            content="https://www.facebook.com/IgorBarsi"
-          />
-        </Helmet>
-
-        <div className={`content-container ${blogPostStyles.markdown}`}>
+        <div className={`content-container ${blogPostStyles.shell}`}>
           <header className={blogPostStyles.header}>
+            <p className={blogPostStyles.eyebrow}>Article</p>
             <h1 className={blogPostStyles.headerHeadline}>
               {post.frontmatter.title}
             </h1>
 
             <span className={blogPostStyles.headerByline}>
               By Igor Barsi <span className="separator" />{' '}
-              {moment(post.frontmatter.date, 'MM-DD-YYYY').format(
-                'MMMM Do, YYYY',
-              )}
+              {formatPostDateWithYear(post.frontmatter.date)}
             </span>
           </header>
 
           <div
-            className={blogPostStyles.content}
+            className={`${blogPostStyles.markdown} ${blogPostStyles.content}`}
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
 
@@ -80,8 +58,8 @@ const BlogPost = ({ data, location }) => {
 export default BlogPost;
 
 export const query = graphql`
-  query BlogPostByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query BlogPostByPath($postPath: String!) {
+    markdownRemark(frontmatter: { path: { eq: $postPath } }) {
       html
       excerpt(pruneLength: 250)
       frontmatter {
@@ -92,3 +70,16 @@ export const query = graphql`
     }
   }
 `;
+
+export const Head = ({ data, location }) => {
+  const post = data.markdownRemark;
+
+  return (
+    <Seo
+      description={post.excerpt}
+      pathname={location.pathname}
+      title={buildPageTitle(post.frontmatter.title)}
+      type="article"
+    />
+  );
+};

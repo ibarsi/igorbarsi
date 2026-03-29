@@ -1,7 +1,7 @@
 ---
-path: "/blog/groom-user-stories-your-delivery-team-wont-hate"
-date: "05-27-2018"
-title: "Groom User Stories Your Delivery Team Won’t Hate"
+path: '/blog/groom-user-stories-your-delivery-team-wont-hate'
+date: '05-27-2018'
+title: 'Groom User Stories Your Delivery Team Won’t Hate'
 ---
 
 When you think of a good user story, you might imagine clear, succinct definitions of features that address real user needs and provide solid business value. They are the PO’s breakdown and representation of where the business needs to grow to keep customers happy and ensure future success.
@@ -30,10 +30,10 @@ When it comes down to it, our teams are full of regular people. We’re all busy
 
 When you sit down to write your next user story, keep the following characteristics in mind.
 
-* **Clear acceptance criteria** that outlines expectations and user needs. These should be comprehensible, succinct points that are narrow and focused on _individual_ requirements. This will ensure developers and QA can digest, implement and test every aspect of the story. In theory, someone should be able to walk off the street into your office, read a user story and get a descent sense of what is being asked.
-* **Vertically sliced** segments of functionality that cut through all architectural layers of the application. Stories should add complete, functioning value to the product. To achieve this, a user story must capture all work required to be completed through the data, business and presentational layers of the application. Technical sub tasks can be broken out to tackle each layer separately, if sensible, but the story itself should capture the final state of a functioning feature.
-* **Focused** on a single workflow or unit of value as part of a greater initiative. A user story shouldn’t cover too much ground, but just enough to deliver value. Bloated stories will come off as daunting and lead to avoidance, while slim stories will seem tedious and pointless, influencing the team to rush implementation and “move on to the next thing”. Striking that balance is key to maintain engagement while still delivering something meaningful.
-* **Prioritized** [ruthlessly](https://blackboxofpm.com/ruthless-prioritization-e4256e3520a9). User stories should be constantly re-prioritized and re-ordered in a way that represents current needs, adjusting for ROI, effort required and blocking dependencies accordingly.
+- **Clear acceptance criteria** that outlines expectations and user needs. These should be comprehensible, succinct points that are narrow and focused on _individual_ requirements. This will ensure developers and QA can digest, implement and test every aspect of the story. In theory, someone should be able to walk off the street into your office, read a user story and get a descent sense of what is being asked.
+- **Vertically sliced** segments of functionality that cut through all architectural layers of the application. Stories should add complete, functioning value to the product. To achieve this, a user story must capture all work required to be completed through the data, business and presentational layers of the application. Technical sub tasks can be broken out to tackle each layer separately, if sensible, but the story itself should capture the final state of a functioning feature.
+- **Focused** on a single workflow or unit of value as part of a greater initiative. A user story shouldn’t cover too much ground, but just enough to deliver value. Bloated stories will come off as daunting and lead to avoidance, while slim stories will seem tedious and pointless, influencing the team to rush implementation and “move on to the next thing”. Striking that balance is key to maintain engagement while still delivering something meaningful.
+- **Prioritized** [ruthlessly](https://blackboxofpm.com/ruthless-prioritization-e4256e3520a9). User stories should be constantly re-prioritized and re-ordered in a way that represents current needs, adjusting for ROI, effort required and blocking dependencies accordingly.
 
 Remember, we’re all regular people at the end of the day. Through the myriad of distractions and depletion of focus we endure, let’s put some effort into making our delivery process as painless as possible.
 
@@ -65,10 +65,10 @@ These tools and processes are in place to help us achieve velocity. If instead t
 
 From my experience, I’ve had good results sticking to the following classifications and separations of concerns between ticket categories.
 
-* **Epics** should be written by the PO to capture entire initiatives. These are high level tasks that are written in an executive level language that speaks to business owners. Epics should state clear goals that the team can rally behind and stay focused.
-* **Stories** should be written by the PO, breaking epics down into sizable chunks of functionality. I already went into user story writing in the previous section, but I want to re-iterate how critical it is that stories stay relevant to the business. This is the PO’s value-centric breakdown of a larger initiative that can be used to track the overall progress of the delivery of said initiative.
-* **Sub-Tasks** should be written by developers to outline the technical implementation details for a given story. These tasks are for developers only to be completed during the sprint. A single story could have one matching task, many tasks or share tasks between other stories. The goal is to create tasks that logically break down the work required of developers, across stories, to be utilized in a way that’s most efficient for them to deliver. Once all tasks linked to a story are completed, it should be ready for test.
-* **Defects** should be written by QA to capture errors or missed criteria in stories. Defects should be described in detail, with clear steps to reproduce and screenshots or videos If possible. Stories should be linked so that missed acceptance criteria is clear.
+- **Epics** should be written by the PO to capture entire initiatives. These are high level tasks that are written in an executive level language that speaks to business owners. Epics should state clear goals that the team can rally behind and stay focused.
+- **Stories** should be written by the PO, breaking epics down into sizable chunks of functionality. I already went into user story writing in the previous section, but I want to re-iterate how critical it is that stories stay relevant to the business. This is the PO’s value-centric breakdown of a larger initiative that can be used to track the overall progress of the delivery of said initiative.
+- **Sub-Tasks** should be written by developers to outline the technical implementation details for a given story. These tasks are for developers only to be completed during the sprint. A single story could have one matching task, many tasks or share tasks between other stories. The goal is to create tasks that logically break down the work required of developers, across stories, to be utilized in a way that’s most efficient for them to deliver. Once all tasks linked to a story are completed, it should be ready for test.
+- **Defects** should be written by QA to capture errors or missed criteria in stories. Defects should be described in detail, with clear steps to reproduce and screenshots or videos If possible. Stories should be linked so that missed acceptance criteria is clear.
 
 The distinctions defined above should be clear and their language consistent. Product should be able to define what they need in a language they understand. Development and QA should be no different. With this clean separation, each member of the team can work as efficiently and comfortably as possible.
 
@@ -76,9 +76,9 @@ The distinctions defined above should be clear and their language consistent. Pr
 
 These days, high quality software doesn’t get delivered by a single person. There are groups of talented and diverse individuals in different fields of practice with varying disciplines and perspectives. To truly get the most out of your delivery team, the stories that ultimately drive the product’s development should be groomed in a way that compliments these dynamics.
 
-* **Readability** is critical in ensuring that your stories get consumed efficiently, with minimal errors and confusion. Remember, anyone should be able to walk off the street, read a story and grasp the ask.
-* **Inclusion** among varying disciplines in the team before and during grooming could proactively prevent lost time and churn during implementation.
-* **Separation of concerns** between task categories improves clarity as to where information can be found and reduces duplication across tasks.
+- **Readability** is critical in ensuring that your stories get consumed efficiently, with minimal errors and confusion. Remember, anyone should be able to walk off the street, read a story and grasp the ask.
+- **Inclusion** among varying disciplines in the team before and during grooming could proactively prevent lost time and churn during implementation.
+- **Separation of concerns** between task categories improves clarity as to where information can be found and reduces duplication across tasks.
 
 > Grooming doesn’t have to be painful.
 

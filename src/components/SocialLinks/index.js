@@ -16,7 +16,8 @@ export const SocialLinks = () => (
       <a
         href="http://stackoverflow.com/story/igor-barsi"
         title="Igor Barsi - StackOverflow Story"
-        target="blank"
+        target="_blank"
+        rel="noreferrer"
       >
         <StackOverflowIcon />
       </a>
@@ -25,7 +26,8 @@ export const SocialLinks = () => (
       <a
         href="https://github.com/ibarsi"
         title="Igor Barsi - GitHub"
-        target="blank"
+        target="_blank"
+        rel="noreferrer"
       >
         <GitHubIcon />
       </a>
@@ -34,7 +36,8 @@ export const SocialLinks = () => (
       <a
         href="https://twitter.com/igorbarsi"
         title="Igor Barsi - Twitter"
-        target="blank"
+        target="_blank"
+        rel="noreferrer"
       >
         <TwitterIcon />
       </a>
@@ -43,7 +46,8 @@ export const SocialLinks = () => (
       <a
         href="https://medium.com/@igorbarsi"
         title="Igor Barsi - Medium"
-        target="blank"
+        target="_blank"
+        rel="noreferrer"
       >
         <MediumIcon />
       </a>
@@ -52,7 +56,8 @@ export const SocialLinks = () => (
       <a
         href="https://www.linkedin.com/in/ibarsi/"
         title="Igor Barsi - LinkedIn"
-        target="blank"
+        target="_blank"
+        rel="noreferrer"
       >
         <LinkedInIcon />
       </a>
