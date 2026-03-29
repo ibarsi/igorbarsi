@@ -4,6 +4,9 @@
   "description": "Personal site.",
   "author": "Igor Barsi <ibarsi92@gmail.com> (https://github.com/ibarsi)",
   "license": "MIT",
+  "engines": {
+    "node": "25.8.2"
+  },
   "scripts": {
     "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
     "develop": "ASTRO_TELEMETRY_DISABLED=1 astro dev",

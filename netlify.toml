@@ -4,6 +4,7 @@
 
 [build.environment]
   ASTRO_TELEMETRY_DISABLED = "1"
+  NODE_VERSION = "25.8.2"
 
 [context.production]
   command = "npm run build"

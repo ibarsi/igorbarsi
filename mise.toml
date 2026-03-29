@@ -1,0 +1,76 @@
+min_version = "2026.3.17"
+
+[env]
+ASTRO_TELEMETRY_DISABLED = "1"
+
+[tools]
+node = "25.8.2"
+
+[tasks.install]
+description = "Install npm dependencies"
+run = "npm install"
+alias = "i"
+
+[tasks.dev]
+description = "Start the Astro dev server"
+run = "npm run develop"
+alias = "d"
+
+[tasks.build]
+description = "Build the production site"
+run = "npm run build"
+sources = [
+  "astro.config.mjs",
+  "package.json",
+  "package-lock.json",
+  "src/**/*",
+  "static/**/*",
+  "tsconfig.json",
+]
+outputs = ["dist"]
+alias = "b"
+
+[tasks.preview]
+description = "Preview the production build"
+run = "npm run preview"
+depends = ["build"]
+alias = "p"
+
+[tasks.lint]
+description = "Run ESLint"
+run = "npm run lint"
+sources = [
+  "eslint.config.cjs",
+  "package.json",
+  "src/**/*.{astro,js,jsx,ts,tsx,mdx}",
+]
+
+[tasks.typecheck]
+description = "Run Astro and TypeScript checks"
+run = "npm run typecheck"
+sources = [
+  "astro.config.mjs",
+  "package.json",
+  "src/**/*.{astro,ts,tsx,mdx}",
+  "tsconfig.json",
+]
+
+[tasks.format]
+description = "Format source files"
+run = "npm run format"
+
+[tasks."format-check"]
+description = "Check formatting without writing changes"
+run = "npm run format:check"
+
+[tasks.check]
+description = "Run lint and type checks"
+depends = ["lint", "typecheck"]
+
+[tasks.ci]
+description = "Run the local CI suite"
+run = "mise run -j 1 lint ::: typecheck ::: build"
+
+[tasks.clean]
+description = "Remove generated build artifacts"
+run = "rm -rf .astro dist"
