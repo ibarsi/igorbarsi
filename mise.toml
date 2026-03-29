@@ -1,4 +1,4 @@
-min_version = "2026.3.17"
+min_version = "2026.3.12"
 
 [env]
 ASTRO_TELEMETRY_DISABLED = "1"
@@ -69,7 +69,7 @@ depends = ["lint", "typecheck"]
 
 [tasks.ci]
 description = "Run the local CI suite"
-run = "mise run -j 1 lint ::: typecheck ::: build"
+run = "mise run -j 1 lint ::: typecheck ::: format-check ::: build"
 
 [tasks.clean]
 description = "Remove generated build artifacts"
