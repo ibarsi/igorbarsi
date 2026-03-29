@@ -1,50 +1,48 @@
 .page {
   display: grid;
-  gap: 1.5rem;
+  gap: 4rem;
+  padding-top: 2rem;
 }
 
-.hero,
-.yearSection {
-  padding: clamp(1.5rem, 3vw, 2rem);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  background: var(--color-surface);
-  box-shadow: var(--shadow-soft);
-  backdrop-filter: blur(12px);
-}
-
-.eyebrow,
-.yearLabel {
-  margin: 0 0 0.65rem;
-  font-family: 'Oswald', sans-serif;
-  font-size: 0.84rem;
-  letter-spacing: 0.08em;
+.label {
+  margin: 0 0 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--color-accent-strong);
+  color: var(--color-accent);
+}
+
+.hero {
+  max-width: 42rem;
 }
 
 .title {
-  margin: 0 0 1rem;
-  font-size: clamp(2.4rem, 5vw, 4.6rem);
-  line-height: 0.96;
+  margin: 0 0 1.25rem;
+  font-size: clamp(2.6rem, 5vw, 4.6rem);
+  line-height: 0.98;
+}
+
+.yearSection {
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border);
 }
 
 .yearHeader {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .yearTitle {
-  margin: 0;
-  font-size: clamp(1.8rem, 2vw, 2.5rem);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(2rem, 3vw, 3rem);
+  color: var(--color-text);
+  opacity: 0.3;
 }
 
 @media (max-width: 720px) {
   .page {
-    gap: 1rem;
-  }
-
-  .hero,
-  .yearSection {
-    padding: 1.25rem;
+    gap: 3rem;
+    padding-top: 1rem;
   }
 }
