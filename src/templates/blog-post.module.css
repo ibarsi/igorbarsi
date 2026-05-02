@@ -104,6 +104,7 @@
 
 .markdown figure {
   margin: 2.5em 0;
+  text-align: center;
 }
 
 .markdown figcaption {
@@ -139,8 +140,26 @@
   border: none;
 }
 
+.markdown p:has(> img:only-child) {
+  margin: 2.5em 0;
+  text-align: center;
+}
+
 .markdown img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin: 2.5em auto;
   border: 1px solid var(--color-border);
+  object-fit: contain;
+  object-position: center;
+  image-rendering: auto;
+}
+
+.markdown p:has(> img:only-child) > img,
+.markdown figure img {
+  margin: 0 auto;
 }
 
 .footer {
