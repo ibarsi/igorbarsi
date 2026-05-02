@@ -17,10 +17,15 @@ posts.sort((a, b) => (a.data.date < b.data.date ? 1 : -1));
 <BaseLayout title={title} description={description}>
   <div class={styles.page}>
     <section class={`${styles.hero} animate-in`}>
+      <div class={styles.hyperframe} aria-hidden="true">
+        <span class={styles.frameLine}></span>
+        <span class={styles.frameLine}></span>
+        <span class={styles.frameLine}></span>
+      </div>
       <p class={styles.label}>Software Engineer &amp; Writer</p>
       <h1 class={styles.headline}>
-        Building better teams,<br />
-        habits, and software.
+        <span>Building better teams,</span>
+        <span>habits, and software.</span>
       </h1>
       <p class={`paragraph paragraph--intro ${styles.summary}`}>
         I write about the human side of engineering — delivery, leadership,
@@ -39,7 +44,7 @@ posts.sort((a, b) => (a.data.date < b.data.date ? 1 : -1));
     </section>
 
     <div class={`${styles.pillars} animate-in delay-1`}>
-      <article class={styles.pillar}>
+      <article class={styles.pillar} style="--index: 0">
         <span class={styles.pillarNumber}>01</span>
         <h2 class={styles.pillarTitle}>
           Effective engineering over empty motion
@@ -51,7 +56,7 @@ posts.sort((a, b) => (a.data.date < b.data.date ? 1 : -1));
         </p>
       </article>
 
-      <article class={styles.pillar}>
+      <article class={styles.pillar} style="--index: 1">
         <span class={styles.pillarNumber}>02</span>
         <h2 class={styles.pillarTitle}>Opinionated, practical, and grounded</h2>
         <p class="paragraph">

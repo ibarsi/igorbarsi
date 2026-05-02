@@ -19,8 +19,8 @@ const { entries } = Astro.props;
 
 <ul class={styles.container}>
   {
-    entries.map((entry) => (
-      <li class={styles.item}>
+    entries.map((entry, index) => (
+      <li class={styles.item} style={`--index: ${index}`}>
         <a href={`/blog/${entry.data.slug}/`} class={styles.card}>
           <span class={styles.itemDate}>{formatPostDate(entry.data.date)}</span>
           <span class={styles.itemTitle}>{entry.data.title}</span>
