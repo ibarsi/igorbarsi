@@ -20,3 +20,7 @@
   targetPort = 4321
   publish = "dist"
   autoLaunch = false
+
+[[edge_functions]]
+  path = "/newsletter/"
+  function = "gone"
