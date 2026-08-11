@@ -1,4 +1,7 @@
 {
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "igorbarsi",
+  "pages_build_output_dir": "./dist",
   "observability": {
     "enabled": false,
     "head_sampling_rate": 1,
