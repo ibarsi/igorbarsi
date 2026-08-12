@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 
 import RecentBlogPosts from '../components/RecentBlogPosts/index.astro';
+import { getSelectedRepositories } from '../data/github';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import styles from './index.module.css';
 import { buildPageTitle } from '../utils.js';
@@ -12,6 +13,7 @@ const description =
 
 const posts = await getCollection('blog');
 posts.sort((a, b) => (a.data.date < b.data.date ? 1 : -1));
+const repositories = await getSelectedRepositories();
 ---
 
 <BaseLayout title={title} description={description}>
@@ -29,12 +31,7 @@ posts.sort((a, b) => (a.data.date < b.data.date ? 1 : -1));
           craft, communication, habits, and choices behind durable work.
         </p>
         <div class={styles.heroActions}>
-          <a
-            href="#writing"
-            class={styles.primaryAction}
-            data-burst
-            data-burst-class={styles.starBurst}>Start reading</a
-          >
+          <a href="#writing" class={styles.primaryAction}>Start reading</a>
           <a
             href="https://www.linkedin.com/in/ibarsi/"
             class={styles.secondaryAction}>Find me on LinkedIn</a
@@ -52,48 +49,17 @@ posts.sort((a, b) => (a.data.date < b.data.date ? 1 : -1));
       </div>
     </section>
 
-    <section class={styles.practice}>
-      <div class={styles.practiceInner}>
-        <p class={styles.railLabel}>Engineering practice</p>
-        <h2 class={styles.practiceIntro}>
-          The work is technical, but it is never only technical.
-        </h2>
-        <div class={styles.focusGrid}>
-          <article class={styles.focusCard}>
-            <p class={styles.focusTag}>01 · Delivery</p>
-            <h3 class={styles.focusTitle}>Make progress visible</h3>
-            <p class={styles.focusCopy}>
-              Practical systems for turning ambiguous work into shared momentum
-              without adding empty process.
-            </p>
-          </article>
-          <article class={styles.focusCard}>
-            <p class={styles.focusTag}>02 · Leadership</p>
-            <h3 class={styles.focusTitle}>Build capable teams</h3>
-            <p class={styles.focusCopy}>
-              Clear communication, useful habits, and room for engineers to make
-              good decisions together.
-            </p>
-          </article>
-          <article class={styles.focusCard}>
-            <p class={styles.focusTag}>03 · Craft</p>
-            <h3 class={styles.focusTitle}>Keep improving the work</h3>
-            <p class={styles.focusCopy}>
-              Thoughtful technical practice that compounds through small,
-              intentional choices.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="writing" class={styles.writing}>
-      <div class={styles.shell}>
-        <div class={styles.railHeader}>
-          <div>
-            <p class={styles.railLabel}>Writing desk</p>
-            <h2 class={styles.railTitle}>Recent notes for engineers</h2>
-          </div>
+    <section id="writing" class={styles.writingBand}>
+      <div class={`${styles.shell} ${styles.writingInner}`}>
+        <div class={styles.writingIntro}>
+          <p class={styles.railLabel}>Writing desk</p>
+          <h2 class={styles.writingTitle}>
+            Notes for engineers who care about the work.
+          </h2>
+          <p class={styles.writingCopy}>
+            Field notes on delivery, technical practice, and the human systems
+            that make software durable.
+          </p>
           <a href="/blog/" class={styles.allPosts}>Browse all writing</a>
         </div>
         <div class={styles.postFrame}>
@@ -101,19 +67,52 @@ posts.sort((a, b) => (a.data.date < b.data.date ? 1 : -1));
         </div>
       </div>
     </section>
+
+    <section class={styles.contributionsBand}>
+      <div class={`${styles.shell} ${styles.contributionsInner}`}>
+        <div class={styles.contributionsIntro}>
+          <p class={styles.railLabel}>Open-source contributions</p>
+          <h2 class={styles.contributionsTitle}>
+            Tools I’ve helped move forward.
+          </h2>
+          <p class={styles.contributionsCopy}>
+            Recent work in the open, on projects I use and care about.
+          </p>
+        </div>
+        <ol class={styles.contributionList}>
+          {
+            repositories.map((repository, index) => (
+              <li class={styles.contributionRow}>
+                <p class={styles.contributionIndex}>
+                  {String(index + 1).padStart(2, '0')}
+                </p>
+                <div class={styles.contributionMain}>
+                  <p class={styles.contributionLabel}>Contributed to</p>
+                  <h3 class={styles.contributionTitle}>{repository.name}</h3>
+                  <p class={styles.contributionCopy}>
+                    {repository.description}
+                  </p>
+                </div>
+                <div class={styles.contributionMeta}>
+                  <p>{repository.category}</p>
+                  <p>
+                    {repository.language ?? 'Open source'} · Updated{' '}
+                    {repository.updatedLabel}
+                  </p>
+                  <a
+                    class={styles.contributionLink}
+                    href={repository.url}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    View on GitHub <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </li>
+            ))
+          }
+        </ol>
+      </div>
+    </section>
   </div>
 </BaseLayout>
-
-<script>
-  document.querySelector('[data-burst]')?.addEventListener('click', (event) => {
-    const target = event.currentTarget;
-    if (!(target instanceof HTMLElement)) return;
-    const star = document.createElement('span');
-    star.className = target.dataset.burstClass || '';
-    const bounds = target.getBoundingClientRect();
-    star.style.left = `${bounds.left + bounds.width / 2}px`;
-    star.style.top = `${bounds.top + bounds.height / 2}px`;
-    document.body.append(star);
-    star.addEventListener('animationend', () => star.remove(), { once: true });
-  });
-</script>

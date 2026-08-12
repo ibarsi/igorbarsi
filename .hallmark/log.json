@@ -1,6 +1,27 @@
 [
   {
     "date": "2026-08-12",
+    "macrostructure": "Editorial Sequence",
+    "theme": "Kiln",
+    "enrichment": "Tier-A build-time GitHub repository metadata",
+    "brief": "Homepage reset: statement, writing, then open-source contribution ledger"
+  },
+  {
+    "date": "2026-08-12",
+    "macrostructure": "Ecosystem Index",
+    "theme": "Kiln",
+    "enrichment": "Tier-A build-time GitHub repository metadata",
+    "brief": "Curated recent open-source contributions for engineering peers"
+  },
+  {
+    "date": "2026-08-12",
+    "macrostructure": "Ecosystem Index",
+    "theme": "Kiln",
+    "enrichment": "Tier-A CSS system blocks",
+    "brief": "User-requested refinement: retain warmth while making the portfolio more precise and technical"
+  },
+  {
+    "date": "2026-08-12",
     "macrostructure": "Ecosystem Index",
     "theme": "Hum",
     "enrichment": "Tier-A CSS signal mark",

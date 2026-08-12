@@ -1,4 +1,4 @@
-/* Hallmark · macrostructure: Ecosystem Index · tone: playful technical · anchor hue: pear-yellow */
+/* Hallmark · macrostructure: Ecosystem Index · tone: warm precision · anchor hue: kiln orange */
 .page {
   overflow: clip;
 }
@@ -49,8 +49,8 @@
 .headlineHighlight {
   background-image: linear-gradient(var(--color-accent) 0 0);
   background-repeat: no-repeat;
-  background-size: 100% 0.32em;
-  background-position: 0 82%;
+  background-size: 100% 0.12em;
+  background-position: 0 92%;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
@@ -77,8 +77,8 @@
   justify-content: center;
   min-height: 2.9rem;
   padding: 0.75rem 1.2rem;
-  border-radius: var(--radius-pill);
-  font-weight: 600;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
   white-space: nowrap;
 }
 
@@ -87,9 +87,8 @@
   isolation: isolate;
   background: var(--color-accent);
   color: var(--color-accent-ink);
-  box-shadow:
-    0 4px 0 var(--color-accent-deep),
-    0 7px 14px -5px var(--color-accent-cast);
+  border: var(--rule) solid var(--color-accent);
+  box-shadow: 0 1px 2px var(--color-accent-cast);
   transition:
     transform var(--dur-fast) var(--ease-out),
     box-shadow var(--dur-fast) var(--ease-out),
@@ -97,16 +96,11 @@
 }
 
 .primaryAction:hover {
-  transform: translateY(-2px);
-  box-shadow:
-    0 6px 0 var(--color-accent-deep),
-    0 12px 22px -6px var(--color-accent-cast);
+  background: var(--color-accent-deep);
+  border-color: var(--color-accent-deep);
 }
 .primaryAction:active {
-  transform: translateY(3px);
-  box-shadow:
-    0 1px 0 var(--color-accent-deep),
-    0 2px 6px -2px var(--color-accent-cast);
+  transform: translateY(1px);
 }
 
 .secondaryAction,
@@ -118,8 +112,8 @@
 }
 .secondaryAction:hover,
 .allPosts:hover {
-  background: var(--color-ink);
-  color: var(--color-paper);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
 }
 .secondaryAction:active,
 .allPosts:active {
@@ -133,39 +127,39 @@
   bottom: clamp(3rem, 7vw, 7rem);
   width: var(--signal-size);
   aspect-ratio: 1;
-  transform: rotate(-8deg);
+  transform: rotate(-3deg);
   transition: transform var(--dur-base) var(--ease-out);
 }
 
 .signalBlock {
   position: absolute;
   inset: 16%;
-  border: 2px solid var(--color-ink);
-  border-radius: var(--radius-card);
+  border: var(--rule) solid var(--color-ink);
+  border-radius: var(--radius-sm);
   transition: transform var(--dur-base) var(--ease-out);
 }
 .signalBlock:nth-child(1) {
-  background: var(--color-accent-3);
-  transform: translate(-14%, 14%);
+  background: var(--color-paper-3);
+  transform: translate(-9%, 9%);
 }
 .signalBlock:nth-child(2) {
   background: var(--color-accent-2);
-  transform: translate(7%, 7%);
+  transform: translate(5%, 5%);
 }
 .signalBlock:nth-child(3) {
-  background: var(--color-accent);
+  background: var(--color-paper);
 }
 .signal:hover {
-  transform: rotate(2deg);
+  transform: rotate(0deg);
 }
 .signal:hover .signalBlock:nth-child(1) {
-  transform: translate(-25%, 25%);
+  transform: translate(-14%, 14%);
 }
 .signal:hover .signalBlock:nth-child(2) {
-  transform: translate(12%, 12%);
+  transform: translate(8%, 8%);
 }
 .signal:hover .signalBlock:nth-child(3) {
-  transform: translate(4%, -4%);
+  transform: translate(2%, -2%);
 }
 
 .rail {
@@ -185,118 +179,134 @@
   letter-spacing: -0.035em;
 }
 .railLabel {
-  color: var(--color-accent-3);
+  color: var(--color-accent);
 }
 
-.practice {
+.writingBand {
+  border-top: var(--rule) solid var(--color-line);
   background: var(--color-paper-2);
 }
-.practiceInner {
-  width: min(100%, var(--content-width));
-  margin-inline: auto;
-  padding: var(--space-3xl) var(--page-gutter);
+.writingInner {
+  display: grid;
+  gap: var(--space-2xl);
+  padding-block: var(--space-3xl);
 }
-.practiceIntro {
-  max-width: 38rem;
-  margin: var(--space-md) 0 var(--space-2xl);
+.writingIntro {
+  max-width: 31rem;
+}
+.writingTitle,
+.contributionsTitle {
+  max-width: 13ch;
+  margin: var(--space-md) 0 0;
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-3xl));
+  letter-spacing: -0.045em;
+  line-height: 1.04;
+}
+.writingCopy,
+.contributionsCopy {
+  margin: var(--space-lg) 0 0;
   font-size: var(--text-lg);
   line-height: 1.45;
 }
+.writingIntro .allPosts {
+  margin-top: var(--space-xl);
+}
 
-.focusGrid {
+.contributionsBand {
+  border-top: var(--rule) solid var(--color-line);
+  background: var(--color-paper);
+}
+.contributionsInner {
+  padding-block: var(--space-3xl);
+}
+.contributionsIntro {
   display: grid;
   gap: var(--space-md);
+  max-width: 44rem;
+  margin-bottom: var(--space-2xl);
 }
-.focusCard {
-  min-width: 0;
-  padding: var(--space-xl);
-  border: var(--rule) solid var(--color-ink);
-  border-radius: var(--radius-card);
-  background: var(--card-surface);
-  box-shadow: 0 10px 26px -18px var(--color-shadow);
-  transition:
-    transform var(--dur-base) var(--ease-out),
-    box-shadow var(--dur-base) var(--ease-out),
-    background-color var(--dur-base) var(--ease-out);
+.contributionsIntro .railLabel {
+  margin-bottom: 0;
 }
-.focusCard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 32px -18px var(--color-shadow);
-  background: var(--card-hover);
+.contributionsCopy {
+  max-width: 38rem;
+  margin-top: 0;
 }
-.focusCard:nth-child(1) {
-  --card-surface: var(--color-card-pear);
-  --card-hover: var(--color-card-pear-hover);
+
+.contributionList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 2px solid var(--color-ink);
 }
-.focusCard:nth-child(2) {
-  --card-surface: var(--color-card-cyan);
-  --card-hover: var(--color-card-cyan-hover);
+.contributionRow {
+  display: grid;
+  gap: var(--space-md);
+  padding: var(--space-xl) 0;
+  border-bottom: var(--rule) solid var(--color-line);
 }
-.focusCard:nth-child(3) {
-  --card-surface: var(--color-card-coral);
-  --card-hover: var(--color-card-coral-hover);
+.contributionIndex,
+.contributionLabel,
+.contributionMeta p,
+.contributionLink {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
 }
-.focusTag {
-  color: var(--color-ink-muted);
+.contributionIndex,
+.contributionLabel {
+  color: var(--color-accent);
 }
-.focusTitle {
-  margin: var(--space-lg) 0 var(--space-sm);
+.contributionTitle {
+  margin: var(--space-sm) 0;
   font-size: var(--text-xl);
 }
-.focusCopy {
-  max-width: 34ch;
+.contributionCopy {
+  max-width: 43ch;
   margin: 0;
   line-height: 1.6;
 }
-
-.writing {
-  padding-top: var(--space-3xl);
+.contributionMeta {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+  gap: var(--space-sm);
+  color: var(--color-ink-muted);
 }
-.writing .shell {
-  padding-bottom: var(--space-3xl);
+.contributionMeta p {
+  width: 100%;
+}
+.contributionLink {
+  display: inline-flex;
+  gap: var(--space-xs);
+  width: fit-content;
+  margin-top: var(--space-md);
+  color: var(--color-accent-deep);
+  text-decoration: none;
+}
+.contributionRow:hover .contributionTitle,
+.contributionLink:hover {
+  color: var(--color-accent);
 }
 
 .postFrame {
   border-top: 2px solid var(--color-ink);
 }
 
-.starBurst {
-  position: absolute;
-  width: 1.5rem;
-  height: 1.5rem;
-  pointer-events: none;
-  background:
-    linear-gradient(
-      90deg,
-      transparent 44%,
-      var(--color-accent-3) 44% 56%,
-      transparent 56%
-    ),
-    linear-gradient(
-      0deg,
-      transparent 44%,
-      var(--color-accent-3) 44% 56%,
-      transparent 56%
-    );
-  animation: starBurst 420ms var(--ease-out) forwards;
-}
-@keyframes starBurst {
-  from {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(0) rotate(0deg);
-  }
-  to {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(1.4) rotate(45deg);
-  }
-}
-
 @media (min-width: 44rem) {
-  .focusGrid {
-    grid-template-columns: 1.35fr minmax(0, 1fr) minmax(0, 1fr);
+  .writingInner {
+    grid-template-columns: minmax(16rem, 0.75fr) minmax(0, 1.25fr);
+    gap: clamp(2rem, 6vw, 6rem);
+    align-items: start;
   }
-  .focusCard:first-child {
-    grid-row: span 2;
+  .contributionRow {
+    grid-template-columns: 3rem minmax(0, 1.25fr) minmax(11rem, 0.55fr);
+    gap: var(--space-xl);
+    padding-block: var(--space-2xl);
+  }
+  .contributionMeta {
+    display: grid;
+    justify-items: start;
   }
 }
 
@@ -321,10 +331,7 @@
   .secondaryAction,
   .allPosts,
   .signal,
-  .focusCard {
+  .contributionLink {
     transition-duration: 150ms;
-  }
-  .starBurst {
-    display: none;
   }
 }

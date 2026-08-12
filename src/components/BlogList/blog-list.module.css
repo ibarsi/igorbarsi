@@ -1,4 +1,4 @@
-/* Hallmark · macrostructure: Ecosystem Index · tone: playful technical · anchor hue: pear-yellow */
+/* Hallmark · macrostructure: Ecosystem Index · tone: precise technical · anchor hue: cobalt */
 .container {
   display: grid;
   padding: 0;
@@ -21,8 +21,8 @@
     transform var(--dur-base) var(--ease-out);
 }
 .card:hover {
-  background: var(--color-card-cyan);
-  transform: translateX(0.25rem);
+  background: var(--color-card-cyan-hover);
+  border-color: var(--color-accent);
   text-decoration: none;
 }
 .itemDate {

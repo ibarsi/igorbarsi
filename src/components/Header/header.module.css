@@ -1,4 +1,4 @@
-/* Hallmark · macrostructure: Ecosystem Index · tone: playful technical · anchor hue: pear-yellow */
+/* Hallmark · macrostructure: Ecosystem Index · tone: precise technical · anchor hue: cobalt */
 .shell {
   border-bottom: 2px solid var(--color-ink);
   background: var(--color-paper);
@@ -29,7 +29,7 @@
   place-items: center;
   width: 2rem;
   height: 2rem;
-  border-radius: 50%;
+  border-radius: var(--radius-sm);
   background: var(--color-accent);
   border: var(--rule) solid var(--color-ink);
   font-family: var(--font-mono);
