@@ -1,21 +1,8 @@
 /* Hallmark · macrostructure: Ecosystem Index · tone: playful technical · anchor hue: pear-yellow */
 .footer {
-  overflow: hidden;
   border-top: 2px solid var(--color-ink);
   background: var(--color-paper);
   color: var(--color-ink);
-}
-.track {
-  display: flex;
-  width: max-content;
-  gap: var(--space-2xl);
-  padding-block: var(--space-lg);
-  animation: marquee 32s linear infinite;
-  font-size: clamp(var(--text-sm), 2vw, var(--text-md));
-  font-weight: 700;
-  letter-spacing: 0.035em;
-  white-space: nowrap;
-  background: var(--color-paper-2);
 }
 .meta {
   display: flex;
@@ -25,7 +12,6 @@
   width: min(100%, var(--content-width));
   margin-inline: auto;
   padding: var(--space-md) var(--page-gutter);
-  border-top: 2px solid var(--color-ink);
   background: var(--color-paper);
 }
 .meta p {
@@ -34,22 +20,9 @@
   font-size: var(--text-xs);
   white-space: nowrap;
 }
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
 @media (max-width: 25rem) {
   .meta {
     align-items: flex-start;
     flex-direction: column;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .track {
-    animation: none;
   }
 }
