@@ -30,9 +30,11 @@
   width: 1.1rem;
   height: 1.1rem;
   object-fit: contain;
-  opacity: 0.6;
-  filter: invert(1);
-  transition: opacity 200ms ease;
+  opacity: 0.82;
+  filter: none;
+  transition:
+    opacity var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
 }
 
 .listItem a:hover {
@@ -42,4 +44,17 @@
 
 .listItem a:hover .icon {
   opacity: 1;
+}
+
+.listItem a:focus-visible {
+  border-color: var(--color-accent);
+}
+
+.listItem a:focus-visible .icon,
+.listItem a:active .icon {
+  opacity: 1;
+}
+
+.listItem a:active .icon {
+  transform: translateY(1px);
 }

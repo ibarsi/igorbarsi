@@ -1,6 +1,7 @@
 /* Hallmark · macrostructure: Ecosystem Index · tone: warm precision · anchor hue: kiln orange */
 .page {
   overflow: clip;
+  margin-bottom: calc((var(--space-3xl) - var(--space-md)) * -1);
 }
 
 .shell {
