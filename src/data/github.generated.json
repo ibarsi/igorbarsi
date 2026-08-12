@@ -1,0 +1,26 @@
+[
+  {
+    "category": "Privacy AI",
+    "description": "On-device speech-to-text for macOS, built with privacy as a first principle.",
+    "language": null,
+    "name": "typewhisper-mac",
+    "updatedLabel": "Jun 2026",
+    "url": "https://github.com/ibarsi/typewhisper-mac"
+  },
+  {
+    "category": "macOS tooling",
+    "description": "A CLI workflow for managing macOS applications distributed as binaries.",
+    "language": null,
+    "name": "homebrew-cask",
+    "updatedLabel": "Jun 2026",
+    "url": "https://github.com/ibarsi/homebrew-cask"
+  },
+  {
+    "category": "Developer tools",
+    "description": "An open-source AI agent that brings Gemini directly into the terminal.",
+    "language": "TypeScript",
+    "name": "gemini-cli",
+    "updatedLabel": "Jun 2026",
+    "url": "https://github.com/ibarsi/gemini-cli"
+  }
+]

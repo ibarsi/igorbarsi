@@ -13,7 +13,7 @@ const description =
 
 const posts = await getCollection('blog');
 posts.sort((a, b) => (a.data.date < b.data.date ? 1 : -1));
-const repositories = await getSelectedRepositories();
+const repositories = getSelectedRepositories();
 ---
 
 <BaseLayout title={title} description={description}>

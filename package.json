@@ -8,13 +8,14 @@
     "node": "25.8.2"
   },
   "scripts": {
-    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "build": "npm run github:sync && ASTRO_TELEMETRY_DISABLED=1 astro build",
     "develop": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
     "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
     "format": "prettier --write \"**/*.{astro,js,jsx,ts,tsx,css,md,mdx,json,mjs}\"",
     "format:check": "prettier --check \"**/*.{astro,js,jsx,ts,tsx,css,md,mdx,json,mjs}\"",
     "lint": "eslint src --ext .js,.jsx,.cjs,.mjs && eslint astro.config.mjs eslint.config.cjs",
-    "typecheck": "ASTRO_TELEMETRY_DISABLED=1 astro check"
+    "typecheck": "ASTRO_TELEMETRY_DISABLED=1 astro check",
+    "github:sync": "node scripts/sync-github-repositories.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^5.0.3",
