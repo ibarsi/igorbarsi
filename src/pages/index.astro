@@ -16,66 +16,101 @@ posts.sort((a, b) => (a.data.date < b.data.date ? 1 : -1));
 
 <BaseLayout title={title} description={description}>
   <div class={styles.page}>
-    <section class={`${styles.hero} animate-in`}>
-      <div class={styles.hyperframe} aria-hidden="true">
-        <span class={styles.frameLine}></span>
-        <span class={styles.frameLine}></span>
-        <span class={styles.frameLine}></span>
+    <section class={`${styles.hero} ${styles.shell}`}>
+      <div class={styles.heroCopy}>
+        <p class={styles.kicker}>Igor Barsi · software engineer</p>
+        <h1 class={styles.headline}>
+          Better systems, <span class={styles.headlineHighlight}
+            >more human</span
+          > engineering.
+        </h1>
+        <p class={styles.summary}>
+          I write for engineers who care about how software gets made: the
+          craft, communication, habits, and choices behind durable work.
+        </p>
+        <div class={styles.heroActions}>
+          <a
+            href="#writing"
+            class={styles.primaryAction}
+            data-burst
+            data-burst-class={styles.starBurst}>Start reading</a
+          >
+          <a
+            href="https://www.linkedin.com/in/ibarsi/"
+            class={styles.secondaryAction}>Find me on LinkedIn</a
+          >
+        </div>
       </div>
-      <p class={styles.label}>Software Engineer &amp; Writer</p>
-      <h1 class={styles.headline}>
-        <span>Building better teams,</span>
-        <span>habits, and software.</span>
-      </h1>
-      <p class={`paragraph paragraph--intro ${styles.summary}`}>
-        I write about the human side of engineering — delivery, leadership,
-        communication, and the routines that shape durable technical work.
-      </p>
-
-      <div class={styles.heroActions}>
-        <a href="/blog/" class={styles.primaryAction}>Read the blog</a>
-        <a
-          href="https://www.linkedin.com/in/ibarsi/"
-          class={styles.secondaryAction}
-        >
-          LinkedIn &rarr;
-        </a>
+      <div
+        class={styles.signal}
+        aria-label="A small yellow signal mark"
+        role="img"
+      >
       </div>
     </section>
 
-    <div class={`${styles.pillars} animate-in delay-1`}>
-      <article class={styles.pillar} style="--index: 0">
-        <span class={styles.pillarNumber}>01</span>
-        <h2 class={styles.pillarTitle}>
-          Effective engineering over empty motion
+    <section class={styles.practice}>
+      <div class={styles.practiceInner}>
+        <p class={styles.railLabel}>Engineering practice</p>
+        <h2 class={styles.practiceIntro}>
+          The work is technical, but it is never only technical.
         </h2>
-        <p class="paragraph">
-          Much of my writing is aimed at engineers, but the themes travel well:
-          clear communication, disciplined habits, and systems that help people
-          do meaningful work together.
-        </p>
-      </article>
-
-      <article class={styles.pillar} style="--index: 1">
-        <span class={styles.pillarNumber}>02</span>
-        <h2 class={styles.pillarTitle}>Opinionated, practical, and grounded</h2>
-        <p class="paragraph">
-          I share what has proven useful, where teams tend to struggle, and the
-          patterns that seem to compound over time.
-        </p>
-      </article>
-    </div>
-
-    <section class={`${styles.postsSection} animate-in delay-2`}>
-      <div class={styles.sectionHeader}>
-        <div>
-          <p class={styles.label}>Latest</p>
-          <h2 class={styles.sectionTitle}>Recent writing</h2>
+        <div class={styles.focusGrid}>
+          <article class={styles.focusCard}>
+            <p class={styles.focusTag}>01 · Delivery</p>
+            <h3 class={styles.focusTitle}>Make progress visible</h3>
+            <p class={styles.focusCopy}>
+              Practical systems for turning ambiguous work into shared momentum
+              without adding empty process.
+            </p>
+          </article>
+          <article class={styles.focusCard}>
+            <p class={styles.focusTag}>02 · Leadership</p>
+            <h3 class={styles.focusTitle}>Build capable teams</h3>
+            <p class={styles.focusCopy}>
+              Clear communication, useful habits, and room for engineers to make
+              good decisions together.
+            </p>
+          </article>
+          <article class={styles.focusCard}>
+            <p class={styles.focusTag}>03 · Craft</p>
+            <h3 class={styles.focusTitle}>Keep improving the work</h3>
+            <p class={styles.focusCopy}>
+              Thoughtful technical practice that compounds through small,
+              intentional choices.
+            </p>
+          </article>
         </div>
-        <a href="/blog/" class={styles.sectionLink}>All posts &rarr;</a>
       </div>
+    </section>
 
-      <RecentBlogPosts entries={posts} limit={3} />
+    <section id="writing" class={styles.writing}>
+      <div class={styles.shell}>
+        <div class={styles.railHeader}>
+          <div>
+            <p class={styles.railLabel}>Writing desk</p>
+            <h2 class={styles.railTitle}>Recent notes for engineers</h2>
+          </div>
+          <a href="/blog/" class={styles.allPosts}>Browse all writing</a>
+        </div>
+        <div class={styles.postFrame}>
+          <RecentBlogPosts entries={posts} limit={3} />
+        </div>
+      </div>
     </section>
   </div>
 </BaseLayout>
+
+<script>
+  document.querySelector('[data-burst]')?.addEventListener('click', (event) => {
+    const target = event.currentTarget;
+    if (!(target instanceof HTMLElement)) return;
+    const star = document.createElement('span');
+    star.className = target.dataset.burstClass || '';
+    const bounds = target.getBoundingClientRect();
+    star.style.left = `${bounds.left + bounds.width / 2}px`;
+    star.style.top = `${bounds.top + bounds.height / 2}px`;
+    document.body.append(star);
+    star.addEventListener('animationend', () => star.remove(), { once: true });
+  });
+</script>

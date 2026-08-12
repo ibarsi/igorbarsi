@@ -1,48 +1,39 @@
+/* Hallmark · macrostructure: Ecosystem Index · tone: playful technical · anchor hue: pear-yellow */
 .page {
-  display: grid;
-  gap: 4rem;
-  padding-top: 2rem;
+  width: min(100%, var(--content-width));
+  margin-inline: auto;
+  padding: clamp(3rem, 8vw, 7rem) var(--page-gutter) 0;
 }
-
+.hero {
+  max-width: 51rem;
+  padding-bottom: var(--space-3xl);
+}
 .label {
-  margin: 0 0 1.25rem;
+  margin: 0 0 var(--space-md);
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: var(--text-xs);
+  font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: var(--color-accent-3);
 }
-
-.hero {
-  max-width: 42rem;
-}
-
 .title {
-  margin: 0 0 1.25rem;
-  font-size: clamp(2.6rem, 5vw, 4.6rem);
-  line-height: 0.98;
+  margin: 0 0 var(--space-lg);
+  font-size: clamp(var(--text-3xl), 6vw, var(--text-display));
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+  overflow-wrap: anywhere;
 }
-
 .yearSection {
-  padding-top: 2rem;
-  border-top: 1px solid var(--color-border);
+  padding-block: var(--space-2xl);
+  border-top: 2px solid var(--color-ink);
 }
-
 .yearHeader {
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-md);
 }
-
 .yearTitle {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: clamp(2rem, 3vw, 3rem);
-  color: var(--color-text);
-  opacity: 0.3;
-}
-
-@media (max-width: 720px) {
-  .page {
-    gap: 3rem;
-    padding-top: 1rem;
-  }
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-ink-muted);
 }

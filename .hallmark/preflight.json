@@ -1,0 +1,10 @@
+{
+  "scanned_at": "2026-08-12",
+  "framework": "Astro 6",
+  "fonts": ["Instrument Serif", "DM Sans", "JetBrains Mono"],
+  "palette": "dark charcoal with amber accent",
+  "motion": "CSS-only",
+  "spacing": "ad hoc CSS spacing",
+  "preserved": ["Astro", "MDX blog collection", "static deployment"],
+  "replaced": ["palette", "font stack", "visual system"]
+}
