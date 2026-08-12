@@ -133,38 +133,39 @@
   bottom: clamp(3rem, 7vw, 7rem);
   width: var(--signal-size);
   aspect-ratio: 1;
-  border: 2px solid var(--color-ink);
-  border-radius: 48% 52% 56% 44%;
-  background: var(--color-accent);
-  box-shadow: 0.65rem 0.65rem 0 var(--color-accent-2);
-  transform: rotate(-11deg);
-  transition:
-    transform var(--dur-base) var(--ease-out),
-    box-shadow var(--dur-base) var(--ease-out);
+  transform: rotate(-8deg);
+  transition: transform var(--dur-base) var(--ease-out);
 }
 
-.signal::before,
-.signal::after {
-  content: '';
+.signalBlock {
   position: absolute;
-  border-radius: var(--radius-pill);
-  background: var(--color-ink);
+  inset: 16%;
+  border: 2px solid var(--color-ink);
+  border-radius: var(--radius-card);
+  transition: transform var(--dur-base) var(--ease-out);
 }
-.signal::before {
-  width: 15%;
-  height: 15%;
-  top: 31%;
-  left: 28%;
+.signalBlock:nth-child(1) {
+  background: var(--color-accent-3);
+  transform: translate(-14%, 14%);
 }
-.signal::after {
-  width: 15%;
-  height: 15%;
-  top: 31%;
-  right: 28%;
+.signalBlock:nth-child(2) {
+  background: var(--color-accent-2);
+  transform: translate(7%, 7%);
+}
+.signalBlock:nth-child(3) {
+  background: var(--color-accent);
 }
 .signal:hover {
-  transform: rotate(4deg) scale(1.04);
-  box-shadow: 0.9rem 0.9rem 0 var(--color-accent-3);
+  transform: rotate(2deg);
+}
+.signal:hover .signalBlock:nth-child(1) {
+  transform: translate(-25%, 25%);
+}
+.signal:hover .signalBlock:nth-child(2) {
+  transform: translate(12%, 12%);
+}
+.signal:hover .signalBlock:nth-child(3) {
+  transform: translate(4%, -4%);
 }
 
 .rail {

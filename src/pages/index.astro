@@ -43,9 +43,12 @@ posts.sort((a, b) => (a.data.date < b.data.date ? 1 : -1));
       </div>
       <div
         class={styles.signal}
-        aria-label="A small yellow signal mark"
+        aria-label="An interactive stack of system blocks"
         role="img"
       >
+        <span class={styles.signalBlock}></span>
+        <span class={styles.signalBlock}></span>
+        <span class={styles.signalBlock}></span>
       </div>
     </section>
 
