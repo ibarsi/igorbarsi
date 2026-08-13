@@ -5,24 +5,64 @@ import '../layouts/fonts.css';
 
 import Footer from '../components/Footer/index.astro';
 import Header from '../components/Header/index.astro';
-import { DEFAULT_SOCIAL_IMAGE, SITE_TITLE, SITE_URL } from '../site-config';
+import {
+  DEFAULT_SOCIAL_IMAGE,
+  DEFAULT_SOCIAL_IMAGE_ALT,
+  PERSON_SAME_AS,
+  SITE_DESCRIPTION,
+  SITE_TITLE,
+  SITE_URL,
+} from '../site-config';
 
 interface Props {
   description: string;
+  image?: string;
+  imageAlt?: string;
   pathname?: string;
+  publishedDate?: string;
+  robots?: string;
+  structuredData?: Record<string, unknown> | Record<string, unknown>[];
   title: string;
   type?: 'article' | 'website';
 }
 
 const {
   description,
+  image = DEFAULT_SOCIAL_IMAGE,
+  imageAlt = DEFAULT_SOCIAL_IMAGE_ALT,
   pathname = Astro.url.pathname,
+  publishedDate,
+  robots = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+  structuredData = [],
   title,
   type = 'website',
 } = Astro.props;
 
 const canonical = new URL(pathname, SITE_URL).toString();
-const imageUrl = new URL(DEFAULT_SOCIAL_IMAGE, SITE_URL).toString();
+const imageUrl = new URL(image, SITE_URL).toString();
+const extraStructuredData = Array.isArray(structuredData)
+  ? structuredData
+  : [structuredData];
+const siteStructuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: SITE_TITLE,
+    url: SITE_URL,
+    description: SITE_DESCRIPTION,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: SITE_TITLE,
+    url: SITE_URL,
+    image: imageUrl,
+    jobTitle: 'Software engineer and writer',
+    sameAs: PERSON_SAME_AS,
+  },
+  ...extraStructuredData,
+];
+const jsonLd = JSON.stringify(siteStructuredData).replace(/</g, '\\u003c');
 ---
 
 <!doctype html>
@@ -37,6 +77,9 @@ const imageUrl = new URL(DEFAULT_SOCIAL_IMAGE, SITE_URL).toString();
     <meta name="msapplication-config" content="/browserconfig.xml" />
     <meta name="theme-color" content="#fffaf2" />
     <meta name="description" content={description} />
+    <meta name="author" content={SITE_TITLE} />
+    <meta name="robots" content={robots} />
+    <meta name="googlebot" content={robots} />
 
     <title>{title}</title>
 
@@ -46,20 +89,24 @@ const imageUrl = new URL(DEFAULT_SOCIAL_IMAGE, SITE_URL).toString();
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={imageUrl} />
+    <meta name="twitter:image:alt" content={imageAlt} />
 
     <meta property="og:description" content={description} />
     <meta property="og:image" content={imageUrl} />
     <meta property="og:image:secure_url" content={imageUrl} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta
-      property="og:image:alt"
-      content="Igor Barsi, software engineer and writer"
-    />
+    <meta property="og:image:alt" content={imageAlt} />
     <meta property="og:site_name" content={SITE_TITLE} />
     <meta property="og:title" content={title} />
     <meta property="og:type" content={type} />
     <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content="en_CA" />
+    {
+      type === 'article' && publishedDate && (
+        <meta property="article:published_time" content={publishedDate} />
+      )
+    }
 
     <link rel="manifest" href="/manifest.json" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -69,6 +116,8 @@ const imageUrl = new URL(DEFAULT_SOCIAL_IMAGE, SITE_URL).toString();
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#bc5c24" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="canonical" href={canonical} />
+    <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+    <script type="application/ld+json" is:inline set:html={jsonLd} />
     <slot name="head" />
   </head>
   <body>
