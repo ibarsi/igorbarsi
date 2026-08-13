@@ -1,39 +1,40 @@
+/* Hallmark · macrostructure: Ecosystem Index · tone: precise technical · anchor hue: cobalt */
 .list {
   display: flex;
-  gap: 0.25rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-xs);
   padding: 0;
   margin: 0;
   list-style: none;
 }
-
 .link {
   display: inline-flex;
   align-items: center;
-  padding: 0.5rem 0.9rem;
+  min-height: 2.75rem;
+  padding-inline: var(--space-sm);
+  border-radius: var(--radius-sm);
   font-family: var(--font-mono);
-  font-size: 0.8rem;
-  font-weight: 400;
-  letter-spacing: 0.04em;
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--color-text-secondary);
+  white-space: nowrap;
   transition:
-    color 200ms ease,
-    background 200ms ease;
+    background-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out);
 }
-
 .link:hover {
-  color: var(--color-text);
+  color: var(--color-accent);
   text-decoration: none;
 }
-
 .linkActive {
-  color: var(--color-accent);
+  background: var(--color-ink);
+  color: var(--color-paper);
 }
-
 .linkInverse {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--color-paper);
 }
-
 .linkInverse:hover {
-  color: #ffffff;
+  color: var(--color-ink);
 }

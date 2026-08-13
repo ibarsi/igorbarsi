@@ -8,22 +8,23 @@
     "node": "25.8.2"
   },
   "scripts": {
-    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "build": "npm run github:sync && ASTRO_TELEMETRY_DISABLED=1 astro build",
     "develop": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
     "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
     "format": "prettier --write \"**/*.{astro,js,jsx,ts,tsx,css,md,mdx,json,mjs}\"",
     "format:check": "prettier --check \"**/*.{astro,js,jsx,ts,tsx,css,md,mdx,json,mjs}\"",
     "lint": "eslint src --ext .js,.jsx,.cjs,.mjs && eslint astro.config.mjs eslint.config.cjs",
-    "typecheck": "ASTRO_TELEMETRY_DISABLED=1 astro check"
+    "typecheck": "ASTRO_TELEMETRY_DISABLED=1 astro check",
+    "github:sync": "node scripts/sync-github-repositories.mjs"
   },
   "dependencies": {
-    "@astrojs/mdx": "^5.0.3",
-    "@astrojs/sitemap": "^3.7.2",
-    "astro": "^6.1.1",
+    "@astrojs/mdx": "^7.0.5",
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^7.2.1",
     "sharp": "^0.34.5"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.8",
+    "@astrojs/check": "^0.9.10",
     "eslint": "^10.1.0",
     "eslint-config-prettier": "^10.1.8",
     "prettier": "^3.8.1",

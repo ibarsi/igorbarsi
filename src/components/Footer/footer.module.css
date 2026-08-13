@@ -1,55 +1,28 @@
-.container {
-  width: min(calc(100% - 3rem), var(--content-width));
-  margin: 0 auto 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--color-border);
+/* Hallmark · macrostructure: Ecosystem Index · tone: precise technical · anchor hue: cobalt */
+.footer {
+  border-top: 2px solid var(--color-ink);
+  background: var(--color-paper);
+  color: var(--color-ink);
 }
-
-.inner {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.top {
+.meta {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
+  gap: var(--space-md);
+  width: min(100%, var(--content-width));
+  margin-inline: auto;
+  padding: var(--space-md) var(--page-gutter);
+  background: var(--color-paper);
 }
-
-.navigation {
-  display: flex;
-}
-
-.social {
-  display: flex;
-}
-
-.bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.copywrite {
+.meta p {
   margin: 0;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: var(--color-text-secondary);
-  opacity: 0.6;
+  font-size: var(--text-xs);
+  white-space: nowrap;
 }
-
-@media (max-width: 720px) {
-  .container {
-    width: min(calc(100% - 1.5rem), var(--content-width));
-    margin-bottom: 1.5rem;
-    padding-top: 1.5rem;
-  }
-
-  .top {
-    flex-direction: column;
+@media (max-width: 25rem) {
+  .meta {
     align-items: flex-start;
-    gap: 1rem;
+    flex-direction: column;
   }
 }

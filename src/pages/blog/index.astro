@@ -39,7 +39,7 @@ const years = Object.keys(groupedPosts)
 
 <BaseLayout title={title} description={description} pathname="/blog/">
   <div class={styles.page}>
-    <section class={`${styles.hero} animate-in`}>
+    <section class={styles.hero}>
       <p class={styles.label}>Archive</p>
       <h1 class={styles.title}>
         Writing on engineering, leadership, and better delivery.
@@ -51,10 +51,8 @@ const years = Object.keys(groupedPosts)
     </section>
 
     {
-      years.map((year, i) => (
-        <section
-          class={`${styles.yearSection} animate-in delay-${Math.min(i + 1, 5)}`}
-        >
+      years.map((year) => (
+        <section class={styles.yearSection}>
           <div class={styles.yearHeader}>
             <span class={styles.yearTitle}>{year}</span>
           </div>
