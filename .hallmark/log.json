@@ -3,6 +3,13 @@
     "date": "2026-08-12",
     "macrostructure": "Editorial Sequence",
     "theme": "Kiln",
+    "enrichment": "Tier-C static terminal workstation render",
+    "brief": "Original static, left-facing 3D terminal workstation with transparent backdrop"
+  },
+  {
+    "date": "2026-08-12",
+    "macrostructure": "Editorial Sequence",
+    "theme": "Kiln",
     "enrichment": "Tier-A build-time GitHub repository metadata",
     "brief": "Homepage reset: statement, writing, then open-source contribution ledger"
   },

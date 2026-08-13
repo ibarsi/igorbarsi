@@ -1,4 +1,4 @@
-/* Hallmark · macrostructure: Ecosystem Index · tone: warm precision · anchor hue: kiln orange */
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V4 · macrostructure: Editorial Sequence · tone: warm technical precision · anchor hue: kiln orange · enrichment: Tier-C static terminal workstation render */
 .page {
   overflow: clip;
   margin-bottom: calc((var(--space-3xl) - var(--space-md)) * -1);
@@ -22,6 +22,8 @@
 .heroCopy {
   max-width: 49rem;
   min-width: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .kicker,
@@ -121,46 +123,22 @@
   transform: translateY(1px);
 }
 
-.signal {
-  --signal-size: clamp(7rem, 17vw, 13rem);
+.signalField {
   position: absolute;
-  right: clamp(-2rem, 5vw, 3rem);
-  bottom: clamp(3rem, 7vw, 7rem);
-  width: var(--signal-size);
+  right: clamp(-5.5rem, -1vw, -0.5rem);
+  bottom: clamp(-5rem, -2vw, -1rem);
+  width: clamp(22rem, 46vw, 43rem);
+  margin: 0;
   aspect-ratio: 1;
-  transform: rotate(-3deg);
-  transition: transform var(--dur-base) var(--ease-out);
 }
 
-.signalBlock {
-  position: absolute;
-  inset: 16%;
-  border: var(--rule) solid var(--color-ink);
-  border-radius: var(--radius-sm);
-  transition: transform var(--dur-base) var(--ease-out);
-}
-.signalBlock:nth-child(1) {
-  background: var(--color-paper-3);
-  transform: translate(-9%, 9%);
-}
-.signalBlock:nth-child(2) {
-  background: var(--color-accent-2);
-  transform: translate(5%, 5%);
-}
-.signalBlock:nth-child(3) {
-  background: var(--color-paper);
-}
-.signal:hover {
-  transform: rotate(0deg);
-}
-.signal:hover .signalBlock:nth-child(1) {
-  transform: translate(-14%, 14%);
-}
-.signal:hover .signalBlock:nth-child(2) {
-  transform: translate(8%, 8%);
-}
-.signal:hover .signalBlock:nth-child(3) {
-  transform: translate(2%, -2%);
+.terminalRender {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: saturate(0.92) contrast(1.02);
+  transform: scaleX(-1);
 }
 
 .rail {
@@ -312,11 +290,11 @@
 }
 
 @media (max-width: 36rem) {
-  .signal {
-    --signal-size: 6rem;
-    right: -2.2rem;
-    bottom: 2rem;
-    opacity: 0.9;
+  .signalField {
+    right: -7.5rem;
+    bottom: -2.5rem;
+    width: clamp(17rem, 82vw, 23rem);
+    opacity: 0.7;
   }
   .railHeader {
     align-items: flex-start;
@@ -331,7 +309,7 @@
   .primaryAction,
   .secondaryAction,
   .allPosts,
-  .signal,
+  .signalField,
   .contributionLink {
     transition-duration: 150ms;
   }

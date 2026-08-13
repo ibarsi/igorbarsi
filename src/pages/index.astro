@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 
+import heroTerminal from '../assets/hero-terminal.png';
 import RecentBlogPosts from '../components/RecentBlogPosts/index.astro';
 import { getSelectedRepositories } from '../data/github';
 import BaseLayout from '../layouts/BaseLayout.astro';
@@ -38,15 +39,13 @@ const repositories = getSelectedRepositories();
           >
         </div>
       </div>
-      <div
-        class={styles.signal}
-        aria-label="An interactive stack of system blocks"
-        role="img"
-      >
-        <span class={styles.signalBlock}></span>
-        <span class={styles.signalBlock}></span>
-        <span class={styles.signalBlock}></span>
-      </div>
+      <figure class={styles.signalField}>
+        <img
+          src={heroTerminal.src}
+          alt="An ivory desktop computer with a terminal screen and keyboard"
+          class={styles.terminalRender}
+        />
+      </figure>
     </section>
 
     <section id="writing" class={styles.writingBand}>
