@@ -125,7 +125,7 @@
 
 .signalField {
   position: absolute;
-  right: clamp(-5.5rem, -1vw, -0.5rem);
+  right: clamp(-7rem, -3vw, -2rem);
   bottom: clamp(-5rem, -2vw, -1rem);
   width: clamp(22rem, 46vw, 43rem);
   margin: 0;
