@@ -12,7 +12,12 @@ const { pathname = '/' } = Astro.props;
 <header class={styles.shell}>
   <div class={styles.container}>
     <a href="/" class={styles.brand}>
-      <span class={styles.brandMark}>IB</span>
+      <img
+        src="/favicon.svg"
+        alt=""
+        aria-hidden="true"
+        class={styles.brandMark}
+      />
       <span class={styles.brandName}>Igor Barsi</span>
     </a>
 
