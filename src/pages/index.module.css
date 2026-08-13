@@ -26,6 +26,35 @@
   z-index: 1;
 }
 
+.heroCopy > .kicker,
+.heroCopy > .headline,
+.heroCopy > .summary,
+.heroCopy > .heroActions,
+.signalField {
+  animation: hero-arrive var(--dur-long) var(--ease-out) both;
+}
+
+.heroCopy > .kicker {
+  animation-delay: 0ms;
+}
+
+.heroCopy > .headline {
+  animation-delay: 60ms;
+}
+
+.heroCopy > .summary {
+  animation-delay: 120ms;
+}
+
+.heroCopy > .heroActions {
+  animation-delay: 180ms;
+}
+
+.signalField {
+  animation-name: terminal-arrive;
+  animation-delay: 120ms;
+}
+
 .kicker,
 .railLabel,
 .focusTag {
@@ -50,12 +79,21 @@
 }
 
 .headlineHighlight {
-  background-image: linear-gradient(var(--color-accent) 0 0);
-  background-repeat: no-repeat;
-  background-size: 100% 0.12em;
-  background-position: 0 92%;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
+  position: relative;
+  display: inline-block;
+}
+
+.headlineHighlight::after {
+  position: absolute;
+  right: 0;
+  bottom: 0.1em;
+  left: 0;
+  height: 2px;
+  background: var(--color-accent);
+  content: '';
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: underline-draw var(--dur-base) var(--ease-out) 300ms both;
 }
 
 .summary {
@@ -99,6 +137,7 @@
 }
 
 .primaryAction:hover {
+  transform: translateY(-1px);
   background: var(--color-accent-deep);
   border-color: var(--color-accent-deep);
 }
@@ -268,6 +307,69 @@
   color: var(--color-accent);
 }
 
+.contributionTitle,
+.contributionLink span {
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .contributionRow:hover .contributionTitle {
+    transform: translateX(0.25rem);
+  }
+
+  .contributionLink:hover span {
+    transform: translate(0.2rem, -0.2rem);
+  }
+}
+
+.contributionRow:focus-within .contributionTitle {
+  transform: translateX(0.25rem);
+}
+
+.contributionLink:focus-visible span {
+  transform: translate(0.2rem, -0.2rem);
+}
+
+@keyframes hero-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes terminal-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem) scaleX(-1) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scaleX(-1) scale(1);
+  }
+}
+
+@keyframes underline-draw {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes reveal-reduced {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .postFrame {
   border-top: 2px solid var(--color-ink);
 }
@@ -306,11 +408,39 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .heroCopy > .kicker,
+  .heroCopy > .headline,
+  .heroCopy > .summary,
+  .heroCopy > .heroActions,
+  .signalField,
+  .headlineHighlight::after {
+    animation-name: reveal-reduced;
+    animation-duration: 150ms;
+    animation-delay: 0ms;
+  }
+
+  .headlineHighlight::after {
+    transform: scaleX(1);
+  }
+
+  .primaryAction:hover,
+  .primaryAction:active,
+  .secondaryAction:active,
+  .allPosts:active,
+  .contributionRow:hover .contributionTitle,
+  .contributionRow:focus-within .contributionTitle,
+  .contributionLink:hover span,
+  .contributionLink:focus-visible span {
+    transform: none;
+  }
+
   .primaryAction,
   .secondaryAction,
   .allPosts,
   .signalField,
-  .contributionLink {
+  .contributionLink,
+  .contributionTitle,
+  .contributionLink span {
     transition-duration: 150ms;
   }
 }

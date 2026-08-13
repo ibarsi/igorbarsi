@@ -21,9 +21,16 @@
     transform var(--dur-base) var(--ease-out);
 }
 .card:hover {
+  transform: translateX(0.25rem);
   background: var(--color-card-cyan-hover);
   border-color: var(--color-accent);
   text-decoration: none;
+}
+
+.card:focus-visible {
+  transform: translateX(0.25rem);
+  background: var(--color-card-cyan-hover);
+  border-color: var(--color-accent);
 }
 .itemDate {
   grid-column: 2;
@@ -56,5 +63,10 @@
 @media (prefers-reduced-motion: reduce) {
   .card {
     transition-duration: 150ms;
+  }
+
+  .card:hover,
+  .card:focus-visible {
+    transform: none;
   }
 }
